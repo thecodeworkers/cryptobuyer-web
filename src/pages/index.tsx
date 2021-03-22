@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import { wrapper } from '../store'
+import { Navbar } from '../components'
 import Head from 'next/head'
 
 const Home = () => {
@@ -11,7 +12,8 @@ const Home = () => {
       <Head>
         <title>CryptoBuyer</title>
       </Head>
-      <p>Hola</p>
+      <Navbar />
+      <p>Hola </p>
     </div>
   )
 }
