@@ -1,0 +1,63 @@
+@import '../../../public/styles/index.scss';
+
+._main {
+  width: 85%;
+  margin: 0px auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // position: relative;
+}
+
+._leftSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+._list {
+  padding-left: 4rem;
+  display: flex;
+  list-style: none;
+  font-family: $helveticaNowText;
+  font-size: 0.875rem;
+
+  & li {
+    color: $charade;
+    cursor: pointer;
+  }
+}
+
+._paddingLeft {
+  padding-left: 3rem;
+}
+
+._signUp {
+  color: $easternBlue;
+  font-family: $helveticaNowText;
+  font-size: 0.875rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+._signInBtn {
+  background-color: $easternBlue;
+  font-family: $helveticaNowText;
+  color: $white;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+._products {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+._icon {
+  margin-left: 0.5rem;
+}

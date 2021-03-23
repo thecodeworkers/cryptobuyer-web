@@ -13,7 +13,6 @@ const Home = () => {
         <title>CryptoBuyer</title>
       </Head>
       <Navbar />
-      <p>Hola </p>
     </div>
   )
 }
