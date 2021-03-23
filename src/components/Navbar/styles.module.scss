@@ -1,13 +1,19 @@
 @import '../../../public/styles/index.scss';
 
+._parent {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 ._main {
   width: 85%;
   margin: 0px auto;
-  height: 70px;
+  padding: 1.5rem 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // position: relative;
 }
 
 ._leftSide {
@@ -37,7 +43,7 @@
   color: $easternBlue;
   font-family: $helveticaNowText;
   font-size: 0.875rem;
-  margin-right: 1rem;
+  margin-right: 1.2rem;
   cursor: pointer;
 }
 

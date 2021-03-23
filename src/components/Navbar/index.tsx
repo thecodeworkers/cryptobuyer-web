@@ -4,34 +4,37 @@ import { Dropdown } from '../';
 
 const Navbar = () => {
 
-  const [ show, setShow ] = useState(false)
+  const [show, setShow] = useState(false)
 
   return (
-    <div className={styles._main}>
-      <div className={styles._leftSide}>
-        <div>
-          <img src='images/logos/cryptobuyer-logo.svg'></img>
-        </div>
-        <div>
-          <ul className={styles._list}>
-            <li className={styles._products} onClick={() => setShow(!show)}> Productos
-          <Dropdown show={show} />
-              <img className={styles._icon} src='images/icons/down-arrow.svg' />
-            </li>
-            <li className={styles._paddingLeft}> Sobre Nosotros </li>
-            <li className={styles._paddingLeft}> Blog </li>
-          </ul>
-        </div>
-      </div>
+    <div className={styles._parent}>
+      <div className={styles._main}>
+        <div className={styles._leftSide}>
+          <div>
+            <img src='images/logos/cryptobuyer-logo.svg'></img>
+          </div>
+          <div>
+            <ul className={styles._list}>
+              <li className={styles._products}>
+                <span onClick={() => setShow(show => !show)} className={styles._products}> Productos <img className={styles._icon} src='images/icons/down-arrow.svg' /></span>
+                <Dropdown show={show} />
 
-      <div>
-        <a className={styles._signUp}>
-          Registrarse
-      </a>
+              </li>
+              <li className={styles._paddingLeft}> Sobre Nosotros </li>
+              <li className={styles._paddingLeft}> Blog </li>
+            </ul>
+          </div>
+        </div>
 
-        <button className={styles._signInBtn}>
-          Iniciar sesión
-      </button>
+        <div>
+          <a className={styles._signUp}>
+            Registrarse
+          </a>
+
+          <button className={styles._signInBtn}>
+            Iniciar sesión
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -13,6 +13,9 @@ const Home = () => {
         <title>CryptoBuyer</title>
       </Head>
       <Navbar />
+      <div style={{backgroundColor: '#EFEFEF', width: '100%', height: '100vh', margin: 0, padding: 0}}>
+
+      </div>
     </div>
   )
 }

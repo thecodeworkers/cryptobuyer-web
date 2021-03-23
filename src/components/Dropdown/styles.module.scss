@@ -1,19 +1,64 @@
 @import '../../../public/styles/index.scss';
 
 ._main {
-  padding: 10px;
-  width: 300px;
-  height: 350px;
-  border-radius: 5px;
+  border-radius: 10px;
   position: absolute;
-  top: 3rem;
+  width: 32.688rem;
+  top: 2.5rem;
   left: -35%;
   background-color: $white;
-  -webkit-box-shadow: 0px 0px 25px -13px rgba(112,112,112,1);
-  -moz-box-shadow: 0px 0px 25px -13px rgba(112,112,112,1);
-  box-shadow: 0px 0px 25px -13px rgba(112,112,112,1);
+  box-shadow: 5px 5px 20px $blackRussian;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 ._hidden {
   display: none;
+}
+
+._line {
+  width: 1px;
+  background-color: $doveGray;
+  height: auto;
+  margin: 0.625rem;
+}
+
+._leftSide {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.625rem ;
+}
+
+._rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+  padding: 0.625rem 1.25rem;
+}
+
+._greenTitle {
+  color: $easternBlue;
+  margin-bottom: 1.5rem;
+}
+
+._link {
+  margin-bottom: 1rem;
+  margin-left: 0.4rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & h4 {
+    font-size: 0.9rem;
+  }
+  & p {
+    font-size: 0.875rem;
+    width: 80%;
+    color: $doveGray;
+  }
 }
