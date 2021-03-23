@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className={styles._main}>
         <div className={styles._leftSide}>
           <div>
-            <img src='images/logos/cryptobuyer-logo.svg'></img>
+            <img src='images/logos/cryptobuyer-logo-dark.svg'></img>
           </div>
           <div>
             <ul className={styles._list}>
