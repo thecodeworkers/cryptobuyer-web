@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { wrapper } from '../store'
-import { Navbar } from '../components'
+import { Navbar, Footer, FirstBanner, Metrics, GeneralButton } from '../components'
 import { getResources } from '../store/actions'
 import Head from 'next/head'
 
@@ -14,9 +14,10 @@ const Home = () => {
         <title>CryptoBuyer</title>
       </Head>
       <Navbar />
-      <div style={{backgroundColor: '#EFEFEF', width: '100%', height: '100vh', margin: 0, padding: 0}}>
+      <FirstBanner data={home?.mainBanner} />
+      <Metrics data={home?.counter} />
 
-      </div>
+      <GeneralButton height={3.125} backgroundColor='#212121' textColor='#ffffff' text='click!' />
     </div>
   )
 }
