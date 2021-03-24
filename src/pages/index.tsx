@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import { wrapper } from '../store'
 import { Navbar } from '../components'
+import { getResources } from '../store/actions'
 import Head from 'next/head'
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
 }
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  ({ store }) => { }
+  ({ store }) => store.dispatch(getResources())
 )
 
 export default Home
