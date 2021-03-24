@@ -7,15 +7,12 @@ import Head from 'next/head'
 const Home = () => {
 
   const { page: { homePage: { home } } } = useSelector(state => state)
-console.log(home);
-
 
   return (
     <div>
       <Head>
         <title>CryptoBuyer</title>
       </Head>
-
       <SecondBanner section={home?.publicityBanner} content={home?.secondBanner} />
     </div>
   )
