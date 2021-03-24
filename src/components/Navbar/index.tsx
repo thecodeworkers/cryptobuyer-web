@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './styles.module.scss';
 import { Dropdown } from '../';
+import { Logo } from '../../../public/images/logos'
 
 const Navbar = () => {
 
@@ -11,7 +12,7 @@ const Navbar = () => {
       <div className={styles._main}>
         <div className={styles._leftSide}>
           <div>
-            <img src='images/logos/cryptobuyer-logo.svg'></img>
+           <Logo color={'#262833'} />
           </div>
           <div>
             <ul className={styles._list}>
