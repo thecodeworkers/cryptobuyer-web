@@ -1,0 +1,100 @@
+@import './index.scss';
+
+._secondBanner {
+  width: 100%;
+  height: auto;
+  background-color: $white;
+  padding: 100px 0px;
+  ._teamContainer {
+    width: calc(100% - 14.6%);
+    padding: 0px 7.3%;
+    height: 153px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 50px;
+    ._teamItem {
+      width: 150px;
+      text-align: center;
+      margin: 0px 10px;
+      img {
+        margin-bottom: 5px;
+      }
+      ._name {
+        font-family: $helveticaNowText;
+        font-size: 14px;
+        margin: 5px 0px;
+      }
+      ._title {
+        font-family: $helveticaNowTextBold;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+  }
+  ._textContainer {
+    width: calc(100% - 14.6%);
+    display: flex;
+    padding: 0px 7.3%;
+    ._leftSide {
+      width: calc(52.7% - 7.2%);
+      padding-right: 7.2%;
+      ._textContent {
+        margin-top: 1vw;
+        h2 {
+          font-family: $helveticaNowTextBold;
+          font-size: 3.45vw;
+        }
+        p {
+          font-family: $helveticaNowText;
+          font-size: 1.04vw;
+        }
+        &:nth-child(2) {
+          margin-top: 4vw;
+          margin-bottom: 1vw;
+        }
+      }
+    }
+    ._line {
+      width: 5px;
+      background: $charade;
+    }
+    ._rightSide {
+      width: calc((48% - 4.65%) - 5px);
+      padding-left: 4.65%;
+      ._textContent {
+        margin-top: 1vw;
+        h2 {
+          font-family: $helveticaNowTextBold;
+          font-size: 3.45vw;
+        }
+        p {
+          width: 58%;
+          font-family: $helveticaNowText;
+          font-size: 1.04vw;
+        }
+      }
+      ._investors {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 3vw;
+        height: 16vw;
+        flex-direction: column;
+        overflow-x: hidden;
+        img {
+          height: auto;
+          width: 17vw;
+        }
+        ._investBox{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
