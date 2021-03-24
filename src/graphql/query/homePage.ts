@@ -1,7 +1,7 @@
 import { homeId } from '../../utils/pageIds'
 
 const home = `
-  page(id: "${homeId}") {
+  homePage:page(id: "${homeId}") {
     home {
       allies {
         image {
