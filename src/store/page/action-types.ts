@@ -1,1 +1,1 @@
-export const GET_HOME_PAGE = 'GET_HOME_PAGE'
+export const GET_PAGES = 'GET_PAGES'
