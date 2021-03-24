@@ -66,14 +66,14 @@
 ._speechText{
   color: $white;
   font-family: $helveticaNowTextBold;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   margin-bottom: 0.5rem;
 }
 
 ._speech{
   color: $white;
   font-family: $helveticaNowTextBold;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   width: 95%;
 }
 
@@ -97,7 +97,7 @@
 ._copyrightText{
   color: $white;
   font-family: $helveticaNowTextBold;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 
 @keyframes heartbeat
@@ -131,7 +131,7 @@
 ._heart{
   color: $white;
   font-family: $helveticaNowTextBold;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   margin-right: 0.3rem;
   margin-left: 0.3rem;
   animation: heartbeat 1s ease infinite;
