@@ -15,25 +15,25 @@ const Footer = () => {
         <div className={styles._content}>
           <div className={styles._linksContainer}>
             <div className={styles._links}>
-              <a className={styles._link}>Pro</a>
+              <a className={styles._linkBold}>Pro</a>
               <a className={styles._link}>Go to</a>
               <a className={styles._link}>Beneficios</a>
               <a className={styles._link}>Servicios</a>
             </div>
             <div className={styles._links}>
-              <a className={styles._link}>Pay</a>
+              <a className={styles._linkBold}>Pay</a>
               <a className={styles._link}>Comienza</a>
               <a className={styles._link}>Beneficios</a>
               <a className={styles._link}>Servicio</a>
             </div>
             <div className={styles._links}>
-              <a className={styles._link}>ATM</a>
+              <a className={styles._linkBold}>ATM</a>
               <a className={styles._link}>Qué es ATM</a>
               <a className={styles._link}>Beneficios</a>
               <a className={styles._link}>Noticias</a>
             </div>
             <div className={styles._links}>
-              <a className={styles._link}>Blog</a>
+              <a className={styles._linkBold}>Blog</a>
               <a className={styles._link}>Destacados</a>
               <a className={styles._link}>Noticias</a>
               <p className={styles._link}></p>
@@ -73,7 +73,7 @@ const Footer = () => {
 
         </div>
         <div className={styles._copyright}>
-          <p className={styles._copyrightText}>© 2021, hecho con  por Cryptobuyer</p>
+          <p className={styles._copyrightText}>© 2021, hecho con</p>
           <span className={styles._heart}>&hearts;</span>
           <p className={styles._copyrightText}>por Cryptobuyer</p>
         </div>
