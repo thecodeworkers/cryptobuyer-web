@@ -37,15 +37,18 @@
 
 ._link{
   color: $white;
-  font-family: $helveticaNowTextBold;
-  font-size: 0.7rem;
+  font-family: $openSans;
+  font-size: 0.65rem;
   margin-bottom: 1.5rem;
   margin-right: 3rem;
 }
 
-._linkFinal{
-  display: flex;
-  flex-direction: column;
+._linkBold{
+  color: $white;
+  font-family: $openSansBold;
+  font-size: 0.7rem;
+  margin-bottom: 1.5rem;
+  margin-right: 3rem;
 }
 
 ._speechMain{
@@ -65,15 +68,15 @@
 
 ._speechText{
   color: $white;
-  font-family: $helveticaNowTextBold;
+  font-family: $openSansBold;
   font-size: 0.6rem;
   margin-bottom: 0.5rem;
 }
 
 ._speech{
   color: $white;
-  font-family: $helveticaNowTextBold;
-  font-size: 0.6rem;
+  font-family: $openSans;
+  font-size: 0.55rem;
   width: 95%;
 }
 
@@ -96,8 +99,8 @@
 
 ._copyrightText{
   color: $white;
-  font-family: $helveticaNowTextBold;
-  font-size: 0.6rem;
+  font-family: $openSansBold;
+  font-size: 0.65rem;
 }
 
 @keyframes heartbeat
@@ -130,8 +133,8 @@
 
 ._heart{
   color: $white;
-  font-family: $helveticaNowTextBold;
-  font-size: 0.6rem;
+  font-family: $openSansBold;
+  font-size: 0.65rem;
   margin-right: 0.3rem;
   margin-left: 0.3rem;
   animation: heartbeat 1s ease infinite;

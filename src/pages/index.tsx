@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { wrapper } from '../store'
-import { Navbar } from '../components'
+import { Navbar, Footer } from '../components'
 import { getResources } from '../store/actions'
 import Head from 'next/head'
 
@@ -19,6 +19,7 @@ const Home = () => {
       <div style={{backgroundColor: '#EFEFEF', width: '100%', height: '100vh', margin: 0, padding: 0}}>
 
       </div>
+      <Footer />
     </div>
   )
 }
