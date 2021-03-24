@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
         <div className={styles._copyright}>
           <p className={styles._copyrightText}>© 2021, hecho con</p>
-          <span className={styles._heart}>&hearts;</span>
+          <img src={'images/icons/heart.svg'} className={styles._heart}></img>
           <p className={styles._copyrightText}>por Cryptobuyer</p>
         </div>
       </div>
