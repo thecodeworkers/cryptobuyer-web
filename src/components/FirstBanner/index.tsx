@@ -1,7 +1,6 @@
 import styles from './styles.module.scss';
 
 const FirstBanner = ({data}) => {
-
   return (
     <>
     <div className='_main'>
@@ -9,7 +8,6 @@ const FirstBanner = ({data}) => {
         <div className={styles._textParent}>
           <h1 className={styles._title}> { data.title } </h1>
           <p className={styles._subtitle} > { data.subtitle } </p>
-
           <button className={styles._button}> {data?.button?.title} </button>
         </div>
       </div>
