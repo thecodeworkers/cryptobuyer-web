@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 import React from 'react';
-
+import { Logo } from '../../../public/images/logos'
 
 const Footer = () => {
 
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles._footer}>
 
         <div className={styles._logoMain} >
-          <img src='images/logos/cryptobuyer-logo-light.svg' width='200px' />
+        <Logo color='#fff' />
         </div>
 
         <div className={styles._content}>
