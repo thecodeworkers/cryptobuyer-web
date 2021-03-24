@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className={styles._main}>
         <div className={styles._leftSide}>
           <div>
-           <Logo color={'#262833'} />
+           <Logo color='#262833' />
           </div>
           <div>
             <ul className={styles._list}>
