@@ -8,26 +8,27 @@
   ._teamContainer {
     width: calc(100% - 14.6%);
     padding: 0px 7.3%;
-    height: 153px;
+    height: 8vw;
     display: flex;
     overflow: hidden;
-    margin-bottom: 50px;
     ._teamItem {
       width: 150px;
       text-align: center;
       margin: 0px 10px;
       img {
-        margin-bottom: 5px;
+        margin-bottom: 0.1vw;
+        width: 5.2vw;
+        height: 5.2vw;
       }
       ._name {
         font-family: $helveticaNowText;
-        font-size: 14px;
-        margin: 5px 0px;
+        font-size: 0.74vw;
+        margin: 0.2vw 0px;
       }
       ._title {
         font-family: $helveticaNowTextBold;
-        font-size: 14px;
-        margin-top: 5px;
+        font-size: 0.74vw;
+        margin-top: 0.2vw;
       }
     }
   }
@@ -35,6 +36,7 @@
     width: calc(100% - 14.6%);
     display: flex;
     padding: 0px 7.3%;
+    margin-top: 5vw;
     ._leftSide {
       width: calc(52.7% - 7.2%);
       padding-right: 7.2%;
