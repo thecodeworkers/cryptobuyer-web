@@ -26,8 +26,6 @@ const ThirdBanner = ({ data }) => (
       }
     `}</style>
   </>
-
 )
 
-
-export default ThirdBanner;
+export default ThirdBanner
