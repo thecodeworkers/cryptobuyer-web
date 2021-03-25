@@ -10,7 +10,7 @@ const ThirdBanner = ({ data }) => (
            <p className={styles._subtitle}> { data?.subtitle } </p>
 
            <div className={styles._buttonParent}>
-              <GeneralButton height={3} backgroundColor='#212121' textColor='white' text={data?.button?.title}/>
+              <GeneralButton height={3} backgroundColor='#262833' textColor='#fff' text={data?.button?.title}/>
            </div>
         </div>
       </div>
