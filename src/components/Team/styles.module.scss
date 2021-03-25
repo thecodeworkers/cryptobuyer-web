@@ -40,7 +40,7 @@
       width: calc(52.7% - 7.2%);
       padding-right: 7.2%;
       ._textContent {
-        margin-top: 1vw;
+        margin-top: 1rem;
         h2 {
           font-family: $helveticaNowTextBold;
           font-size: 4rem;
@@ -50,8 +50,8 @@
           font-size: 1.2rem;
         }
         &:nth-child(2) {
-          margin-top: 4vw;
-          margin-bottom: 1vw;
+          margin-top: 4rem;
+          margin-bottom: 1rem;
         }
       }
     }
@@ -63,7 +63,7 @@
       width: calc((48% - 4.65%) - 5px);
       padding-left: 4.65%;
       ._textContent {
-        margin-top: 1vw;
+        margin-top: 1rem;
         h2 {
           font-family: $helveticaNowTextBold;
           font-size: 4rem;
