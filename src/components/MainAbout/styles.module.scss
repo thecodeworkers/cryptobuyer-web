@@ -1,0 +1,35 @@
+@import '../../../public/styles/index.scss';
+
+._bannerContainer {
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+    ._mainTitle {
+        padding-bottom: 3%;
+    }
+
+    ._mainText {
+        color: white;
+        padding: 0px 7.3%;
+        align-self: center;
+        width: 35%;
+    }
+}
+
+._subtitleContainer {
+    height: 30vh;
+    background-color: $lightGray;
+    padding: 0px 7.3%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    ._subtitleText {
+        text-align: center;
+        width: 100%;
+        padding-top: 7vh;
+    }
+}

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { Navbar, Team } from '../components'
+import { Navbar, Team, MainAbout } from '../components'
 import Head from 'next/head'
 
 const AboutUs = () => {
@@ -12,12 +12,10 @@ const AboutUs = () => {
         <title>CryptoBuyer - Quienes Somos</title>
       </Head>
       <Navbar />
-      <div style={{ backgroundColor: '#EFEFEF', width: '100%', height: '100vh', margin: 0, padding: 0 }}>
-        <div style={{ height: '100px' }}>
-
-        </div>
+      {/* <div style={{ backgroundColor: '#EFEFEF', width: '100%', height: '100vh', margin: 0, padding: 0 }}> */}
+        <MainAbout data={about} />
         <Team data={about?.secondBanner} />
-      </div>
+      {/* </div> */}
     </div>
   )
 }
