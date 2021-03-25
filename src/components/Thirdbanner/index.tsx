@@ -6,12 +6,12 @@ const ThirdBanner = ({ data }) => (
     <div className='_main'>
       <div className={styles._content}>
         <div className={styles._textParent}>
-           <h1 className={styles._title}> { data?.title } </h1>
-           <p className={styles._subtitle}> { data?.subtitle } </p>
+          <h1 className={styles._title}> {data?.title} </h1>
+          <p className={styles._subtitle}> {data?.subtitle} </p>
 
-           <div className={styles._buttonParent}>
-              <GeneralButton height={3} backgroundColor='#262833' textColor='#fff' text={data?.button?.title}/>
-           </div>
+          <div className={styles._buttonParent}>
+            <GeneralButton height={3} backgroundColor='#262833' textColor='#fff' text={data?.button?.title} />
+          </div>
         </div>
       </div>
     </div>

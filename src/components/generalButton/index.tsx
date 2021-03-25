@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { Button } from './type'
 
-const generalButton :FC<Button>  = ({ height, text, backgroundColor, textColor, method}) => (
+const generalButton: FC<Button> = ({ height, text, backgroundColor, textColor, method }) => (
   <>
-    <button className='_button' onClick={method ? method : null}> { text } </button>
+    <button className='_button' onClick={method ? method : null}> {text} </button>
     <style jsx>{`
     ._button{
       width: 100%;

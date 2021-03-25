@@ -30,7 +30,6 @@ const SecondBanner = ({ section, content }) => {
       ._publicity{
         background-image: url(${section?.mediaItemUrl});
         background-size: cover;
-        background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;

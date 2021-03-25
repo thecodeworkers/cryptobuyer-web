@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles._footer}>
 
         <div className={styles._logoMain} >
-        <Logo color='#fff' />
+          <Logo color='#fff' />
         </div>
 
         <div className={styles._content}>
