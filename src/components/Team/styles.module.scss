@@ -8,27 +8,26 @@
   ._teamContainer {
     width: calc(100% - 14.6%);
     padding: 0px 7.3%;
-    height: 8vw;
     display: flex;
     overflow: hidden;
     ._teamItem {
-      width: 7.85vw;
+      width: 150px;
       text-align: center;
-      margin: 0px 0.53vw;
+      margin: 0px 0.7rem;
       img {
-        margin-bottom: 0.1vw;
-        width: 5.2vw;
-        height: 5.2vw;
+        margin-bottom: 5px;
+        width: 90px;
+        height: 90px;
       }
       ._name {
         font-family: $helveticaNowText;
-        font-size: 0.74vw;
-        margin: 0.2vw 0px;
+        font-size: 0.89rem;
+        margin: 0.5rem 0px;
       }
       ._title {
         font-family: $helveticaNowTextBold;
-        font-size: 0.74vw;
-        margin-top: 0.2vw;
+        font-size: 0.89rem;
+        margin-top: 0.5rem;
       }
     }
   }
@@ -36,7 +35,7 @@
     width: calc(100% - 14.6%);
     display: flex;
     padding: 0px 7.3%;
-    margin-top: 5vw;
+    margin-top: 5rem;
     ._leftSide {
       width: calc(52.7% - 7.2%);
       padding-right: 7.2%;
@@ -44,11 +43,11 @@
         margin-top: 1vw;
         h2 {
           font-family: $helveticaNowTextBold;
-          font-size: 3.45vw;
+          font-size: 4rem;
         }
         p {
           font-family: $helveticaNowText;
-          font-size: 1.04vw;
+          font-size: 1.2rem;
         }
         &:nth-child(2) {
           margin-top: 4vw;
@@ -67,12 +66,12 @@
         margin-top: 1vw;
         h2 {
           font-family: $helveticaNowTextBold;
-          font-size: 3.45vw;
+          font-size: 4rem;
         }
         p {
           width: 58%;
           font-family: $helveticaNowText;
-          font-size: 1.04vw;
+          font-size: 1.2rem;
         }
       }
       ._investors {
