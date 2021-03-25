@@ -1,9 +1,7 @@
 import styles from './styles.module.scss'
+import { createMarkup } from '../../utils'
 
 const MainAbout = ({ data }) => {
-    const createMarkup = (text) => {
-        return {__html: text};
-    }
 
     const scrollToNextSection = () => {
 		var i = 10;
