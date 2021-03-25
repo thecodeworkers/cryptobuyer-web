@@ -1,0 +1,101 @@
+@import '../../../public/styles/index.scss';
+
+._secondBanner {
+  width: 100%;
+  height: auto;
+  background-color: $white;
+  padding: 100px 0px;
+  ._teamContainer {
+    width: calc(100% - 14.6%);
+    padding: 0px 7.3%;
+    display: flex;
+    overflow: hidden;
+    ._teamItem {
+      width: 150px;
+      text-align: center;
+      margin: 0px 0.7rem;
+      img {
+        margin-bottom: 5px;
+        width: 90px;
+        height: 90px;
+      }
+      ._name {
+        font-family: $helveticaNowText;
+        font-size: 0.89rem;
+        margin: 0.5rem 0px;
+      }
+      ._title {
+        font-family: $helveticaNowTextBold;
+        font-size: 0.89rem;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  ._textContainer {
+    width: calc(100% - 14.6%);
+    display: flex;
+    padding: 0px 7.3%;
+    margin-top: 5rem;
+    ._leftSide {
+      width: calc(52.7% - 7.2%);
+      padding-right: 7.2%;
+      ._textContent {
+        margin-top: 1rem;
+        h2 {
+          font-family: $helveticaNowTextBold;
+          font-size: 4rem;
+        }
+        p {
+          font-family: $helveticaNowText;
+          font-size: 1.2rem;
+        }
+        &:nth-child(2) {
+          margin-top: 4rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    ._line {
+      width: 5px;
+      background: $charade;
+    }
+    ._rightSide {
+      width: calc((48% - 4.65%) - 5px);
+      padding-left: 4.65%;
+      ._textContent {
+        margin-top: 1rem;
+        h2 {
+          font-family: $helveticaNowTextBold;
+          font-size: 4rem;
+        }
+        p {
+          width: 58%;
+          font-family: $helveticaNowText;
+          font-size: 1.2rem;
+        }
+      }
+      ._investors {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 3vw;
+        height: 16vw;
+        flex-direction: column;
+        overflow-x: hidden;
+        img {
+          height: auto;
+          width: 17vw;
+        }
+        ._investBox {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
