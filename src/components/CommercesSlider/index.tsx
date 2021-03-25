@@ -6,8 +6,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const CommercesSlider = ({ section }) => {
 
-  console.log(section[0].image);
-
   const settings = {
     dots: false,
     infinite: false,
@@ -22,8 +20,8 @@ const CommercesSlider = ({ section }) => {
         {
           section.map((item, index) => {
             return (
-              <div className={styles._slider}>
-                <img src={item?.image?.mediaItemUrl} key={index} className={styles._commerce} />
+              <div className={styles._slider} key={index}>
+                <img src={item?.image?.mediaItemUrl}  className={styles._commerce} />
               </div>
             )
           })
