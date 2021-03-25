@@ -8,8 +8,6 @@ const Home = () => {
 
   const { page: { homePage: { home } } } = useSelector(state => state)
 
-console.log(home);
-
   return (
     <div>
       <Head>
