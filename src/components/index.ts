@@ -5,3 +5,4 @@ export { default as Footer } from '../components/Footer';
 export { default as Metrics } from '../components/Metrics';
 export { default as GeneralButton } from '../components/generalButton'
 export { default as SecondBanner } from './SecondBanner';
+export { default as CommercesSlider } from './CommercesSlider';
