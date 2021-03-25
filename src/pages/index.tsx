@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { wrapper } from '../store'
-import { Navbar, Footer, FirstBanner, Metrics, GeneralButton, ThirdBanner, Affiliates } from '../components'
+import { Navbar, Footer, FirstBanner, Metrics, GeneralButton, ThirdBanner, SecondBanner, CommercesSlider, Affiliates } from '../components'
 import { getResources } from '../store/actions'
 import Head from 'next/head'
 
@@ -21,6 +21,9 @@ const Home = () => {
       <ThirdBanner data={home?.thirdBanner} />
       {/* <Affiliates data={home?.allies}/> */}
       {/* <GeneralButton height={3.125} backgroundColor='#212121' textColor='#ffffff' text='click!' /> */}
+      <SecondBanner section={home?.publicityBanner} content={home?.secondBanner} />
+      <CommercesSlider section={home?.allies} />
+
     </div>
   )
 }
