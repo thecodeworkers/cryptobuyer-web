@@ -1,0 +1,30 @@
+@import '../../../public/styles/index.scss';
+
+._content {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+._textParent {
+  width: 50%;
+}
+
+._title {
+  font-family: $helveticaNowTextBold;
+  font-size: 50px;
+}
+
+._subtitle {
+  font-family: $helveticaNowText;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+._buttonParent {
+  width: 16.75rem;
+  margin-top: 1.5rem;
+}
