@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-const FirstBanner = ({data}) => {
+const FirstBanner = ({ data }) => {
   return (
     <>
     <div className='_main'>
