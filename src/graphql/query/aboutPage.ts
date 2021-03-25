@@ -12,6 +12,11 @@ const about = `
           mediaItemUrl
           slug
         }
+        coin {
+          mediaType
+          mediaItemUrl
+          slug
+        }
       }
       secondBanner {
         title1

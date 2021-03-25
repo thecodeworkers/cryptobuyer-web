@@ -13,9 +13,6 @@ const MainAbout = ({ data }) => {
 			if (i >= document.documentElement.clientHeight) clearInterval(int);
 		}, 20);
 	}
-
-    console.log(data)
-
     
     return (
     <div  style={{height: '100vh'}}>
@@ -24,11 +21,12 @@ const MainAbout = ({ data }) => {
                 <h1 className={styles._mainTitle}>{data?.mainBanner?.title}</h1>
                 <div dangerouslySetInnerHTML={createMarkup(data?.mainBanner.content)}></div>
             </div>
+            <div className={styles._middleCoin} style={{ backgroundImage:`url(${data?.mainBanner?.coin?.mediaItemUrl})` }}></div>    
         </div>
         <div className={styles._subtitleContainer}>
             <h2 className={styles._subtitleText} dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></h2>
             <div>
-                <p>Conoce a nuestro <strong>equipo</strong></p>
+                <p>Conoce nuestro <strong>equipo</strong></p>
                 <img src={'images/icons/down-arrow.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
             </div>
         </div>
