@@ -11,7 +11,7 @@ const AboutUs = () => {
       <Head>
         <title>CryptoBuyer - Quienes Somos</title>
       </Head>
-      <Navbar />
+      <Navbar color='#FFFFFF' />
       <MainAbout data={about} />
       <Team data={about?.secondBanner} />
     </div>
