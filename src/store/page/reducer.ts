@@ -1,13 +1,14 @@
 import { AnyAction } from 'redux'
-import { GET_HOME_PAGE } from './action-types'
+import { GET_PAGES } from './action-types'
 
 const initialState = {
-  homePage: {}
+  homePage: {},
+  aboutPage: {}
 }
 
 const pageReducer = (state = initialState, { type, payload }: AnyAction) => {
-  switch(type) {
-    case GET_HOME_PAGE:
+  switch (type) {
+    case GET_PAGES:
       return { ...state, ...payload }
     default:
       return state
