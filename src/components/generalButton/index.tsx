@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Button } from './type'
 
+const $helveticaRegular16 = '0.875'
 const generalButton: FC<Button> = ({ height, text, backgroundColor, textColor, method }) => (
   <>
     <button className='_button' onClick={method ? method : null}> {text} </button>
@@ -13,7 +14,7 @@ const generalButton: FC<Button> = ({ height, text, backgroundColor, textColor, m
       color: ${textColor};
       border: none;
       cursor: pointer;
-      font-size: 0.8rem;
+      font-size: ${$helveticaRegular16}rem;
       border-radius: 10px;
     }
   `}</style>
