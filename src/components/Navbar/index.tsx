@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './styles.module.scss';
 import { Dropdown } from '../';
 import { Logo } from '../../../public/images/logos'
