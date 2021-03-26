@@ -15,12 +15,15 @@
 
 ._textParent {
     width: 40%;
+    margin-top: 5%;
     color: $white;
     font-family: $helveticaNowText;
     font-size: $heleticaBold64;
 
     p {
         margin-bottom: 2%;
+        font-family: $helveticaNowText;
+        font-size: $helveticaRegular20;
     }
 }
 
@@ -56,6 +59,8 @@
 
         p {
             margin-bottom: 2%;
+            font-family: $helveticaNowText;
+            font-size: $helveticaRegular20;
         }
     }
 }
@@ -90,6 +95,11 @@
         strong {
             color: $easternBlue;
         }
+    }
+
+    ._meetOurTeam p {
+        font-family: $helveticaNowText;
+        font-size: $helveticaRegular20;
     }
 }
 

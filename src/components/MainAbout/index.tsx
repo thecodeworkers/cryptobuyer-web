@@ -27,7 +27,7 @@ const MainAbout = ({ data }) => {
 
             <div className={styles._subtitleContainer}>
                 <h2 className={styles._subtitleText} dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></h2>
-                <div>
+                <div className={styles._meetOurTeam}> 
                     <p>Conoce nuestro <strong>equipo</strong></p>
                     <img src={'images/icons/down-arrow.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
                 </div>
