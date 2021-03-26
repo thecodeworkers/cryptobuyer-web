@@ -1,0 +1,142 @@
+
+@import '../../../public/styles/index.scss';
+
+._footerContainer{
+  background-color: $charade;
+  width: 100%;
+  padding: 2rem 0rem;
+  box-sizing: border-box;
+}
+
+._footer{
+  width: 85%;
+  margin: auto;
+}
+._content{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+._logoMain{
+  margin-bottom: 1.5rem;
+}
+
+._linksContainer{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+._links{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+._link{
+  color: $white;
+  font-family: $openSans;
+  font-size: $openSansRegular15;
+  margin-bottom: 1.5rem;
+  margin-right: 3rem;
+}
+
+._linkBold{
+  color: $white;
+  font-family: $openSansBold;
+  font-size: $opensansBold16;
+  margin-bottom: 1.5rem;
+  margin-right: 3rem;
+}
+
+._speechMain{
+  width: 30%;
+}
+
+._speechContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+._speechTextContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+._speechText{
+  color: $white;
+  font-family: $openSansBold;
+  font-size: $openSansBold15;
+  margin-bottom: 0.5rem;
+}
+
+._speech{
+  color: $white;
+  font-family: $openSans;
+  font-size: $openSansRegular11;
+  width: 95%;
+}
+
+._logos {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+._logo {
+  margin-right: 2rem;
+  width: 25px;
+}
+
+._copyright{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 2rem;
+}
+
+._copyrightText{
+  color: $white;
+  font-family: $openSansBold;
+  font-size: $openSansBold15;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+._heart{
+  color: $white;
+  font-family: $openSansBold;
+  font-size: $openSansBold15;
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+  animation: heartbeat 1s ease infinite;
+}
+
