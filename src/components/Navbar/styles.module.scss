@@ -63,8 +63,25 @@
   display: flex;
   align-items: center;
   position: relative;
+  // background-color: blue;
 }
 
 ._icon {
   margin-left: 0.5rem;
+}
+
+._pointParent {
+  display: block;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+._point {
+  width: 6px;
+  height: 6px;
+  background-color: $easternBlue;
+  border-radius: 50%;
 }

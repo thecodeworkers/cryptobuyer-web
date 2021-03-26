@@ -19,7 +19,9 @@ const Navbar = () => {
               <li className={styles._products}>
                 <span onClick={() => setShow(show => !show)} className={styles._products}> Productos <img className={styles._icon} src='images/icons/down-arrow.svg' /></span>
                 <Dropdown show={show} />
-
+                <div className={styles._pointParent}>
+                  <div className={styles._point}></div>
+                </div>
               </li>
               <li className={styles._paddingLeft}> Sobre Nosotros </li>
               <li className={styles._paddingLeft}> Blog </li>
