@@ -1,0 +1,51 @@
+@import '../../../public/styles/index.scss';
+
+._container{
+  height: 28.125rem;
+  background-color: $gallerySolid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._content{
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+}
+._leftContainer{
+  width: 50%;
+}
+
+._title{
+  font-size: $heleticaBold64;
+  font-family: $helveticaNowTextBold;
+  color: $charade;
+  margin-bottom: 1rem;
+}
+._subtitle{
+  font-size: $helveticaRegular24;
+  font-family: $helveticaNowText;
+  color: $charade;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+._rightContainer{
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+}
+._pointContainer{
+  position: absolute;
+  right: 0;
+  top: -95px;
+}
+
+._buttonContainer{
+  width: 220px;
+}

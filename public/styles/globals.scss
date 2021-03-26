@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* a{
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+
+@font-face {
+  font-family: "Helvetica-Now-Text";
+  src: url('../fonts/HelveticaNowText-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Helvetica-Now-Text-Bold";
+  src: url('../fonts/HelveticaNowText-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Helvetica-Now-Text-Black";
+  src: url('../fonts/HelveticaNowText-Black.ttf');
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
