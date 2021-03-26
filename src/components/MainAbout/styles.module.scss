@@ -1,5 +1,43 @@
 @import '../../../public/styles/index.scss';
 
+._main {
+    height: 100vh;
+}
+
+._content {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+._textParent {
+    width: 40%;
+    color: $white;
+    font-family: $helveticaNowText;
+    font-size: $heleticaBold64;
+
+    p {
+        margin-bottom: 2%;
+    }
+}
+
+._subtitle {
+    font-family: $helveticaNowText;
+    font-size: $helveticaRegular20;
+    color: $white;
+    font-weight: 400;
+}
+
+._mainTitle {
+    padding-bottom: 3%;
+    font-family: $helveticaNowTextBold;
+    font-size: 2.5rem;
+}
+
+
 ._bannerContainer {
     height: 70vh;
     background-position: center;
@@ -8,12 +46,7 @@
     display: flex;
     position: relative;
 
-    ._mainTitle {
-        padding-bottom: 3%;
-        font-family: $helveticaNowTextBold;
-        font-size: 2.5rem;
-    }
-
+   
     ._mainText {
         font-family: $helveticaNowText;
         color: $white;
@@ -34,7 +67,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -22vh;
+    bottom: 7vh;
     margin: auto;
 }
 
@@ -49,7 +82,7 @@
 
     ._subtitleText {
         font-family: $helveticaNowTextBold;
-        font-size: 2.5rem;
+        font-size: $heleticaBold64;
         text-align: center;
         width: 100%;
         padding-top: 7vh;

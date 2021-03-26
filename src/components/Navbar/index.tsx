@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './styles.module.scss';
 import { Dropdown } from '../';
 import { Logo } from '../../../public/images/logos'
@@ -6,8 +6,14 @@ import { Logo } from '../../../public/images/logos'
 const Navbar = () => {
 
   const [show, setShow] = useState(false)
+  const [location, setLocation] = useState('');
+
+  useEffect(() => {
+    setLocation(window.location.pathname);
+  }, [])
 
   return (
+
     <div className={styles._parent}>
       <div className={styles._main}>
         <div className={styles._leftSide}>
@@ -15,7 +21,7 @@ const Navbar = () => {
             <Logo color='#262833' />
           </div>
           <div>
-            <ul className={styles._list}>
+            <ul className={[styles._list, '_color'].join(" ")}>
               <li className={styles._products}>
                 <span onClick={() => setShow(show => !show)} className={styles._products}> Productos <img className={styles._icon} src='images/icons/down-arrow.svg' /></span>
                 <Dropdown show={show} />
@@ -37,7 +43,14 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+      <style jsx>{`
+        ._color {
+            color: ${location == '/' ? '#262833' : 'white'};
+        }
+      `}</style>
     </div>
+
+    
   )
 };
 
