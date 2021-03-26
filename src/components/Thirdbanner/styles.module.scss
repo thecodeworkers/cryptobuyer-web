@@ -15,13 +15,14 @@
 
 ._title {
   font-family: $helveticaNowTextBold;
-  font-size: 50px;
+  font-size: $heleticaBold64;
 }
 
 ._subtitle {
   font-family: $helveticaNowText;
   width: 80%;
   margin-top: 1rem;
+  font-size: $helveticaRegular24
 }
 
 ._buttonParent {

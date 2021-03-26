@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+._logoParent {
+  cursor: pointer;
+}
+
 ._leftSide {
   display: flex;
   flex-direction: row;
@@ -37,7 +41,8 @@
 }
 
 ._paddingLeft {
-  padding-left: 3rem;
+  margin-left: 3rem;
+  position: relative;
 }
 
 ._signUp {
@@ -67,4 +72,26 @@
 
 ._icon {
   margin-left: 0.5rem;
+}
+
+._pointParent {
+  display: block;
+  position: absolute;
+  top: 1.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+._point {
+  width: 6px;
+  height: 6px;
+  background-color: $easternBlue;
+  border-radius: 50%;
+}
+
+._activeColor {
+  margin-left: 3rem;
+  position: relative;
+  color: $easternBlue !important;
 }
