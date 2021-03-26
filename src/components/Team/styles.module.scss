@@ -6,8 +6,9 @@
   background-color: $white;
   padding: 100px 0px;
   ._teamContainer {
-    width: calc(100% - 14.6%);
-    padding: 0px 7.3%;
+    width: 85%;
+    padding: 0;
+    margin: 0 auto;
     display: flex;
     overflow: hidden;
     ._teamItem {
@@ -21,20 +22,20 @@
       }
       ._name {
         font-family: $helveticaNowText;
-        font-size: 0.89rem;
+        font-size: $helveticaRegular14;
         margin: 0.5rem 0px;
       }
       ._title {
         font-family: $helveticaNowTextBold;
-        font-size: 0.89rem;
+        font-size: $helveticaRegular14;
         margin-top: 0.5rem;
       }
     }
   }
   ._textContainer {
-    width: calc(100% - 14.6%);
+    width: 85%;
     display: flex;
-    padding: 0px 7.3%;
+    margin: 0 auto;
     margin-top: 5rem;
     ._leftSide {
       width: calc(52.7% - 7.2%);
@@ -43,11 +44,11 @@
         margin-top: 1rem;
         h2 {
           font-family: $helveticaNowTextBold;
-          font-size: 4rem;
+          font-size: $helveticaBold60;
         }
         p {
           font-family: $helveticaNowText;
-          font-size: 1.2rem;
+          font-size: $helveticaRegular16;
         }
         &:nth-child(2) {
           margin-top: 4rem;
@@ -66,12 +67,12 @@
         margin-top: 1rem;
         h2 {
           font-family: $helveticaNowTextBold;
-          font-size: 4rem;
+          font-size: $helveticaBold60;
         }
         p {
           width: 58%;
           font-family: $helveticaNowText;
-          font-size: 1.2rem;
+          font-size: $helveticaRegular16;
         }
       }
       ._investors {
