@@ -1,6 +1,7 @@
 import { memo, useRef } from 'react'
+import GeneralButton from '../GeneralButton'
 import styles from './styles.module.scss'
-import { GeneralButton } from '../../components'
+
 const SecondBanner = ({ section, content }) => {
 
   const publicityBannerRef = useRef();

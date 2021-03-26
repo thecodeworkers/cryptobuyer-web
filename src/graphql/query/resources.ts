@@ -1,4 +1,4 @@
-import { GraphQlClient, normalized, normalizedArray } from '../../utils';
+import { GraphQlClient, normalized, normalizedArray } from '@utils';
 import homePageQuery from './homePage'
 import aboutPageQuery from './aboutPage'
 
