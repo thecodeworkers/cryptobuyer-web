@@ -17,6 +17,11 @@
   font-family: $helveticaNowTextBold;
   font-size: 60px;
   margin-bottom: 0.5rem;
+  color: $charade;
+
+  strong {
+    color: $easternBlue;
+  }
 }
 
 ._subtitle {

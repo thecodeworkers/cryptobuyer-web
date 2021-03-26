@@ -1,4 +1,5 @@
 import styles from './styles.module.scss';
+import { createMarkup } from '../../utils'
 
 const FirstBanner = ({ data }) => {
   return (
@@ -6,7 +7,7 @@ const FirstBanner = ({ data }) => {
       <div className='_main'>
         <div className={styles._content}>
           <div className={styles._textParent}>
-            <h1 className={styles._title}> {data.title} </h1>
+            <h1 className={styles._title} dangerouslySetInnerHTML={createMarkup(data?.title)}></h1>
             <p className={styles._subtitle} > {data.subtitle} </p>
             <button className={styles._button}> {data?.button?.title} </button>
           </div>
