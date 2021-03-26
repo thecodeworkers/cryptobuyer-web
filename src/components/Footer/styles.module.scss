@@ -38,7 +38,7 @@
 ._link{
   color: $white;
   font-family: $openSans;
-  font-size: 0.65rem;
+  font-size: $openSansRegular15;
   margin-bottom: 1.5rem;
   margin-right: 3rem;
 }
@@ -46,7 +46,7 @@
 ._linkBold{
   color: $white;
   font-family: $openSansBold;
-  font-size: 0.7rem;
+  font-size: $opensansBold16;
   margin-bottom: 1.5rem;
   margin-right: 3rem;
 }
@@ -69,14 +69,14 @@
 ._speechText{
   color: $white;
   font-family: $openSansBold;
-  font-size: 0.6rem;
+  font-size: $openSansBold15;
   margin-bottom: 0.5rem;
 }
 
 ._speech{
   color: $white;
   font-family: $openSans;
-  font-size: 0.55rem;
+  font-size: $openSansRegular11;
   width: 95%;
 }
 
@@ -100,7 +100,7 @@
 ._copyrightText{
   color: $white;
   font-family: $openSansBold;
-  font-size: 0.65rem;
+  font-size: $openSansBold15;
 }
 
 @keyframes heartbeat
@@ -134,7 +134,7 @@
 ._heart{
   color: $white;
   font-family: $openSansBold;
-  font-size: 0.65rem;
+  font-size: $openSansBold15;
   margin-right: 0.3rem;
   margin-left: 0.3rem;
   animation: heartbeat 1s ease infinite;

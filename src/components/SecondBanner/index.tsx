@@ -33,7 +33,7 @@ const SecondBanner = ({ section, content }) => {
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
-        height: 450px;
+        height: 250px;
       }
     `}</style>
     </>
