@@ -1,4 +1,5 @@
 import styles from './styles.module.scss'
+import { LinkedIn } from '../../../public/images/icons'
 
 const Team = ({ data }) => (
   <div className={styles._secondBanner}>
@@ -7,6 +8,7 @@ const Team = ({ data }) => (
 
         return (
           <div className={styles._teamItem} key={index}>
+            <div className={styles._socialNetwork}>{<LinkedIn />}</div>
             <img src={value.imagen.mediaItemUrl} alt={value.imagen.slug} width='100px' height='100px' />
             <p className={styles._name} >{value.name}</p>
             <p className={styles._title} >{value.jobTitle}</p>
