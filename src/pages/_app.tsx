@@ -2,8 +2,8 @@ import { FC, useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { useStore } from 'react-redux'
-import { wrapper } from '../store'
-import '../../public/styles/globals.scss'
+import { wrapper } from '@store'
+import '@styles/globals.scss'
 import Head from 'next/head';
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {

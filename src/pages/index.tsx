@@ -1,8 +1,17 @@
 import { useSelector } from 'react-redux'
-import { wrapper } from '../store'
-import { Navbar, Footer, FirstBanner, Metrics, GeneralButton, ThirdBanner, SecondBanner, CommercesSlider, Partnership } from '../components'
-import { getResources } from '../store/actions'
+import { wrapper } from '@store'
+import { getResources } from '@store/actions'
 import Head from 'next/head'
+import {
+  Navbar,
+  Footer, FirstBanner,
+  Metrics,
+  GeneralButton,
+  ThirdBanner,
+  SecondBanner,
+  CommercesSlider,
+  Partnership
+ } from '@components'
 
 const Home = () => {
 
