@@ -1,5 +1,6 @@
-import styles from './styles.module.scss';
+import styles from './styles.module.scss'
 import { createMarkup } from '../../utils'
+import { GeneralButton } from '../../components'
 
 const FirstBanner = ({ data }) => {
   return (
@@ -8,8 +9,11 @@ const FirstBanner = ({ data }) => {
         <div className={styles._content}>
           <div className={styles._textParent}>
             <h1 className={styles._title} dangerouslySetInnerHTML={createMarkup(data?.title)}></h1>
-            <p className={styles._subtitle} > {data.subtitle} </p>
-            <button className={styles._button}> {data?.button?.title} </button>
+            <p className={styles._subtitle} > {data?.subtitle} </p>
+
+            <div className={styles._buttonContainer}>
+              <GeneralButton height={3} backgroundColor='#F7C906' textColor='#262833' text={data?.button?.title} />
+            </div>
           </div>
         </div>
       </div>
