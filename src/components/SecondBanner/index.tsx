@@ -1,6 +1,6 @@
 import { memo, useRef } from 'react'
 import styles from './styles.module.scss'
-import { GeneralButton } from '../'
+import { GeneralButton } from '../../components'
 const SecondBanner = ({ section, content }) => {
 
   const publicityBannerRef = useRef();
@@ -33,7 +33,7 @@ const SecondBanner = ({ section, content }) => {
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
-        height: 20vw;
+        height: 450px;
       }
     `}</style>
     </>
