@@ -6,7 +6,6 @@ import {
   Navbar,
   Footer, FirstBanner,
   Metrics,
-  GeneralButton,
   ThirdBanner,
   SecondBanner,
   CommercesSlider,
