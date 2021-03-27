@@ -1,6 +1,11 @@
 @import '../../../public/styles/index.scss';
 
-._container{
+._main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+._firstContainer{
   height: 28.125rem;
   background-color: $gallerySolid;
   display: flex;
@@ -8,7 +13,7 @@
   align-items: center;
 }
 
-._content{
+._firstContent{
   width: 85%;
   height: 100%;
   display: flex;
@@ -16,21 +21,19 @@
   align-items: center;
   margin: 0px auto;
 }
-._leftContainer{
-
+._firstLeftContainer{
   width: 50%;
   height: 100%;
   position: relative;
-
 }
 
-._title{
+._firstTitle{
   font-size: $heleticaBold64;
   font-family: $helveticaNowTextBold;
   color: $charade;
   margin-bottom: 1rem;
 }
-._subtitle{
+._firstSubtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $charade;
@@ -38,15 +41,64 @@
   margin-bottom: 1rem;
 }
 
-._rightContainer{
-  width: 50%;
+._firstRightContainer{
+  width: 40%;
 }
-._pointContainer{
+._cardsContainer{
   position: absolute;
-  right: 0;
-  top: -95px;
+  left: 0;
+  top: -145px;
 }
 
-._buttonContainer{
+._firstButtonContainer{
+  width: 220px;
+}
+
+._secondContainer{
+  height: 28.125rem;
+  background-color: $gallerySolid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._secondContent{
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+}
+._secondLeftContainer{
+  width: 50%;
+}
+
+._secondTitle{
+  font-size: $heleticaBold64;
+  font-family: $helveticaNowTextBold;
+  color: $charade;
+  margin-bottom: 1rem;
+}
+._secondSubtitle{
+  font-size: $helveticaRegular24;
+  font-family: $helveticaNowText;
+  color: $charade;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+._secondRightContainer{
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+._atmContainer{
+  position: absolute;
+  right: 0;
+  bottom : -100px;
+}
+
+._secondButtonContainer{
   width: 220px;
 }
