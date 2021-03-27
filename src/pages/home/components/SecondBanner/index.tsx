@@ -1,5 +1,5 @@
 import { memo, useRef } from 'react'
-import GeneralButton from '../GeneralButton'
+import { GeneralButton } from '@components'
 import styles from './styles.module.scss'
 
 const SecondBanner = ({ section, content }) => {

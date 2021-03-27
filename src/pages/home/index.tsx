@@ -2,15 +2,14 @@ import { useSelector } from 'react-redux'
 import { wrapper } from '@store'
 import { getResources } from '@store/actions'
 import Head from 'next/head'
+import { Navbar, Footer } from '@components'
 import {
-  Navbar,
-  Footer, FirstBanner,
+  FirstBanner,
   Metrics,
   ThirdBanner,
   SecondBanner,
   CommercesSlider,
-  Partnership
- } from '@components'
+  Partnership} from './components'
 
 const Home = () => {
 
