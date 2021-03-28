@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { Navbar, Team, MainAbout } from '../components'
+import { Navbar, Team, MainAbout } from '@components'
 import Head from 'next/head'
 
 const AboutUs = () => {

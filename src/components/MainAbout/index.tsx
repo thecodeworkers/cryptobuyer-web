@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import { createMarkup } from '../../utils'
+import { createMarkup } from '@utils'
 
 const MainAbout = ({ data }) => {
 
@@ -11,7 +11,7 @@ const MainAbout = ({ data }) => {
 			if (i >= document.documentElement.clientHeight) clearInterval(int);
 		}, 20);
 	}
-    
+
     return (
         <>
         <div className={styles.main}>
@@ -22,12 +22,12 @@ const MainAbout = ({ data }) => {
                         <p className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.mainBanner.content)}></p>
                     </div>
                 </div>
-                <div className={styles._middleCoin} style={{ backgroundImage:`url(${data?.mainBanner?.coin?.mediaItemUrl})` }}></div> 
+                <div className={styles._middleCoin} style={{ backgroundImage:`url(${data?.mainBanner?.coin?.mediaItemUrl})` }}></div>
             </div>
 
             <div className={styles._subtitleContainer}>
                 <h2 className={styles._subtitleText} dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></h2>
-                <div className={styles._meetOurTeam}> 
+                <div className={styles._meetOurTeam}>
                     <p>Conoce nuestro <strong>equipo</strong></p>
                     <img src={'images/icons/down-arrow.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
                 </div>

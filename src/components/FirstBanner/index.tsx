@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
-import { createMarkup } from '../../utils'
-import { GeneralButton } from '../../components'
+import { createMarkup } from '@utils'
+import GeneralButton from '../GeneralButton'
 
 const FirstBanner = ({ data }) => {
   return (

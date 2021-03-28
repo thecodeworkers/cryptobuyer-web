@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import { LinkedIn } from '../../../public/images/icons'
+import { LinkedIn } from '@images/icons'
 
 const Team = ({ data }) => (
   <div className={styles._secondBanner}>
