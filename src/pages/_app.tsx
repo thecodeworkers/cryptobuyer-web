@@ -7,7 +7,7 @@ import '@styles/globals.scss'
 import Head from 'next/head';
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
-  const store = useStore()
+  const store: any = useStore()
   const router = useRouter()
 
   useEffect(() => {
