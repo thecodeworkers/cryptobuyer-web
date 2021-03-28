@@ -2,8 +2,7 @@ import { FC } from 'react'
 import { Button } from './type'
 
 const $helveticaRegular16 = '0.875'
-
-const GeneralButton: FC<Button> = ({ height, text, backgroundColor, textColor, method }) => (
+const generalButton: FC<Button> = ({ height, text, backgroundColor, textColor, method }) => (
   <>
     <button className='_button' onClick={method ? method : null}> {text} </button>
     <style jsx>{`
@@ -22,4 +21,4 @@ const GeneralButton: FC<Button> = ({ height, text, backgroundColor, textColor, m
   </>
 );
 
-export default GeneralButton
+export default generalButton

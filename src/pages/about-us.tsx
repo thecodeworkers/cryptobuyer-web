@@ -1,10 +1,21 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
-import { AboutUs } from '@components'
+import { Navbar, Team, MainAbout } from '../components'
+import Head from 'next/head'
 
-const AboutUsPage = () => {
-  const { page: { aboutPage: { about } } } = useSelector((state: any) => state)
-  return <AboutUs content={about} />
+const AboutUs = () => {
+
+  const { page: { aboutPage: { about } } } = useSelector(state => state)
+
+  return (
+    <div>
+      <Head>
+        <title>CryptoBuyer - Quienes Somos</title>
+      </Head>
+      <Navbar color='#FFFFFF' />
+      <MainAbout data={about} />
+      <Team data={about?.secondBanner} />
+    </div>
+  )
 }
 
-export default AboutUsPage
+export default AboutUs

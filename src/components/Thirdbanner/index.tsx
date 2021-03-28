@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import { GeneralButton } from '@components'
+import { GeneralButton } from '../../components'
 
 const ThirdBanner = ({ data }) => (
   <>
