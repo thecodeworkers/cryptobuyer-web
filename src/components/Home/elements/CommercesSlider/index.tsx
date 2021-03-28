@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const CommercesSlider = ({ section }) => {
+const CommercesSlider = ({ data }) => {
 
   const settings = {
     dots: false,
@@ -18,7 +18,7 @@ const CommercesSlider = ({ section }) => {
     <div className={styles._sliderContainer}>
       <Slider {...settings}>
         {
-          section.map((item, index) => {
+          data.map((item, index) => {
             return (
               <div className={styles._slider} key={index}>
                 <img src={item?.image?.mediaItemUrl}  className={styles._commerce} />
