@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
-import { createMarkup } from '../../utils'
-import { GeneralButton } from '../../components'
+import { createMarkup } from '@utils'
+import { GeneralButton } from '@components'
 
 const FirstBanner = ({ data }) => {
   return (
@@ -12,7 +12,12 @@ const FirstBanner = ({ data }) => {
             <p className={styles._subtitle} > {data?.subtitle} </p>
 
             <div className={styles._buttonContainer}>
-              <GeneralButton height={3} backgroundColor='#F7C906' textColor='#262833' text={data?.button?.title} />
+              <GeneralButton
+                height={3}
+                backgroundColor='#F7C906'
+                textColor='#262833'
+                text={data?.button?.title}
+              />
             </div>
           </div>
         </div>

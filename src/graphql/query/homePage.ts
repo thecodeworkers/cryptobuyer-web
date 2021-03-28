@@ -1,4 +1,4 @@
-import { homeId } from '../../utils/pageIds'
+import { homeId } from '@utils/pageIds'
 
 const home = `
   homePage:page(id: "${homeId}") {
