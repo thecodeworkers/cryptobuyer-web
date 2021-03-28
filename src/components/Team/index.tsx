@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
-import { LinkedIn } from '@images/icons'
+import { LinkedIn } from '../../../public/images/icons'
 
-const SecondBanner = ({ data }) => (
+const Team = ({ data }) => (
   <div className={styles._secondBanner}>
     <div className={styles._teamContainer}>
       {data?.team?.map((value, index) => {
@@ -49,4 +49,4 @@ const SecondBanner = ({ data }) => (
 )
 
 
-export default SecondBanner;
+export default Team;

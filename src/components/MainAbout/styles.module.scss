@@ -1,4 +1,4 @@
-@import '../../../../../public/styles/index.scss';
+@import '../../../public/styles/index.scss';
 
 ._main {
     height: 100vh;
@@ -49,7 +49,7 @@
     display: flex;
     position: relative;
 
-
+   
     ._mainText {
         font-family: $helveticaNowText;
         color: $white;
