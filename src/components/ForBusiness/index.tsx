@@ -11,6 +11,17 @@ const AboutUs = ({ content }) => {
         <title>CryptoBuyer - Quienes Somos</title>
       </Head>
       <Navbar color='#FFFFFF' />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <SecondBanner data={content?.secondBanner} />
     </div>
   )

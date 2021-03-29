@@ -12,16 +12,13 @@ const SecondBanner = ({ data }) => {
       <div className={styles._firstContainer} ref={publicityBannerRef}>
         <div className={styles._firstContent}>
           <div className={styles._firstLeftContainer}>
-          <div className={styles._cardsContainer}>
+          <div className={styles._phoneContainer}>
               <img src='images/resource/phone.svg'></img>
             </div>
           </div>
           <div className={styles._firstRightContainer}>
-            <p className={styles._firstTitle}>Una tarjeta,varias monedas</p>
-            <p className={styles._firstSubtitle}>Recarga con tus criptomonedas y úsala en cualquier parte del mundo</p>
-            <div className={styles._firstButtonContainer}>
-              <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#fff' text='Solicitar mi Visa' />
-            </div>
+            <p className={styles._firstTitle}>Acepta <b>Bitcoin</b> en tu negocio</p>
+            <p className={styles._firstSubtitle}>Nuestra plataforma no tiene tarifas de afiliación o mantenimiento para tu comercio.</p>
           </div>
         </div>
       </div>
@@ -29,10 +26,10 @@ const SecondBanner = ({ data }) => {
       <div className={styles._secondContainer} ref={publicityBannerRef}>
         <div className={styles._secondContent}>
           <div className={styles._secondLeftContainer}>
-          <p className={styles._secondTitle}>Monedas digitales al alcance de tus manos</p>
-            <p className={styles._secondSubtitle}>Compra Bitcoin, Dash y Litecoin en efectivo y en segundos gracias a los primeros cajeros automáticos de criptomonedas del mundo.</p>
+          <p className={styles._secondTitle}>Más soluciones, más crecimiento</p>
+            <p className={styles._secondSubtitle}>Habilita un cajero de criptos en tu negocio y haz crecer tu clientela</p>
             <div className={styles._secondButtonContainer}>
-              <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text='¿Dónde están ubicados?' />
+              <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text='Más información' />
             </div>
           </div>
           <div className={styles._secondRightContainer}>
