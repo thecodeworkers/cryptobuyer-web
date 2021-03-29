@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { wrapper } from '@store'
-import { getResources } from '@store/actions'
+import { getPages } from '@store/actions'
 import { Home } from '@components'
 
 const HomePage = () => {
@@ -10,7 +10,7 @@ const HomePage = () => {
 }
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  ({ store }) => store.dispatch(getResources())
+  ({ store }) => store.dispatch(getPages('homePage'))
 )
 
 export default HomePage

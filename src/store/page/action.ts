@@ -1,3 +1,5 @@
+
+import { resource } from '@graphql/query';
 import { actionObject } from '@utils'
 import { GET_PAGES } from '../page/action-types'
 
@@ -29,11 +31,16 @@ const reduceArray = (quantity, array) => {
 
 export const getPages: any = (resources) => async dispatch => {
 
-  const { homePage, aboutPage } = resources
+  const page: any = await resource(resources)
 
-  let about = { ...{ about: { secondBanner: { investors: [] } } }, ...aboutPage };
+  let data = {}
+  data[resources] = page
 
-  about.about.secondBanner.investors = reduceArray(4, aboutPage.about?.secondBanner?.investors);
+  if (resources == 'aboutPage') {
+    let about = { ...{ about: { secondBanner: { investors: [] } } }, ...page };
+    about.about.secondBanner.investors = reduceArray(4, page.about?.secondBanner?.investors);
+    data[resources] = about
+  }
 
-  dispatch(actionObject(GET_PAGES, { homePage: homePage, aboutPage: about }))
+  dispatch(actionObject(GET_PAGES, data))
 }
