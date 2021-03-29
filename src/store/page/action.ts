@@ -1,4 +1,4 @@
-import { actionObject } from '../../utils'
+import { actionObject } from '@utils'
 import { GET_PAGES } from '../page/action-types'
 
 const reduceArray = (quantity, array) => {
