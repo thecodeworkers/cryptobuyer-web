@@ -1,16 +1,14 @@
 import { memo, useRef } from 'react'
 import styles from './styles.module.scss'
-import { GeneralButton } from '../../components'
+import { GeneralButton } from '@components'
 
-const ThirdForYou = ({ section, content }) => {
+const SecondBanner = ({ data }) => {
 
   const publicityBannerRef = useRef();
 
 
   return (
       <div className={styles.main}>
-
-
       <div className={styles._firstContainer} ref={publicityBannerRef}>
         <div className={styles._firstContent}>
           <div className={styles._firstLeftContainer}>
@@ -48,4 +46,4 @@ const ThirdForYou = ({ section, content }) => {
   )
 }
 
-export default memo(ThirdForYou)
+export default memo(SecondBanner)
