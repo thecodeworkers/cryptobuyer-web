@@ -1,10 +1,14 @@
-import { Navbar, ForYouFirstBanner } from '../components'
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { ForYou } from '@components'
 
-const ForYou = () => (
-  <>
-    <Navbar color='#FFFFFF'/>
-    <ForYouFirstBanner />
-  </>
-)
+const ForYouPage = () => {
+  const { page: { aboutPage: { about } } } = useSelector((state: any) => state)
+  return (
+    <>
+    <ForYou content={about} />
+    </>
+  )
+}
 
-export default ForYou;
+export default ForYouPage
