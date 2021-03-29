@@ -1,16 +1,20 @@
-import React from 'react'
-import  Navbar from '../Navbar'
+import React, { useRef } from 'react'
+import { Navbar } from '@components'
 import { SecondBanner, FirstBanner } from './elements'
 import Head from 'next/head'
 
 const ForYou = ({ content }) => {
+
+  const banner = useRef(null);
 
   return (
     <div>
       <Head>
         <title>CryptoBuyer - Quienes Somos</title>
       </Head>
-      <FirstBanner />
+      <Navbar color='#FFFFFF' />
+      <FirstBanner reference={banner}/>
+      <div ref={banner}></div>
       <SecondBanner data={content?.secondBanner} />
     </div>
   )

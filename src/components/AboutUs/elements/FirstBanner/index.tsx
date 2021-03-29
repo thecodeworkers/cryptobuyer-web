@@ -30,7 +30,7 @@ const FirstBanner = ({ data, subtitle }) => {
           <h2 className={styles._subtitleText} dangerouslySetInnerHTML={createMarkup(subtitle)}></h2>
           <div className={styles._meetOurTeam}>
             <p>Conoce nuestro <strong>equipo</strong></p>
-            <img src={'images/icons/down-arrow.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
+            <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
           </div>
         </div>
       </div>
