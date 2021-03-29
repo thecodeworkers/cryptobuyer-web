@@ -3,7 +3,11 @@ const ForYouFirstBanner = () => {
 
   return (
     <>
-    <div className='_main'></div>
+    <div className='_main'>
+      <div className='_content'>
+
+      </div>
+    </div>
 
     <style jsx>{`
       ._main {
