@@ -2,7 +2,6 @@
 @import '../../../../../public/styles/index.scss';
 
 
-
 ._content {
   width: 85%;
   height: inherit;
@@ -11,7 +10,7 @@
 }
 
 ._textContainer {
-  top: 25%;
+  top: 23%;
   position: absolute;
   width: 45%;
   color: $white;
@@ -40,7 +39,7 @@
 }
 
 ._subtitle {
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.3rem;
   font-size: $heleticaBold64;
   font-family: $helveticaNowTextBold;
 }

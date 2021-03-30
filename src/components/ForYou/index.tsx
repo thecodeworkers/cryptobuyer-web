@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 const ForYou = ({ content }) => {
 
-  const banner = useRef(null);
+  const banner = useRef();
 
   return (
     <div>
@@ -13,7 +13,7 @@ const ForYou = ({ content }) => {
         <title>CryptoBuyer - Quienes Somos</title>
       </Head>
       <Navbar color='#FFFFFF' />
-      <FirstBanner reference={banner}/>
+      <FirstBanner data={content?.mainBanner} reference={banner}/>
       <div ref={banner}></div>
       <SecondBanner data={content?.secondBanner} />
     </div>

@@ -1,7 +1,7 @@
 import { forYouId } from '@utils/pageIds'
 
 const forYou = `
-forYouPage:page(id: ${forYouId}) {
+forYouPage:page(id: "${forYouId}") {
   id
   title
   for_you {
