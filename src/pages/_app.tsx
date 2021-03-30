@@ -7,6 +7,7 @@ import '@styles/globals.scss'
 import Head from 'next/head';
 import { Loader } from '@components'
 import { useSelector } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
 
@@ -15,7 +16,6 @@ const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
 
   useEffect(() => {
-    if(router.route == '/') localStorage.clear()
     store.__persistor.persist()
   }, [])
 
@@ -26,7 +26,6 @@ const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
     </Head>
     { show && <Loader /> }
     <Component {...pageProps} />
-
     </>
   )
 }
