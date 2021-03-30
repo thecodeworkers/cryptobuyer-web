@@ -12,7 +12,7 @@ const ThirdBanner = ({ data }) => {
             <p className={styles._subtitle}>{data?.subtitle}</p>
             <div className={styles._formContainer}>
               <div className={styles._buttonContainer}>
-                <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text='Más información' />
+                <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text={data?.button?.title} />
               </div>
               <input type='string' className={styles._input} />
             </div>
