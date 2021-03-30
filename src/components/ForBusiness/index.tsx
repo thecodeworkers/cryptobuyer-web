@@ -1,6 +1,6 @@
 import React from 'react'
 import  Navbar from '../Navbar'
-import { SecondBanner } from './elements'
+import { SecondBanner, ThirdBanner } from './elements'
 import Head from 'next/head'
 
 const ForBusiness = ({ content }) => {
@@ -23,7 +23,8 @@ const ForBusiness = ({ content }) => {
       <br/>
       <br/>
       <br/>
-      <SecondBanner data={content?.thirdBanner} content={content?.fourthBanner} />
+      <SecondBanner data={content?.thirdBanner}  />
+      <ThirdBanner data={content?.fourthBanner}  />
     </div>
   )
 }
