@@ -33,7 +33,6 @@ export const getPages: any = (resources) => async (dispatch, getState) => {
 
   const result: any = await resource(resources)
   const { page } = getState();
-
   let data = page
   data[resources] = result
 
