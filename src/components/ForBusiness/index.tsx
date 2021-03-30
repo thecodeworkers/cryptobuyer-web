@@ -3,7 +3,8 @@ import  Navbar from '../Navbar'
 import { SecondBanner } from './elements'
 import Head from 'next/head'
 
-const AboutUs = ({ content }) => {
+const ForBusiness = ({ content }) => {
+
 
   return (
     <div>
@@ -22,9 +23,9 @@ const AboutUs = ({ content }) => {
       <br/>
       <br/>
       <br/>
-      <SecondBanner data={content?.secondBanner} />
+      <SecondBanner data={content?.thirdBanner} />
     </div>
   )
 }
 
-export default AboutUs
+export default ForBusiness

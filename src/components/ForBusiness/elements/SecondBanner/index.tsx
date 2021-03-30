@@ -1,8 +1,9 @@
-import { memo, useRef } from 'react'
+import { useRef } from 'react'
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 
 const SecondBanner = ({ data }) => {
+
 
   const publicityBannerRef = useRef();
 
@@ -17,8 +18,8 @@ const SecondBanner = ({ data }) => {
             </div>
           </div>
           <div className={styles._firstRightContainer}>
-            <p className={styles._firstTitle}>Acepta <b>Bitcoin</b> en tu negocio</p>
-            <p className={styles._firstSubtitle}>Nuestra plataforma no tiene tarifas de afiliación o mantenimiento para tu comercio.</p>
+            <p className={styles._firstTitle}>{data?.subtitle}</p>
+            <p className={styles._firstSubtitle}></p>
           </div>
         </div>
       </div>
@@ -43,4 +44,4 @@ const SecondBanner = ({ data }) => {
   )
 }
 
-export default memo(SecondBanner)
+export default SecondBanner
