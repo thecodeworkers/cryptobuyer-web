@@ -1,0 +1,55 @@
+
+@import '../../../../../public/styles/index.scss';
+
+
+._content {
+  width: 85%;
+  height: inherit;
+  margin: auto;
+  position: relative;
+}
+
+._textContainer {
+  top: 23%;
+  position: absolute;
+  width: 45%;
+  color: $white;
+}
+
+._text {
+  font-family: $helveticaNowText;
+  margin-top: 1rem;
+  width: 90%;
+}
+
+._title {
+  font-family: $helveticaNowTextBold;
+  font-size: $heleticaBold64;
+}
+
+._btnParent {
+  margin-top: 1.5rem;
+  width: 220px;
+}
+
+._secondTextParent {
+  position: absolute;
+  bottom: 5%;
+  z-index: 2;
+}
+
+._subtitle {
+  margin-bottom: 2.3rem;
+  font-size: $heleticaBold64;
+  font-family: $helveticaNowTextBold;
+}
+
+._serviceText {
+  font-family: $helveticaNowText;
+}
+
+._arrowParent {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
