@@ -29,14 +29,10 @@ const Navbar = ({ color = '#262833' }) => {
     return !products ? styles._paddingLeft : styles._products
   }
 
-  const gotToHome = () => {
-    if (router.pathname != '/') router.push('/');
-  }
-
-  const navigation = (route) => {
-    if(router.pathname != route) {
-      // dispatch(setLoader(true))
-      router.push('/about-us')
+  const navigation = (route, loader: boolean = false) => {
+    if (router.pathname != route) {
+      if(loader) dispatch(setLoader(true))
+      router.push(route)
     }
   }
   return (
@@ -45,7 +41,7 @@ const Navbar = ({ color = '#262833' }) => {
         <div className={styles._main}>
           <div className={styles._leftSide}>
 
-            <div className={styles._logoParent} onClick={gotToHome}>
+            <div className={styles._logoParent} onClick={() => navigation('/', true)}>
               <Logo color={color} />
             </div>
 
@@ -59,17 +55,12 @@ const Navbar = ({ color = '#262833' }) => {
                   <Dropdown show={show} />
 
                 </li>
-                {/* <Link href='/for-business'> */}
-                  <li className={activeColor('/about-us')} onClick={() => navigation('/about-us')} > Sobre Nosotros
+                <li className={activeColor('/about-us')} onClick={() => navigation('/about-us', true)} > Sobre Nosotros
                   {showPoint('/about-us')}
-                  </li>
-                {/* </Link> */}
-
-                <Link href='/blog'>
-                  <li className={activeColor('/blog')}> Blog
+                </li>
+                  <li className={activeColor('/blog')} onClick={() => navigation('/blog', true)}> Blog
                    {showPoint('/blog')}
                   </li>
-                </Link >
               </ul>
             </div>
           </div>
