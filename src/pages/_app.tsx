@@ -5,6 +5,7 @@ import { useStore } from 'react-redux'
 import { wrapper } from '@store'
 import '@styles/globals.scss'
 import Head from 'next/head';
+import { Loader } from '@components'
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
   const store: any = useStore()
@@ -21,6 +22,7 @@ const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Component {...pageProps} />
+    <Loader />
     </>
   )
 }
