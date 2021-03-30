@@ -49,7 +49,7 @@ const Navbar = ({ color = '#262833' }) => {
                   <Dropdown show={show} />
 
                 </li>
-                <Link href='/about-us'>
+                <Link href='/for-business'>
                   <li className={activeColor('/about-us')} > Sobre Nosotros
                   {showPoint('/about-us')}
                   </li>

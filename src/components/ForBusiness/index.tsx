@@ -11,7 +11,7 @@ const ForBusiness = ({ content }) => {
       <Head>
         <title>CryptoBuyer - Quienes Somos</title>
       </Head>
-      <Navbar color='#FFFFFF' />
+      <Navbar color='#262833' />
       <br/>
       <br/>
       <br/>
@@ -23,7 +23,7 @@ const ForBusiness = ({ content }) => {
       <br/>
       <br/>
       <br/>
-      <SecondBanner data={content?.thirdBanner} />
+      <SecondBanner data={content?.thirdBanner} content={content?.fourthBanner} />
     </div>
   )
 }
