@@ -51,7 +51,22 @@
   right: 0;
   bottom : -100px;
 }
+._formContainer{
+  display: flex;
+}
 
 ._buttonContainer{
-  width: 150px;
+  width: 160px;
+}
+
+._input{
+ background-color: $doveGray;
+ width: 180px;
+ height: 2rem;
+ padding: 0.5rem 1rem;
+ color: $cello;
+ border-radius: 10px;
+ border:none;
+ margin-left: 1rem;
+ font-size: $helveticaRegular14;
 }
