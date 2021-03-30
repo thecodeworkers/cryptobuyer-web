@@ -2,6 +2,9 @@
 import { resource } from '@graphql/query';
 import { actionObject } from '@utils'
 import { GET_PAGES } from '../page/action-types'
+import { LOADER } from '../loader/actions-types'
+import { setLoader } from '../loader/action'
+
 
 const reduceArray = (quantity, array) => {
   let count = 0;
@@ -31,6 +34,8 @@ const reduceArray = (quantity, array) => {
 
 export const getPages: any = (resources) => async dispatch => {
 
+  dispatch(setLoader(true))
+
   const page: any = await resource(resources)
 
   let data = {}
@@ -43,4 +48,5 @@ export const getPages: any = (resources) => async dispatch => {
   }
 
   dispatch(actionObject(GET_PAGES, data))
+  dispatch(setLoader(false))
 }

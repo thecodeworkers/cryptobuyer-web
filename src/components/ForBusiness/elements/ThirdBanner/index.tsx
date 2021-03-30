@@ -4,7 +4,7 @@ import { GeneralButton } from '@components'
 import { createMarkup } from '@utils'
 const SecondBanner = ({ data, content }) => {
 
-console.log(data);
+// console.log(data);
 
   const publicityBannerRef = useRef();
 

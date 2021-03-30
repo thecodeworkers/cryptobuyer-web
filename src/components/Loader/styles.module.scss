@@ -1,13 +1,64 @@
 
+@use 'sass:map';
 @import '../../../public/styles/index.scss';
+
+$elements: (
+  1: (
+    63px,
+    63px,
+    -0.036s
+  ),
+
+  2: (
+    68px,
+    56px,
+    -0.072s
+  ),
+
+  3: (
+    71px,
+    48px,
+    -0.108s
+  ),
+
+  4: (
+    72px,
+    40px,
+    -0.144s
+  ),
+
+  5: (
+    71px,
+    32px,
+    -0.18s
+  ),
+
+  6: (
+    68px,
+    24px,
+    -0.216s
+  ),
+
+  7: (
+    63px,
+    17px,
+    -0.252s
+  ),
+
+  8: (
+    56px,
+    12px,
+    -0.288s
+  )
+);
 
 ._parent {
   width: 100%;
   height: 100vh;
   position: fixed;
   top: 0px;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1030;
+  background-color: $loaderBackground;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,80 +71,37 @@
   height: 80px;
 }
 
-._circlesParent div {
-  animation: rotation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  transform-origin: 40px 40px;
-}
+  ._circles {
+    animation: rotation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
 
-._circlesParent div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: $white;
-  margin: -4px 0 0 -4px;
-}
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $white;
+      margin: -4px 0 0 -4px;
+    }
+  }
 
-._circlesParent div:nth-child(1) {
-  animation-delay: -0.036s;
-}
-._circlesParent div:nth-child(1):after {
-  top: 63px;
-  left: 63px;
-}
-._circlesParent div:nth-child(2) {
-  animation-delay: -0.072s;
-}
-._circlesParent div:nth-child(2):after {
-  top: 68px;
-  left: 56px;
-}
-._circlesParent div:nth-child(3) {
-  animation-delay: -0.108s;
-}
-._circlesParent div:nth-child(3):after {
-  top: 71px;
-  left: 48px;
-}
-._circlesParent div:nth-child(4) {
-  animation-delay: -0.144s;
-}
-._circlesParent div:nth-child(4):after {
-  top: 72px;
-  left: 40px;
-}
-._circlesParent div:nth-child(5) {
-  animation-delay: -0.18s;
-}
-._circlesParent div:nth-child(5):after {
-  top: 71px;
-  left: 32px;
-}
-._circlesParent div:nth-child(6) {
-  animation-delay: -0.216s;
-}
-._circlesParent div:nth-child(6):after {
-  top: 68px;
-  left: 24px;
-}
-._circlesParent div:nth-child(7) {
-  animation-delay: -0.252s;
-}
-._circlesParent div:nth-child(7):after {
-  top: 63px;
-  left: 17px;
-}
-._circlesParent div:nth-child(8) {
-  animation-delay: -0.288s;
-}
+@each $number, $element in $elements {
+  $items: map.get($elements, $number);
+  $top: nth($items, 1);
+  $left: nth($items, 2);
+  $delay: nth($items, 3);
 
-._circlesParent div:nth-child(8):after {
-  top: 56px;
-  left: 12px;
-}
+  ._circles:nth-child(#{$number}) {
+    animation-delay: $delay;
 
+    &:after {
+      top: $top;
+      left: $left;
+    }
+  }
+}
 
 @keyframes rotation {
   0% {

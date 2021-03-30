@@ -4,12 +4,15 @@ import { Dropdown } from '../';
 import { Logo } from '../../../public/images/logos'
 import { DownArrow } from '../../../public/images/icons'
 import { useRouter } from 'next/router'
+import { useDispatch } from 'react-redux'
+import { setLoader } from '../../store/actions'
 import Link from 'next/link'
 
 const Navbar = ({ color = '#262833' }) => {
 
   const router = useRouter()
   const [show, setShow] = useState(false)
+  const dispatch = useDispatch()
 
   const showPoint = (route) => {
     if (router.pathname == route) {
@@ -28,6 +31,13 @@ const Navbar = ({ color = '#262833' }) => {
 
   const gotToHome = () => {
     if (router.pathname != '/') router.push('/');
+  }
+
+  const navigation = (route) => {
+    if(router.pathname != route) {
+      dispatch(setLoader(true))
+      router.push('/about-us')
+    }
   }
   return (
     <>
@@ -49,11 +59,11 @@ const Navbar = ({ color = '#262833' }) => {
                   <Dropdown show={show} />
 
                 </li>
-                <Link href='/for-business'>
-                  <li className={activeColor('/about-us')} > Sobre Nosotros
+                {/* <Link href='/for-business'> */}
+                  <li className={activeColor('/about-us')} onClick={() => navigation('/about-us')} > Sobre Nosotros
                   {showPoint('/about-us')}
                   </li>
-                </Link>
+                {/* </Link> */}
 
                 <Link href='/blog'>
                   <li className={activeColor('/blog')}> Blog
