@@ -29,16 +29,17 @@ const reduceArray = (quantity, array) => {
 }
 
 
-export const getPages: any = (resources) => async dispatch => {
+export const getPages: any = (resources) => async (dispatch, getState) => {
 
-  const page: any = await resource(resources)
+  const result: any = await resource(resources)
+  const { page } = getState();
 
-  let data = {}
-  data[resources] = page
+  let data = page
+  data[resources] = result
 
   if (resources == 'aboutPage') {
-    let about = { ...{ about: { secondBanner: { investors: [] } } }, ...page };
-    about.about.secondBanner.investors = reduceArray(4, page.about?.secondBanner?.investors);
+    let about = { ...{ about: { secondBanner: { investors: [] } } }, ...result };
+    about.about.secondBanner.investors = reduceArray(4, result.about?.secondBanner?.investors);
     data[resources] = about
   }
 
