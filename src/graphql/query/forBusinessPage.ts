@@ -1,47 +1,47 @@
 import { forBusinessId } from '@utils/pageIds'
 
 const forBusiness = `
-  forBusinessPage:page(id: ${forBusinessId}) {
-    id
-    title
-    for_business {
-      mainBanner {
+forBusinessPage:page(id: "${forBusinessId}") {
+  id
+  title
+  for_business {
+    mainBanner {
+      title
+      subtitle
+      background {
+        mediaItemUrl
+        slug
+      }
+      lowTitle
+      button {
         title
-        subtitle
-        background {
+        link
+      }
+    }
+    customers {
+      title
+      subtitle
+      commerces {
+        image {
           mediaItemUrl
           slug
         }
-        lowTitle
-        button {
-          title
-          link
-        }
       }
-      customers {
+    }
+    thirdBanner {
+      title
+      subtitle
+    }
+    fourthBanner {
+      title
+      subtitle
+      button {
         title
-        subtitle
-        commerces {
-          image {
-            mediaItemUrl
-            slug
-          }
-        }
-      }
-      thirdBanner {
-        title
-        subtitle
-      }
-      fourthBanner {
-        title
-        subtitle
-        button {
-          title
-          link
-        }
+        link
       }
     }
   }
+}
 `
 
 export default forBusiness
