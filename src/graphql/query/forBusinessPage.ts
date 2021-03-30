@@ -1,7 +1,7 @@
 import { forBusinessId } from '@utils/pageIds'
 
 const forBusiness = `
-  forBusinessPage:page(id: ${forBusinessId}) {
+  forBusinessPage:page(id: "${forBusinessId}") {
     id
     title
     for_business {

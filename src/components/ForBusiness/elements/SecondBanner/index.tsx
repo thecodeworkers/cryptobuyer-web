@@ -5,6 +5,7 @@ import { GeneralButton } from '@components'
 const SecondBanner = ({ data }) => {
 
   const publicityBannerRef = useRef();
+  console.log(data)
 
 
   return (
