@@ -35,7 +35,7 @@ const Navbar = ({ color = '#262833' }) => {
 
   const navigation = (route) => {
     if(router.pathname != route) {
-      dispatch(setLoader(true))
+      // dispatch(setLoader(true))
       router.push('/about-us')
     }
   }
