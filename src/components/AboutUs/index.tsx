@@ -4,6 +4,7 @@ import { FirstBanner, SecondBanner } from './elements'
 import Head from 'next/head'
 
 const AboutUs = ({ content }) => {
+console.log(content, "about us content");
 
   return (
     <div>
