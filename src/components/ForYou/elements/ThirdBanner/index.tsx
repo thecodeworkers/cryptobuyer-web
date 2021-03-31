@@ -5,11 +5,11 @@ import { GeneralButton } from '@components'
 const ThirdBanner = ({ data }) => {
 
   return (
-      <div className={styles.main}>
+    <div className={styles.main}>
       <div className={styles._container} >
         <div className={styles._content}>
           <div className={styles._leftContainer}>
-          <div className={styles._cardsContainer}>
+            <div className={styles._cardsContainer}>
               <img src='images/resource/cards.svg'></img>
             </div>
           </div>
@@ -22,8 +22,7 @@ const ThirdBanner = ({ data }) => {
           </div>
         </div>
       </div>
-
-      </div>
+    </div>
   )
 }
 
