@@ -14,4 +14,4 @@ const GraphQlClient = async (query, variables = {}) => {
   }
 }
 
-export default GraphQlClient;
+export default GraphQlClient

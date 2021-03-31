@@ -8,4 +8,4 @@ const DownArrow = ({ fill }) => (
   </svg>
 )
 
-export default DownArrow;
+export default DownArrow

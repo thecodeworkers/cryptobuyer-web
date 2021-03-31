@@ -49,4 +49,4 @@ const SecondBanner = ({ data }) => (
 )
 
 
-export default SecondBanner;
+export default SecondBanner

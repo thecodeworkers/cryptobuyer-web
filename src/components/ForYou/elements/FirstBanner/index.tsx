@@ -42,4 +42,4 @@ const ForYouFirstBanner = ({ data, reference }) => {
   )
 }
 
-export default ForYouFirstBanner;
+export default ForYouFirstBanner

@@ -21,6 +21,6 @@ const GeneralButton: FC<Button> = ({ height, text, backgroundColor, textColor, m
     }
   `}</style>
   </>
-);
+)
 
 export default GeneralButton
