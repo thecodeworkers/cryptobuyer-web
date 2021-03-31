@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { FirstBanner } from './elements'
+import { FirstBanner, Referral } from './elements'
 import Head from 'next/head'
 
 const ForProfessional = ({ content }) => {
@@ -16,8 +16,9 @@ const ForProfessional = ({ content }) => {
       <Navbar color='#FFFFFF' />
       {(content) && (<>
         <FirstBanner reference={section} />
-        <div ref={section}></div>
-
+        <div ref={section}>
+          <Referral />
+        </div>
       </>)
       }
     </div>
