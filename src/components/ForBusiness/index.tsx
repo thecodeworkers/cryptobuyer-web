@@ -1,29 +1,22 @@
 import React from 'react'
-import  Navbar from '../Navbar'
-import { SecondBanner } from './elements'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
+import { FirstBanner, SecondBanner, ThirdBanner } from './elements'
 import Head from 'next/head'
 
 const ForBusiness = ({ content }) => {
-
-
   return (
     <div>
       <Head>
-        <title>CryptoBuyer - Quienes Somos</title>
+        <title>CryptoBuyer - Tu Negocio</title>
       </Head>
       <Navbar color='#262833' />
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <SecondBanner data={content?.thirdBanner} content={content?.fourthBanner} />
+      {content ? (<>
+      <FirstBanner data={content?.mainBanner} content={content?.customers} />
+      <SecondBanner data={content?.thirdBanner}  />
+      <ThirdBanner data={content?.fourthBanner}  />
+      </>) : null}
+      <Footer />
     </div>
   )
 }
