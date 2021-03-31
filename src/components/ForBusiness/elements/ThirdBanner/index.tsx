@@ -1,48 +1,32 @@
-import { useRef } from 'react'
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
-import { createMarkup } from '@utils'
-const SecondBanner = ({ data, content }) => {
 
-console.log(data);
-
-  const publicityBannerRef = useRef();
-
+const ThirdBanner = ({ data }) => {
 
   return (
-      <div className={styles.main}>
-      <div className={styles._firstContainer} ref={publicityBannerRef}>
-        <div className={styles._firstContent}>
-          <div className={styles._firstLeftContainer}>
-          <div className={styles._phoneContainer}>
-              <img src='images/resource/phone.svg'></img>
+    <div className={styles.main}>
+      <div className={styles._container}>
+        <div className={styles._content}>
+          <div className={styles._leftContainer}>
+            <p className={styles._title}>{data?.title}</p>
+            <p className={styles._subtitle}>{data?.subtitle}</p>
+            <div className={styles._formContainer}>
+              <div className={styles._buttonContainer}>
+                <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text={data?.button?.title} />
+              </div>
+              <input type='string' className={styles._input} />
             </div>
-          </div>
-          <div className={styles._firstRightContainer}>
-            <p className={styles._firstTitle} dangerouslySetInnerHTML={createMarkup(data?.title)}></p>
-            <p className={styles._firstSubtitle}>{ data?.subtitle }</p>
-          </div>
-        </div>
-      </div>
 
-      <div className={styles._secondContainer} ref={publicityBannerRef}>
-        <div className={styles._secondContent}>
-          <div className={styles._secondLeftContainer}>
-          <p className={styles._secondTitle}>{content?.title}</p>
-            <p className={styles._secondSubtitle}>{content?.subtitle}</p>
-            <div className={styles._secondButtonContainer}>
-              <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text='Más información' />
-            </div>
           </div>
-          <div className={styles._secondRightContainer}>
+          <div className={styles._rightContainer}>
             <div className={styles._atmContainer}>
-              <img src='images/resource/atm.svg'></img>
+              <img src='images/resource/atm-2.svg'></img>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   )
 }
 
-export default SecondBanner
+export default ThirdBanner
