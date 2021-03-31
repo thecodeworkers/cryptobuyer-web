@@ -21,7 +21,7 @@ const CommercesSlider = ({ data }) => {
           data.map((item, index) => {
             return (
               <div className={styles._slider} key={index}>
-                <img src={item?.image?.mediaItemUrl}  className={styles._commerce} />
+                <img src={item?.image?.mediaItemUrl} className={styles._commerce} />
               </div>
             )
           })

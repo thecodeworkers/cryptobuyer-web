@@ -1,7 +1,7 @@
 
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
-import { scrolling, createMarkup} from '@utils'
+import { scrolling, createMarkup } from '@utils'
 
 const ForYouFirstBanner = ({ data, reference }) => {
 

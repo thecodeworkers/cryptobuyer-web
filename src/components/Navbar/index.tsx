@@ -31,7 +31,7 @@ const Navbar = ({ color = '#262833' }) => {
 
   const navigation = (route, loader: boolean = false) => {
     if (router.pathname != route) {
-      if(loader) dispatch(setLoader(true))
+      if (loader) dispatch(setLoader(true))
       router.push(route)
     }
   }
@@ -58,9 +58,9 @@ const Navbar = ({ color = '#262833' }) => {
                 <li className={activeColor('/about-us')} onClick={() => navigation('/about-us', true)} > Sobre Nosotros
                   {showPoint('/about-us')}
                 </li>
-                  <li className={activeColor('/blog')} onClick={() => navigation('/blog', true)}> Blog
+                <li className={activeColor('/blog')} onClick={() => navigation('/blog', true)}> Blog
                    {showPoint('/blog')}
-                  </li>
+                </li>
               </ul>
             </div>
           </div>

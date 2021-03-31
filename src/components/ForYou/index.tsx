@@ -5,7 +5,6 @@ import { FirstBanner, SecondBanner, ThirdBanner, FourthBanner } from './elements
 import Head from 'next/head'
 
 const ForYou = ({ content }) => {
-console.log(content);
 
   const banner = useRef();
 
@@ -16,14 +15,14 @@ console.log(content);
       </Head>
       <Navbar color='#FFFFFF' />
       {(content) ? (<>
-      <FirstBanner data={content?.mainBanner} reference={banner}/>
-      <div ref={banner}></div>
-      <SecondBanner data={content?.secondBanner} />
-      <ThirdBanner data={content?.thirdBanner} />
-      <FourthBanner data={content?.fourthBanner} />
-      <Footer />
+        <FirstBanner data={content?.mainBanner} reference={banner} />
+        <div ref={banner}></div>
+        <SecondBanner data={content?.secondBanner} />
+        <ThirdBanner data={content?.thirdBanner} />
+        <FourthBanner data={content?.fourthBanner} />
+        <Footer />
       </>) : null}
-      </div>
+    </div>
   )
 }
 

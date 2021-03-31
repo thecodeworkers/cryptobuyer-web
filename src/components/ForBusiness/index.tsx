@@ -12,9 +12,9 @@ const ForBusiness = ({ content }) => {
       </Head>
       <Navbar color='#262833' />
       {content ? (<>
-      <FirstBanner data={content?.mainBanner} content={content?.customers} />
-      <SecondBanner data={content?.thirdBanner}  />
-      <ThirdBanner data={content?.fourthBanner}  />
+        <FirstBanner data={content?.mainBanner} content={content?.customers} />
+        <SecondBanner data={content?.thirdBanner} />
+        <ThirdBanner data={content?.fourthBanner} />
       </>) : null}
       <Footer />
     </div>

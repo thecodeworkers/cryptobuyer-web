@@ -11,7 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
 
-  const { show } = useSelector((state: any)  => state.loader)
+  const { show } = useSelector((state: any) => state.loader)
   const store: any = useStore()
   const router = useRouter()
 
@@ -19,17 +19,17 @@ const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
     store.__persistor.persist()
   }, [])
 
-  useEffect(() => {
-    console.log('SHOW CHANGED', show)
-  }, [show])
+  /*   useEffect(() => {
+      console.log('SHOW CHANGED', show)
+    }, [show]) */
 
   return (
     <>
-    <Head>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    { show && <Loader /> }
-    <Component {...pageProps} />
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      { show && <Loader />}
+      <Component {...pageProps} />
     </>
   )
 }

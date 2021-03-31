@@ -2,18 +2,17 @@ import { LOADER } from './actions-types'
 import { AnyAction } from 'redux'
 
 const initialState = {
-	show: false
+  show: false
 }
 
- const setLoaderReducer = (state = initialState, { type, payload }: AnyAction) => {
+const setLoaderReducer = (state = initialState, { type, payload }: AnyAction) => {
 
-  switch(type) {
+  switch (type) {
     case LOADER:
-    console.log('ENTER REDUCER', payload)
-    return { ...state, show: payload }
+      return { ...state, show: payload }
 
     default:
-    return state;
+      return state;
   }
 }
 
