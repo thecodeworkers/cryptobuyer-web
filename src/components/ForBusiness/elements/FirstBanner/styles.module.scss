@@ -7,10 +7,11 @@
 ._content {
     height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     width: 85%;
     margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 ._textParent {
@@ -50,6 +51,7 @@
 ._basicForm {
     display: flex;
     width: 75%;
+    color: $easternBlue;
 
     ._buttonContainer {
         width: 160px;
@@ -57,15 +59,64 @@
 }
 
 ._input{
-    background-color: $doveGray;
+    background-color: rgba(44, 172, 179, 0.2);
     width: 180px;
     height: 2rem;
     padding: 0.5rem 1rem;
-    color: $cello;
+    color: $easternBlue;
     border-radius: 10px;
     border:none;
     margin-left: 1rem;
     font-size: $helveticaRegular14;
+}
+
+._downarrow {
+    cursor: pointer;
+}
+
+._customerContainer {
+    height: 30vh;
+    background-color: $gallerySolid;
+    padding: 0px 7.3%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $charade;
+    justify-content: space-between;
+
+    ._customerTitle {
+        font-family: $helveticaNowTextBold;
+        font-size: $heleticaBold64;
+    }
+    
+    ._customerSubtitles {
+        font-family: $helveticaNowText;
+        font-size: $helveticaRegular20;
+        margin-top: 5%;
+    }
+}
+
+._commercesContainer {
+    display: flex;
+}
+
+._commercesLogo {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 140px;
+    height: 140px;
+}
+
+.services {
+    ._servicesText {
+        font-family: $helveticaNowText;
+        font-size: $helveticaRegular20;
+        margin-top: 5%;
+
+        strong {
+            font-weight: 900;
+        }
+    }
 }
 
   
