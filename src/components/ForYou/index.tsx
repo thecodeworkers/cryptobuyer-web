@@ -16,7 +16,6 @@ const ForYou = ({ content }) => {
       <Navbar color='#FFFFFF' />
       {(content) ? (<>
         <FirstBanner data={content?.mainBanner} reference={banner} />
-        <div ref={banner}></div>
         <SecondBanner data={content?.secondBanner} />
         <ThirdBanner data={content?.thirdBanner} />
         <FourthBanner data={content?.fourthBanner} />
