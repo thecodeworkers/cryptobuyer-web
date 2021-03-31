@@ -28,10 +28,8 @@ const bindMiddleware = (middleware) => {
 }
 
 const reducer = (state, action) => {
-  if (action.type === HYDRATE) {
-    const nextState = { ...state, ...action.payload }
-    return nextState
-  }
+  if (action.type === HYDRATE) return { ...state, ...action.payload }
+  if (action.type == 'persist/REHYDRATE') action.payload = { ...action.payload, ...state }
 
   return reducers(state, action)
 }
@@ -44,8 +42,8 @@ const makeStore: any = ({ isServer }) => {
   const storage = typeof window !== "undefined" ? createWebStorage("local") : createNoopStorage();
 
   const persistConfig = {
-    key: 'buscaoRoot',
-    storage
+    key: 'cryptobuyerRoot',
+    storage,
   }
 
   const persistedReducer = persistReducer(persistConfig, reducer)

@@ -5,22 +5,22 @@ import { useStore } from 'react-redux'
 import { wrapper } from '@store'
 import '@styles/globals.scss'
 import Head from 'next/head';
+import { PersistGate } from 'redux-persist/integration/react'
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
   const store: any = useStore()
   const router = useRouter()
 
   useEffect(() => {
-    if(router.route == '/') localStorage.clear()
     store.__persistor.persist()
   }, [])
 
   return (
     <>
-    <Head>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <Component {...pageProps} />
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Component {...pageProps} />
     </>
   )
 }
