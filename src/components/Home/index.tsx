@@ -18,15 +18,16 @@ const Home = ({ content }) => {
         <title>CryptoBuyer</title>
       </Head>
       <Navbar />
-      {(content) ? (<>
+      {content ? (<>
         < FirstBanner data={content?.mainBanner} />
         <Metrics data={content?.counter} />
         <SecondBanner data={content?.publicityBanner} content={content?.secondBanner} />
         <CommercesSlider data={content?.allies} />
         <ThirdBanner data={content?.thirdBanner} />
         <Partnership data={content?.patnership} />
+        </>) : null}
         <Footer />
-      </>) : null}
+
 
     </div>
   )
