@@ -6,6 +6,8 @@ import Head from 'next/head'
 
 const ForProfessional = ({ content }) => {
 
+  const section = useRef()
+
   return (
     <div>
       <Head>
@@ -13,7 +15,9 @@ const ForProfessional = ({ content }) => {
       </Head>
       <Navbar color='#FFFFFF' />
       {(content) && (<>
-        <FirstBanner />
+        <FirstBanner reference={section} />
+        <div ref={section}></div>
+
       </>)
       }
     </div>
