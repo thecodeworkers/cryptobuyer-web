@@ -6,7 +6,7 @@ import { DownArrow } from '../../../public/images/icons'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { setLoader } from '../../store/actions'
-import Link from 'next/link'
+
 
 const Navbar = ({ color = '#262833' }) => {
 
