@@ -1,5 +1,5 @@
-import styles from './styles.module.scss';
-import React from 'react';
+import styles from './styles.module.scss'
+import React from 'react'
 import { Logo } from '@images/logos'
 
 const Footer = () => {
@@ -82,4 +82,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer

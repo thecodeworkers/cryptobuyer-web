@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const Partnership = ({ data }) => {
 
@@ -11,7 +11,7 @@ const Partnership = ({ data }) => {
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 7,
-  };
+  }
 
   return (
     <div>

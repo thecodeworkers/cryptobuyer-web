@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from './styles.module.scss'
 
 const Metrics = ({ data }) => (
   <div className={styles._main}>
@@ -18,4 +18,4 @@ const Metrics = ({ data }) => (
   </div>
 )
 
-export default Metrics;
+export default Metrics

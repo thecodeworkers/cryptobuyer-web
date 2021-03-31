@@ -20,9 +20,9 @@ const _valueSelection = (node: any, select: string) => {
 export const Filter = (nodes: Array<any>, filter, selection: string) => {
 
     const nodeFilter = (node) => {
-        let validation = true;
-        let validFilter = false;
-        let select = _valueSelection(node, selection);
+        let validation = true
+        let validFilter = false
+        let select = _valueSelection(node, selection)
         if (Array.isArray(select)) {
             validFilter = select.some((data) => {
                 if (data[selection]) return data[selection]['slug'].toLowerCase().includes(filter.toLowerCase())
@@ -31,10 +31,10 @@ export const Filter = (nodes: Array<any>, filter, selection: string) => {
             return validation && validFilter
         }
         if (typeof select == 'string') validFilter = (select.toLowerCase().includes(filter.toLowerCase()))
-        if (typeof select == 'boolean') validFilter = select == filter;
+        if (typeof select == 'boolean') validFilter = select == filter
         if (selection == 'subsidiary') validFilter = select['state']['slug'].toLowerCase().includes(filter.toLowerCase())
         return validation && validFilter
     }
 
-    return (filter) ? nodes.filter(nodeFilter) : nodes;
+    return (filter) ? nodes.filter(nodeFilter) : nodes
 }

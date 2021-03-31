@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 
 const SecondBanner = ({ data, content }) => {
 
-  const publicityBannerRef = useRef();
+  const publicityBannerRef = useRef()
 
 
   return (
@@ -26,8 +26,7 @@ const SecondBanner = ({ data, content }) => {
         </div>
       </div>
       <div className='_publicity' />
-      <style jsx type="scss">{`
-
+      <style jsx>{`
       ._publicity{
         background-image: url(${data?.mediaItemUrl});
         background-size: cover;
