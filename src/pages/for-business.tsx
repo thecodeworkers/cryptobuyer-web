@@ -5,8 +5,8 @@ import { wrapper } from '@store'
 import { getPages } from '@store/actions'
 
 const ForBusinessPage = () => {
-  const { page: { forBusinessPage: { forBusiness } } } = useSelector((state: any) => state)
-  return <ForBusiness content={forBusiness} />
+  const { page: { forBusinessPage: { for_business } } } = useSelector((state: any) => state)
+  return <ForBusiness content={for_business} />
 }
 
 export const getServerSideProps = wrapper.getServerSideProps(

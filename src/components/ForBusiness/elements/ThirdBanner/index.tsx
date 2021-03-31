@@ -2,9 +2,11 @@ import { useRef } from 'react'
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 import { createMarkup } from '@utils'
+
 const SecondBanner = ({ data, content }) => {
-  
+
   const publicityBannerRef = useRef();
+
 
   return (
       <div className={styles.main}>
