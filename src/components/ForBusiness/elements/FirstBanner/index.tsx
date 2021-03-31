@@ -32,8 +32,8 @@ const FirstBanner = ({ data, content }) => {
             </div>
           </div>
         </div>
-        <div className={styles._customerContainer}>
-          <div>
+        <div className={styles._secondContainer}>
+          <div className={styles._customerContainer}>
             <h2 className={styles._customerTitle}>{content?.title}</h2>
             <p className={styles._customerSubtitles}>{content?.subtitle}</p>
           </div>
