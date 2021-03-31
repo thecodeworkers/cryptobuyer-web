@@ -3,13 +3,13 @@ import { createMarkup } from '@utils'
 
 const FirstBanner = ({ data }) => {
   const scrollToNextSection = () => {
-		var i = 10;
-		var int = setInterval(function () {
-			window.scrollTo(0, i);
-			i += 10;
-			if (i >= document.documentElement.clientHeight) clearInterval(int);
-		}, 20);
-	}
+    var i = 10;
+    var int = setInterval(function () {
+      window.scrollTo(0, i);
+      i += 10;
+      if (i >= document.documentElement.clientHeight) clearInterval(int);
+    }, 20);
+  }
 
   return (
     <>
@@ -21,7 +21,7 @@ const FirstBanner = ({ data }) => {
               <p className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.content)}></p>
             </div>
           </div>
-          <div className={styles._middleCoin} style={{ backgroundImage:`url(${data?.coin?.mediaItemUrl})` }}></div>
+          <div className={styles._middleCoin} style={{ backgroundImage: `url(${data?.coin?.mediaItemUrl})` }}></div>
         </div>
 
         <div className={styles._subtitleContainer}>

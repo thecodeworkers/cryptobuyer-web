@@ -44,6 +44,7 @@ const makeStore: any = ({ isServer }) => {
   const persistConfig = {
     key: 'cryptobuyerRoot',
     storage,
+    // whitelist: ['loader']
   }
 
   const persistedReducer = persistReducer(persistConfig, reducer)
