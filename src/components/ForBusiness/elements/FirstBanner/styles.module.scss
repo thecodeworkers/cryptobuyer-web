@@ -74,7 +74,7 @@
     cursor: pointer;
 }
 
-._customerContainer {
+._secondContainer {
     height: 30vh;
     background-color: $gallerySolid;
     padding: 0px 7.3%;
@@ -83,6 +83,10 @@
     flex-wrap: wrap;
     color: $charade;
     justify-content: space-between;
+
+    ._customerContainer {
+        width: 50%;
+    }
 
     ._customerTitle {
         font-family: $helveticaNowTextBold;
@@ -97,7 +101,9 @@
 }
 
 ._commercesContainer {
+    width: 50%;
     display: flex;
+    justify-content: inherit;
 }
 
 ._commercesLogo {
@@ -107,11 +113,11 @@
     height: 140px;
 }
 
-.services {
+._services {
     ._servicesText {
         font-family: $helveticaNowText;
         font-size: $helveticaRegular20;
-        margin-top: 5%;
+        margin: 5% 0 3% 0;
 
         strong {
             font-weight: 900;
