@@ -55,7 +55,7 @@ const Navbar = ({ color = '#262833' }) => {
                   </li>
                 </Link>
 
-                <Link href='/for-business'>
+                <Link href='/blog'>
                   <li className={activeColor('/blog')}> Blog
                    {showPoint('/blog')}
                   </li>
