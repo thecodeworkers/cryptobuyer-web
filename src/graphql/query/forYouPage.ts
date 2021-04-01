@@ -54,6 +54,20 @@ forYouPage:page(id: "${forYouId}") {
         link
       }
     }
+    customers {
+      title
+      subtitle
+      button {
+        title
+        link
+      }
+      commerces {
+        image {
+          mediaItemUrl
+          slug
+        }
+      }
+    }
   }
 }
 `

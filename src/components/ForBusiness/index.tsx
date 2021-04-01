@@ -9,7 +9,7 @@ const ForBusiness = ({ content }) => {
   return (
     <div>
       <Head>
-        <title>CryptoBuyer - Quienes Somos</title>
+        <title>CryptoBuyer - Para Tu Negocio</title>
       </Head>
       <Navbar color='#262833' />
       <br/>
