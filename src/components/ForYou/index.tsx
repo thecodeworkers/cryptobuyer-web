@@ -1,9 +1,8 @@
 import React, { useRef } from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { FirstBanner, SecondBanner, ThirdBanner, FourthBanner } from './elements'
+import { FirstBanner, SecondBanner, ThirdBanner, FourthBanner, MiddleBanner } from './elements'
 import Head from 'next/head'
-import PayCriptos from './elements/PayCriptos'
 
 const ForYou = ({ content }) => {
 
@@ -18,6 +17,7 @@ const ForYou = ({ content }) => {
       {(content) ? (<>
         <FirstBanner data={content?.mainBanner} reference={banner} />
         <SecondBanner data={content?.secondBanner} />
+        <MiddleBanner data={content?.customers} />
         <ThirdBanner data={content?.thirdBanner} />
         <FourthBanner data={content?.fourthBanner} />
         <Footer />

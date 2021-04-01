@@ -2,8 +2,8 @@
 import { GeneralButton } from '@components';
 import styles from './styles.module.scss'
 
-const Customers = ({ data }) => {
-  console.log(data);
+const MiddleBanner = ({ data }) => {
+
   return (
     <>
       <div className={styles._main}>
@@ -16,6 +16,15 @@ const Customers = ({ data }) => {
             </div>
           </div>
           <div className={styles._imageContainer}>
+            <div className={styles._contentImage}>
+              {data.commerces.map((commerce, index) => {
+                return (
+                  <div className={styles._imageBox} key={index}>
+                    {commerce.map((image, index) => <img key={index} src={image.image.mediaItemUrl} alt={image.image.slug} width='auto' height='auto' />)}
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -23,4 +32,4 @@ const Customers = ({ data }) => {
   )
 }
 
-export default Customers;
+export default MiddleBanner;
