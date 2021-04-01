@@ -5,8 +5,9 @@
   flex-direction: column;
   justify-content: center;
 }
+
 ._container{
-  height: 25.125rem;
+  height: 28.125rem;
   background-color: $gallerySolid;
   display: flex;
   justify-content: center;
@@ -23,12 +24,10 @@
 }
 ._leftContainer{
   width: 50%;
-  height: 100%;
-  position: relative;
 }
 
-._firstTitle{
-  font-size: $helveticaBold64;
+._title{
+  font-size: $heleticaBold64;
   font-family: $helveticaNowTextBold;
   color: $charade;
   margin-bottom: 1rem;
@@ -42,10 +41,16 @@
 }
 
 ._rightContainer{
-  width: 40%;
+  width: 50%;
+  height: 100%;
+  position: relative;
 }
-._phoneContainer{
+._atmContainer{
   position: absolute;
-  left: 50px;
-  top: -35px;
+  right: 0;
+  bottom : -100px;
+}
+
+._buttonContainer{
+  width: 220px;
 }

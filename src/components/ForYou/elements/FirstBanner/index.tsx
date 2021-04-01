@@ -1,7 +1,7 @@
 
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
-import { scrolling } from '@utils'
+import { scrolling, createMarkup } from '@utils'
 
 const ForYouFirstBanner = ({ data, reference }) => {
 
@@ -18,7 +18,7 @@ const ForYouFirstBanner = ({ data, reference }) => {
           </div>
 
           <div className={styles._secondTextParent}>
-            <h2 className={styles._subtitle}>{data?.lowTitle}</h2>
+            <h2 className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></h2>
             <div>
               <p className={styles._serviceText}>Conoce todos nuestros servicios para ti</p>
               <div className={styles._arrowParent} onClick={() => scrolling(reference)} >
@@ -42,4 +42,4 @@ const ForYouFirstBanner = ({ data, reference }) => {
   )
 }
 
-export default ForYouFirstBanner;
+export default ForYouFirstBanner

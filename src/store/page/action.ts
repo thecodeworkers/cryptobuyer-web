@@ -1,31 +1,31 @@
 
-import { resource } from '@graphql/query';
+import { resource } from '@graphql/query'
 import { actionObject } from '@utils'
 import { GET_PAGES } from '../page/action-types'
 
 const reduceArray = (quantity, array) => {
-  let count = 0;
+  let count = 0
 
   const reduceFunction = (prev, next, index) => {
     if (index == 1) {
-      let item = prev;
-      prev = [];
+      let item = prev
+      prev = []
       prev[0] = []
-      prev[0][0] = item;
+      prev[0][0] = item
     }
 
-    let indexArr = (count > 0) ? index - (count * 4) : index;
-    prev[count][indexArr] = next;
+    let indexArr = (count > 0) ? index - (count * 4) : index
+    prev[count][indexArr] = next
 
     if ((index + 1) % quantity == 0) {
-      count++;
-      prev[count] = [];
+      count++
+      prev[count] = []
     }
 
-    return prev;
+    return prev
   }
 
-  return array.reduce(reduceFunction);
+  return array.reduce(reduceFunction)
 }
 
 const setResources = (data, page, resources) => {
@@ -45,7 +45,7 @@ const setResources = (data, page, resources) => {
 export const getPages: any = (resources) => async (dispatch, getState) => {
 
   const result: any = await resource(resources)
-  const { page } = getState();
+  const { page } = getState()
   let data = page
   data = setResources(data, result, resources);
   dispatch(actionObject(GET_PAGES, data))

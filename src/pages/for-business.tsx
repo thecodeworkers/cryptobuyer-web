@@ -6,7 +6,6 @@ import { getPages } from '@store/actions'
 
 const ForBusinessPage = () => {
   const { page: { forBusinessPage: { for_business } } } = useSelector((state: any) => state)
-
   return <ForBusiness content={for_business} />
 }
 

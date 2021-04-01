@@ -36,4 +36,4 @@ const FirstBanner = ({ data }) => {
   )
 }
 
-export default FirstBanner;
+export default FirstBanner
