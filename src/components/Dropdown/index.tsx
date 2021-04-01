@@ -1,5 +1,5 @@
-import styles from './styles.module.scss';
-import { memo } from 'react';
+import styles from './styles.module.scss'
+import { memo } from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { setLoader } from '../../store/actions'
@@ -83,6 +83,6 @@ const Dropdown = ({ show }) => {
       </div>
     </div>
   )
-};
+}
 
-export default memo(Dropdown);
+export default memo(Dropdown)

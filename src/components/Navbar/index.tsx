@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import styles from './styles.module.scss';
-import { Dropdown } from '../';
+import { useState } from 'react'
+import styles from './styles.module.scss'
+import { Dropdown } from '../'
 import { Logo } from '../../../public/images/logos'
 import { DownArrow } from '../../../public/images/icons'
 import { useRouter } from 'next/router'
@@ -95,4 +95,4 @@ const Navbar = ({ color = '#262833' }) => {
   )
 };
 
-export default Navbar;
+export default Navbar

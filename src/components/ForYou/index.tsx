@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 const ForYou = ({ content }) => {
 
-  const banner = useRef();
+  const banner = useRef()
 
   return (
     <div>

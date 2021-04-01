@@ -3,12 +3,12 @@ import { GeneralButton } from '@components'
 
 const FirstBanner = ({ data, content }) => {
   const scrollToNextSection = () => {
-    var i = 10;
+    var i = 10
     var int = setInterval(function () {
-      window.scrollTo(0, i);
-      i += 10;
-      if (i >= document.documentElement.clientHeight) clearInterval(int);
-    }, 20);
+      window.scrollTo(0, i)
+      i += 10
+      if (i >= document.documentElement.clientHeight) clearInterval(int)
+    }, 20)
   }
 
   return (
