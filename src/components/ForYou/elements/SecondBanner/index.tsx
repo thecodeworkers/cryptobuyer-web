@@ -19,7 +19,7 @@ const SecondBanner = ({ data }) => {
             <div className={styles._button}>
               <GeneralButton height={3.5} backgroundColor='#FFFFFF' textColor='#262833' text={data?.button?.title} />
             </div>
-            <p className={styles._more} dangerouslySetInnerHTML={createMarkup(data?.counter)} ></p>
+            <div className={styles._more} dangerouslySetInnerHTML={createMarkup(data?.counter)} ></div>
           </div>
         </div>
         <div className={styles._coinContent}>

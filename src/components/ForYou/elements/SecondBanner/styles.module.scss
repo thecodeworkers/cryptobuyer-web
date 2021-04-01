@@ -33,15 +33,15 @@
     }
     ._more {
       width: fit-content;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       margin-bottom: 0px;
       p {
         margin-bottom: 0px;
         width: fit-content;
         color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         strong {
           font-size: $helveticaBold102;
           font-weight: normal;
