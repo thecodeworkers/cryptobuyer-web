@@ -5,7 +5,6 @@ import styles from './styles.module.scss'
 
 
 const SecondBanner = ({ data }) => {
-  console.log(data)
   return (
     <>
       <div className='_main'>
