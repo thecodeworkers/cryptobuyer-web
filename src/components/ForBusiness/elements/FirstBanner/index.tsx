@@ -1,17 +1,8 @@
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
-import { createMarkup } from '@utils'
+import { scrolling, createMarkup } from '@utils'
 
-const FirstBanner = ({ data, content }) => {
-  const scrollToNextSection = () => {
-    var i = 10
-    var int = setInterval(function () {
-      window.scrollTo(0, i)
-      i += 10
-      if (i >= document.documentElement.clientHeight) clearInterval(int)
-    }, 20)
-  }
-
+const FirstBanner = ({ data, content, reference }) => {
   return (
     <>
       <div className={styles.main}>
@@ -29,7 +20,7 @@ const FirstBanner = ({ data, content }) => {
             </div>
             <div className={styles._services}>
               <div className={styles._servicesText} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)} ></div>
-              <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
+              <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={() => scrolling(reference)}></img>
             </div>
           </div>
         </div>
