@@ -1,16 +1,7 @@
 import styles from './styles.module.scss'
-import { createMarkup } from '@utils'
+import { scrolling, createMarkup } from '@utils'
 
-const FirstBanner = ({ data }) => {
-  const scrollToNextSection = () => {
-    let i = 10
-    const int = setInterval(function () {
-      window.scrollTo(0, i)
-      i += 10
-      if (i >= document.documentElement.clientHeight) clearInterval(int)
-    }, 20)
-  }
-
+const FirstBanner = ({ data, reference }) => {
   return (
     <>
       <div className={styles.main}>
@@ -28,7 +19,7 @@ const FirstBanner = ({ data }) => {
           <h2 className={styles._subtitleText} dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></h2>
           <div className={styles._meetOurTeam}>
             <p>Conoce nuestro <strong>equipo</strong></p>
-            <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
+            <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={() => scrolling(reference)}></img>
           </div>
         </div>
       </div>
