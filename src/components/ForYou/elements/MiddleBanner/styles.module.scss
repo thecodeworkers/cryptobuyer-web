@@ -5,7 +5,7 @@
   background-color: $gallerySolid;
 }
 ._container {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -57,7 +57,7 @@
       height: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
     }
   }
