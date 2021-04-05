@@ -1,5 +1,6 @@
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
+import { createMarkup } from '@utils'
 
 const FirstBanner = ({ data, content }) => {
   const scrollToNextSection = () => {
@@ -27,7 +28,7 @@ const FirstBanner = ({ data, content }) => {
               </div>
             </div>
             <div className={styles._services}>
-              <p className={styles._servicesText}>{data?.lowTitle}</p>
+              <div className={styles._servicesText} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)} ></div>
               <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
             </div>
           </div>

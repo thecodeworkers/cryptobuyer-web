@@ -27,11 +27,15 @@
   position: relative;
 }
 
-._firstTitle{
+._title{
   font-size: $helveticaBold64;
   font-family: $helveticaNowTextBold;
   color: $charade;
   margin-bottom: 1rem;
+  strong {
+    color: $easternBlue;
+  }
+
 }
 ._subtitle{
   font-size: $helveticaRegular24;
@@ -49,3 +53,4 @@
   left: 50px;
   top: -35px;
 }
+
