@@ -12,7 +12,7 @@ const setLoaderReducer = (state = initialState, { type, payload }: AnyAction) =>
       return { ...state, show: payload }
 
     default:
-      return state;
+      return state
   }
 }
 

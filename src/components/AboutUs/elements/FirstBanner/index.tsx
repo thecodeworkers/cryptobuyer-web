@@ -3,12 +3,12 @@ import { createMarkup } from '@utils'
 
 const FirstBanner = ({ data }) => {
   const scrollToNextSection = () => {
-    var i = 10;
+    var i = 10
     var int = setInterval(function () {
-      window.scrollTo(0, i);
-      i += 10;
-      if (i >= document.documentElement.clientHeight) clearInterval(int);
-    }, 20);
+      window.scrollTo(0, i)
+      i += 10
+      if (i >= document.documentElement.clientHeight) clearInterval(int)
+    }, 20)
   }
 
   return (
@@ -46,4 +46,4 @@ const FirstBanner = ({ data }) => {
   )
 }
 
-export default FirstBanner;
+export default FirstBanner

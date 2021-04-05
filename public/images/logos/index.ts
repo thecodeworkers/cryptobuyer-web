@@ -1,1 +1,1 @@
-export { default as Logo } from './cryptobuyer-logo';
+export { default as Logo } from './cryptobuyer-logo'

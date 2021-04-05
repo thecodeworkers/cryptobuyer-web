@@ -18,9 +18,9 @@ const ForYouFirstBanner = ({ data, reference }) => {
           </div>
 
           <div className={styles._secondTextParent}>
-            <h2 className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></h2>
+            <div className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></div>
             <div>
-              <p className={styles._serviceText}>Conoce todos nuestros servicios para ti</p>
+              <p className={styles._serviceText}>Conoce todos nuestros servicios <b>para ti</b></p>
               <div className={styles._arrowParent} onClick={() => scrolling(reference)} >
                 <img src='images/icons/complete-arrow-down.svg' />
               </div>
@@ -42,4 +42,4 @@ const ForYouFirstBanner = ({ data, reference }) => {
   )
 }
 
-export default ForYouFirstBanner;
+export default ForYouFirstBanner

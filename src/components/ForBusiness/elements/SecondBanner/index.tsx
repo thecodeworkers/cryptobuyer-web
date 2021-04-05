@@ -12,7 +12,7 @@ const SecondBanner = ({ data }) => {
             </div>
           </div>
           <div className={styles._rightContainer}>
-            <p className={styles._title} dangerouslySetInnerHTML={createMarkup(data?.title)}></p>
+            <div className={styles._title} dangerouslySetInnerHTML={createMarkup(data?.title)}></div>
             <p className={styles._subtitle}>{data?.subtitle}</p>
           </div>
         </div>
