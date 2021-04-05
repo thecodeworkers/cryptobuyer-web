@@ -10,7 +10,7 @@
     padding: 0;
     margin: 0 auto;
     ._teamSlider{
-      width: 620px;
+      width: 100%;
     }
     ._teamItem {
       width: 150px;
@@ -29,6 +29,7 @@
         width: 90px;
         height: 90px;
         display: inherit;
+        background-repeat: no-repeat;
       }
       ._name {
         font-family: $helveticaNowText;
