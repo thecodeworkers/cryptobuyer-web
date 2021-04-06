@@ -4,10 +4,10 @@ import GeneralButton from 'src/components/GeneralButton'
 import styles from './styles.module.scss'
 
 
-const SecondBanner = ({ data }) => {
+const SecondBanner = ({ data, reference }) => {
   return (
     <>
-      <div className='_main'>
+      <div className='_main' ref={reference}>
         <div className={styles._container}>
           <div className={styles._spaceContainer}>
 
@@ -22,7 +22,7 @@ const SecondBanner = ({ data }) => {
           </div>
         </div>
         <div className={styles._coinContent}>
-          {data?.currencies.map((currency, index) => {
+          {data?.currencies?.map((currency, index) => {
             return (
               <div className={styles._coin} key={index}>
                 <img src={currency.image.mediaItemUrl} alt={currency.image.slug} width='100%' height='100%' />
