@@ -1,0 +1,71 @@
+@import '../../../../../public/styles/index.scss';
+
+._main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+._container{
+  height: 28.125rem;
+  background-color: $charade;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._content{
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+}
+._leftContainer{
+  width: 50%;
+}
+
+._title{
+  font-size: $helveticaBold64;
+  font-family: $helveticaNowTextBold;
+  color: $white;
+  margin-bottom: 1rem;
+}
+._subtitle{
+  font-size: $helveticaRegular24;
+  font-family: $helveticaNowText;
+  color: $white;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+._rightContainer{
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+._atmContainer{
+  position: absolute;
+  right: 0;
+  bottom : -100px;
+}
+._formContainer{
+  display: flex;
+}
+
+._buttonContainer{
+  width: 160px;
+}
+
+._input{
+ background-color: $doveGray;
+ width: 180px;
+ height: 2rem;
+ padding: 0.5rem 1rem;
+ color: $white;
+ border-radius: 10px;
+ border:none;
+ margin-left: 1rem;
+ font-size: $helveticaRegular14;
+}

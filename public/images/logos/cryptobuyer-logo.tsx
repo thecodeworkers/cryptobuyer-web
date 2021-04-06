@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Logo = ({ color }) => (
 <svg xmlns="http://www.w3.org/2000/svg" width="208.046" height="38.592" viewBox="0 0 208.046 38.592">
@@ -24,4 +24,4 @@ const Logo = ({ color }) => (
 <rect width="2.267" height="2.267" fill="#fff"/></g></g></g></svg>
 )
 
-export default Logo;
+export default Logo

@@ -1,21 +1,16 @@
+import React from 'react'
 import { useSelector } from 'react-redux'
-import { Navbar, Team, MainAbout } from '../components'
-import Head from 'next/head'
+import { AboutUs } from '@components'
+import { wrapper } from '@store'
+import { getPages } from '@store/actions'
 
-const AboutUs = () => {
-
-  const { page: { aboutPage: { about } } } = useSelector(state => state)
-
-  return (
-    <div>
-      <Head>
-        <title>CryptoBuyer - Quienes Somos</title>
-      </Head>
-      <Navbar color='#FFFFFF' />
-      <MainAbout data={about} />
-      <Team data={about?.secondBanner} />
-    </div>
-  )
+const AboutUsPage = () => {
+  const { page: { aboutPage: { about } } } = useSelector((state: any) => state)
+  return <AboutUs content={about} />
 }
 
-export default AboutUs
+export const getServerSideProps = wrapper.getServerSideProps(
+  ({ store }) => store.dispatch(getPages('aboutPage'))
+)
+
+export default AboutUsPage

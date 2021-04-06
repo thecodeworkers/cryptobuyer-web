@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import page from './page/reducer'
-import resource from './resource/reducer'
+import loader from './loader/reducer'
 
 const reducers = combineReducers({
   page,
-  resource,
+  loader
 })
 
 export default reducers
