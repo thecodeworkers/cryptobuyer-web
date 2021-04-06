@@ -4,10 +4,10 @@ import GeneralButton from 'src/components/GeneralButton'
 import styles from './styles.module.scss'
 
 
-const SecondBanner = ({ data }) => {
+const SecondBanner = ({ data, reference }) => {
   return (
     <>
-      <div className='_main'>
+      <div className='_main' ref={reference}>
         <div className={styles._container}>
           <div className={styles._spaceContainer}>
 
