@@ -8,6 +8,7 @@ const ForProfessional = ({ content }) => {
 
   const section = useRef()
 
+  console.log(content)
   return (
     <div>
       <Head>
@@ -15,9 +16,9 @@ const ForProfessional = ({ content }) => {
       </Head>
       <Navbar color='#FFFFFF' />
       {(content) && (<>
-        <FirstBanner reference={section} />
+        <FirstBanner reference={section} data={content?.mainBanner}/>
         <div ref={section}>
-          <Referral />
+          <Referral data={content?.secondBanner} />
         </div>
       </>)
       }
