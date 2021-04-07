@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Footer } from '@components'
-import { LeftSection } from './elements'
+import { MainSection } from './elements'
 import Head from 'next/head'
 
 const Blog = ({ content }) => {
@@ -11,7 +11,7 @@ const Blog = ({ content }) => {
         <title>CryptoBuyer - Blog</title>
       </Head>
       <Navbar color='#262833' />
-      <LeftSection />
+      <MainSection data={content} />
       <Footer />
     </div>
   )

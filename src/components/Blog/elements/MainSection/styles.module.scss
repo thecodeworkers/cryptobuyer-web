@@ -23,6 +23,7 @@
     ._famousTitle {
       font-size: $helveticaRegular20;
       font-family: $helveticaNowTextBold;
+      margin: 5% auto;
     }
 
     ._famousDescription {
@@ -83,4 +84,11 @@
     grid-row: 2;
     height: 40vh;
   }
+}
+
+._paginationContainer {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  margin-top: 3%;
 }

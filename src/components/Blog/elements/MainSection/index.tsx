@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import styles from './styles.module.scss'
-import { scrolling, createMarkup } from '@utils'
+import {Pagination} from '@components'
 
-const LeftSection = ({ }) => {
+const MainSection = ({ data }) => {
+  const [page, setPage] = useState(1)
+
   return (
     <>
       <div className={styles._main}>
@@ -16,6 +19,9 @@ const LeftSection = ({ }) => {
             <div className={[styles._three, "_background"].join(" ")}></div>
             <div className={[styles._four, "_background"].join(" ")}></div>
             <div className={[styles._five, "_background"].join(" ")}></div>
+          </div>
+          <div className={styles._paginationContainer}>
+            <Pagination currentPage={page} items={15} perPage={5} changePage={setPage}/>
           </div>
         </section>
         <section className={styles._rightContainer}>
@@ -52,4 +58,4 @@ const LeftSection = ({ }) => {
   )
 }
 
-export default LeftSection
+export default MainSection

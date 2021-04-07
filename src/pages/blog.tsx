@@ -5,12 +5,13 @@ import { wrapper } from '@store'
 import { getPages } from '@store/actions'
 
 const BlogPage = () => {
-  const { page: { aboutPage: { about } } } = useSelector((state: any) => state)
-  return <Blog content={about} />
+  const { page: { posts: { posts } } } = useSelector((state: any) => state)
+  console.log(posts)
+  return <Blog content={posts} />
 }
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  ({ store }) => store.dispatch(getPages('aboutPage'))
+  ({ store }) => store.dispatch(getPages('posts'))
 )
 
 export default BlogPage
