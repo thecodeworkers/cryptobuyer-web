@@ -1,16 +1,7 @@
 import styles from './styles.module.scss'
-import { createMarkup } from '@utils'
+import { scrolling, createMarkup } from '@utils'
 
-const FirstBanner = ({ data }) => {
-  const scrollToNextSection = () => {
-    var i = 10
-    var int = setInterval(function () {
-      window.scrollTo(0, i)
-      i += 10
-      if (i >= document.documentElement.clientHeight) clearInterval(int)
-    }, 20)
-  }
-
+const FirstBanner = ({ data, reference }) => {
   return (
     <>
       <div className={styles.main}>
@@ -18,7 +9,7 @@ const FirstBanner = ({ data }) => {
           <div className={styles._content}>
             <div className={styles._textParent}>
               <h1 className={styles._mainTitle}>{data?.title}</h1>
-              <p className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.content)}></p>
+              <div className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.content)}></div>
             </div>
           </div>
           <div className={styles._middleCoin} style={{ backgroundImage: `url(${data?.coin?.mediaItemUrl})` }}></div>
@@ -28,7 +19,7 @@ const FirstBanner = ({ data }) => {
           <h2 className={styles._subtitleText} dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></h2>
           <div className={styles._meetOurTeam}>
             <p>Conoce nuestro <strong>equipo</strong></p>
-            <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={scrollToNextSection}></img>
+            <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={() => scrolling(reference)}></img>
           </div>
         </div>
       </div>

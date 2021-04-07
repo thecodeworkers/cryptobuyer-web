@@ -3,6 +3,8 @@ import homePageQuery from './homePage'
 import aboutPageQuery from './aboutPage'
 import forYouQuery from './forYouPage'
 import forBusinessQuery from './forBusinessPage'
+import proPageQuery from './proPage'
+import postsQuery from './posts'
 
 const resource = async (resource: any) => {
 
@@ -10,7 +12,9 @@ const resource = async (resource: any) => {
     'homePage': homePageQuery,
     'aboutPage': aboutPageQuery,
     'forYouPage': forYouQuery,
-    'forBusinessPage': forBusinessQuery
+    'forBusinessPage': forBusinessQuery,
+    'proPage': proPageQuery,
+    'posts': postsQuery
   }
 
   const query = `
@@ -20,7 +24,7 @@ const resource = async (resource: any) => {
   `
   const result: any = await GraphQlClient(query)
 
-  return normalized(result[resource])
+  return 'nodes' in result[resource] ? normalized(result[resource].nodes) : normalized(result[resource])
 }
 
 export default resource

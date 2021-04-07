@@ -7,10 +7,11 @@ const Partnership = ({ data }) => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 7,
+    autoplay: true
   }
 
   return (
