@@ -1,6 +1,4 @@
-
 @import '../../../../../public/styles/index.scss';
-
 
 ._content {
   width: 85%;
@@ -19,7 +17,7 @@
 ._text {
   font-family: $helveticaNowText;
   margin-top: 1rem;
-  width: 90%;
+  width: 80%;
 }
 
 ._title {
@@ -42,18 +40,37 @@
   margin-bottom: 2.3rem;
   font-size: $helveticaBold64;
   font-family: $helveticaNowTextBold;
-  strong{
-    color: $easternBlue;
-  }
 }
 
 ._serviceText {
   font-family: $helveticaNowText;
-  font-size: $helveticaRegular14;
+  font-size: $helveticaRegular20;
 }
 
 ._arrowParent {
   cursor: pointer;
   display: inline-block;
   margin-top: 0.5rem;
+}
+
+._icons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+._logoParent {
+  padding: 1rem 1rem 0rem 1rem;
+  margin-top: auto;
+
+  & img:last-child {
+    margin-left: 1rem;
+  }
+
+  & p {
+    color: $charade;
+    font-family: $helveticaNowText;
+    font-size: $helveticaRegular14;
+    margin-bottom: 0.7rem;
+  }
 }
