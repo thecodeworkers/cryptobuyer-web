@@ -5,8 +5,6 @@ import { wrapper } from '@store'
 import { getPages } from '@store/actions'
 
 const AboutUsPage = () => {
-
-  const state = useSelector(state => state)
   const { page: { aboutPage: { about } } } = useSelector((state: any) => state)
   return <AboutUs content={about} />
 }

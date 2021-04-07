@@ -1,7 +1,65 @@
 @import '../../../../../public/styles/index.scss';
 
-._main{
+._container {
+  width: 85%;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  ._spaceContainer {
+    width: 55%;
+    height: 100%;
+  }
+  ._textContainer {
+    width: 45%;
+    h2 {
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaBold64;
+      color: $charade;
+      margin-bottom: 2rem;
+      width: 400px;
+    }
+    p {
+      font-family: $helveticaNowText;
+      font-size: $helveticaRegular24;
+      color: $charade;
+      width: 505px;
+      margin-bottom: 1.5rem;
+    }
+    ._button {
+      width: 250px;
+      margin-bottom: 5rem;
+    }
+    ._more {
+      width: fit-content;
+      margin-bottom: 0px;
+      p {
+        margin-bottom: 0px;
+        width: fit-content;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        strong {
+          font-size: $helveticaBold102;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+._coinContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -2.5vw;
+  ._coin {
+    width: 5vw;
+    margin: 0 2vw;
+  }
 }
