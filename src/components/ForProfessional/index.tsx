@@ -7,7 +7,6 @@ import Head from 'next/head'
 const ForProfessional = ({ content }) => {
 
   const section = useRef()
-  console.log(section)
 
   return (
     <div>

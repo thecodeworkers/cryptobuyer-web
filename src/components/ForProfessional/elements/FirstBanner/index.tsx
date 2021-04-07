@@ -6,6 +6,7 @@ import { scrolling } from '@utils'
 const FirstBanner = ({ reference }) => (
   <>
     <div className='_main'>
+      <h1>HELLO!</h1>
       <section className={styles._content}>
         <div className={styles._textContainer}>
           <h1 className={styles._title}>El presente y el futuro de la economía digital</h1>
