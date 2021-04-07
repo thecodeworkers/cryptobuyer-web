@@ -1,0 +1,29 @@
+@import '../../../../../public/styles/index.scss';
+
+._content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+}
+
+._parragraph {
+  width: 35%;
+
+  & h1 {
+    font-family: $helveticaNowTextBold;
+    font-size: $helveticaRegular24 + 1;
+    margin-bottom: 0.8rem;
+  }
+
+  & p {
+    font-size: $helveticaRegular24;
+    font-family: $helveticaNowText;
+  }
+
+  & p:last-child{
+    margin-top: 0.7rem;
+    font-size: $helveticaRegular20;
+  }
+}

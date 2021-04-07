@@ -2,17 +2,18 @@
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 import { scrolling } from '@utils'
+import { createMarkup } from '@utils'
 
-const FirstBanner = ({ reference }) => (
+const FirstBanner = ({ reference, data }) => (
   <>
     <div className='_main'>
       <h1>HELLO!</h1>
       <section className={styles._content}>
         <div className={styles._textContainer}>
-          <h1 className={styles._title}>El presente y el futuro de la economía digital</h1>
-          <p className={styles._text}> Compra, venta e intercambio de decenas de criptomonedas en una plataforma rápida, segura y regulada. </p>
+          <h1 className={styles._title}> {data?.title} </h1>
+          <p className={styles._text}> {data?.subtitle} </p>
           <div className={styles._btnParent}>
-            <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#FFFFFF' text='Registrarse en Pro' />
+            <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#FFFFFF' text={data?.button?.title} />
           </div>
         </div>
 
@@ -27,9 +28,8 @@ const FirstBanner = ({ reference }) => (
             </div>
           </div>
 
-
           <div>
-            <p className={styles._serviceText}>Conoce más beneficios de <strong> Pro </strong></p>
+            <p className={styles._serviceText} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></p>
             <div className={styles._arrowParent} onClick={() => scrolling(reference)} >
               <img src='images/icons/complete-arrow-down.svg' />
             </div>
@@ -40,7 +40,7 @@ const FirstBanner = ({ reference }) => (
 
     <style jsx>{`
   ._main {
-      background-image: url('images/banners/banner-pro.png');
+      background-image: url(${data?.background?.mediaItemUrl});
       background-repeat: no-repeat;
       background-size: 100% 100%;
       width:100%;
