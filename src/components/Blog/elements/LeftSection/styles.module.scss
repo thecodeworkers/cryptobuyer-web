@@ -1,0 +1,86 @@
+@import '../../../../../public/styles/index.scss';
+
+._main {
+  height: inherit;
+  display: flex;
+}
+
+._leftContainer {
+  height: inherit;
+  padding: 10% 5% 5% 7%;
+  width: 75%;
+  background-color: $gallerySolid;
+}
+
+._rightContainer {
+  width: 25%;
+  padding: 15% 7% 5% 5%;
+
+  ._famousContainer {
+    margin-bottom: 25%;
+    color: $charade;
+
+    ._famousTitle {
+      font-size: $helveticaRegular20;
+      font-family: $helveticaNowTextBold;
+    }
+
+    ._famousDescription {
+      font-size: $helveticaRegular14;
+      font-family: $helveticaNowText;
+    }
+  }
+}
+
+._titlesContainer {
+  width: 90%;
+  color: $charade;
+
+  ._mainTitle {
+    font-family: $helveticaNowTextBold;
+    font-size: $helveticaBold64;
+  }
+
+  ._description {
+    font-family: $helveticaNowText;
+    font-size: $helveticaRegular22;
+    margin: 3% auto;
+  }
+}
+
+._postsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  grid-auto-rows: minmax(100px, auto);
+
+  ._one {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    height: 40vh;
+  }
+
+  ._two {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    height: 40vh;
+  }
+
+  ._three {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    height: 40vh;
+  }
+
+  ._four {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    height: 40vh;
+  }
+
+  ._five {
+    grid-column: 3 / 3;
+    grid-row: 2;
+    height: 40vh;
+  }
+}
