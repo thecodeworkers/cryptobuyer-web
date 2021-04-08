@@ -28,7 +28,7 @@ const FirstBanner = ({ reference, data }) => (
           </div>
 
           <div>
-            <p className={styles._serviceText} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></p>
+            <div className={styles._serviceText} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></div>
             <div className={styles._arrowParent} onClick={() => scrolling(reference)} >
               <img src='images/icons/complete-arrow-down.svg' />
             </div>
