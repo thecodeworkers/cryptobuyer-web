@@ -7,8 +7,8 @@ const Referral = ({ data }) => (
       <div className={styles._content}>
           <div className={styles._parragraph}>
               <h1> {data?.title} </h1>
-              <p dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></p>
-              <p dangerouslySetInnerHTML={createMarkup(data?.discount)}></p>
+              <div dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></div>
+              <div dangerouslySetInnerHTML={createMarkup(data?.discount)}></div>
           </div>
       </div>
     </section>

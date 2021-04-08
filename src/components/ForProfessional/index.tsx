@@ -1,14 +1,13 @@
 import React, { useRef } from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { FirstBanner, Referral } from './elements'
+import { FirstBanner, SecondBanner, Referral } from './elements'
 import Head from 'next/head'
 
 const ForProfessional = ({ content }) => {
 
   const section = useRef()
 
-  console.log(content)
   return (
     <div>
       <Head>
@@ -20,6 +19,8 @@ const ForProfessional = ({ content }) => {
         <div ref={section}>
           <Referral data={content?.secondBanner} />
         </div>
+        <SecondBanner data={content?.thirdBanner} />
+        <Footer />
       </>)
       }
     </div>
