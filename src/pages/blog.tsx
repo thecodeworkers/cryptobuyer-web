@@ -5,8 +5,7 @@ import { wrapper } from '@store'
 import { getPages } from '@store/actions'
 
 const BlogPage = () => {
-  const { page: { posts: { posts } } } = useSelector((state: any) => state)
-  console.log(posts)
+  const { page: { posts} } = useSelector((state: any) => state)
   return <Blog content={posts} />
 }
 

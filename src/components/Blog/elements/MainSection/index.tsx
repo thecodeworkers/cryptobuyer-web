@@ -4,14 +4,15 @@ import {Pagination} from '@components'
 
 const MainSection = ({ data }) => {
   const [page, setPage] = useState(1)
+  console.log(data)
 
   return (
     <>
       <div className={styles._main}>
         <section className={styles._leftContainer}>
           <div className={styles._titlesContainer}>
-            <h1 className={styles._mainTitle}>Conoce lo mas relevante en el mundo de los activos digitales</h1>
-            <p className={styles._description}>En nuestro blog encontraras las noticias mas importantes de economia, tecnologia y finanzas</p>
+            <h1 className={styles._mainTitle}>Conoce lo más relevante en el mundo de los activos digitales</h1>
+            <p className={styles._description}>En nuestro blog encontrarás las noticias mas importantes de economía, tecnología y finanzas</p>
           </div>
           <div className={styles._postsContainer}>
             <div className={[styles._one, "_background"].join(" ")}></div>
