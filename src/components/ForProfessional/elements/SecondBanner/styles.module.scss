@@ -24,14 +24,20 @@
 }
 
 ._leftContainer{
-  width: 80%;
-  height: 75vh;
+  width: 40rem;
+  height: 25rem;
   position: relative;
 
-  img {
-    height: 78vh;
+  ._imageContainer {
     position: absolute;
     top: -5%;
+    height: 26rem;
+    width: inherit;
+
+    img {
+      height: inherit;
+      width: inherit;
+    }
   }
 }
 

@@ -8,7 +8,9 @@ const SecondBanner = ({ data }) => (
       <div className={styles._container}>
         <div className={styles._content}>
           <div className={styles._leftContainer}>
+            <div className={styles._imageContainer}>
               <img src='images/resource/devices.svg' />
+            </div>
           </div>
           <div className={styles._rightContainer}>
               <h2 className={styles._title}>{data?.title}</h2>
