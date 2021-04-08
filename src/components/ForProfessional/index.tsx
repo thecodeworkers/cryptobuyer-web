@@ -8,7 +8,6 @@ const ForProfessional = ({ content }) => {
 
   const section = useRef()
 
-  console.log(content)
   return (
     <div>
       <Head>
@@ -20,7 +19,7 @@ const ForProfessional = ({ content }) => {
         <div ref={section}>
           <Referral data={content?.secondBanner} />
         </div>
-        <SecondBanner />
+        <SecondBanner data={content?.thirdBanner} />
         <Footer />
       </>)
       }

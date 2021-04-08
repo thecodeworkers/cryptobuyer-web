@@ -8,7 +8,6 @@ const ForBusinessPage = () => {
   const { page: { forBusinessPage: { for_business } } } = useSelector((state: any) => state)
 
   const state = useSelector(state => state)
-  console.log(state)
 
   return <ForBusiness content={for_business} />
 }
