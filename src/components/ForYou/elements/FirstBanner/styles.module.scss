@@ -34,7 +34,7 @@
 
 ._secondTextParent {
   position: absolute;
-  bottom: 5%;
+  bottom: 2%;
   z-index: 2;
 }
 
@@ -49,6 +49,7 @@
 
 ._serviceText {
   font-family: $helveticaNowText;
+  font-size: $helveticaRegular14;
 }
 
 ._arrowParent {
