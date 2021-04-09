@@ -7,6 +7,7 @@ const initialState = {
   forYouPage: {},
   forBusinessPage: {},
   proPage: {},
+  blogPage: {}
 }
 
 const pageReducer = (state = initialState, { type, payload }: AnyAction) => {
