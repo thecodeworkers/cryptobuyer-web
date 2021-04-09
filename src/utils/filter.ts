@@ -13,7 +13,7 @@ export const Filter = (nodes: Array<any>, filter, selection: string) => {
         let validation = true
         let validFilter = false
         let select = _valueSelection(node, selection)
-        if (typeof select == 'boolean') validFilter = select == filter
+        if (typeof select == 'boolean') validFilter = select === filter
         return validation && validFilter
     }
 
