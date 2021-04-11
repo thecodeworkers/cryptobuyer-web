@@ -14,11 +14,12 @@
 
 ._rightContainer {
   width: 25%;
-  padding: 15% 7% 5% 5%;
+  padding: 12% 7% 5% 5%;
 
   ._famousContainer {
-    margin-bottom: 25%;
+    margin-bottom: 20%;
     color: $charade;
+    height: 35vh;
 
     ._famousTitle {
       font-size: $helveticaRegular20;
@@ -30,12 +31,18 @@
       font-size: $helveticaRegular14;
       font-family: $helveticaNowText;
     }
+
+    &:last-child {
+      margin: 0;
+    }
   }
+
 }
 
 ._titlesContainer {
   width: 90%;
   color: $charade;
+  margin-bottom: 5%;
 
   ._mainTitle {
     font-family: $helveticaNowTextBold;
@@ -50,39 +57,18 @@
 }
 
 ._postsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
-  grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh;
 
-  ._one {
-    grid-column: 1 / 2;
-    grid-row: 1;
-    height: 40vh;
-  }
+  ._item {
+    height: 45vh;
+    width: 31%;
 
-  ._two {
-    grid-column: 2 / 4;
-    grid-row: 1;
-    height: 40vh;
-  }
-
-  ._three {
-    grid-column: 1 / 2;
-    grid-row: 2;
-    height: 40vh;
-  }
-
-  ._four {
-    grid-column: 2 / 3;
-    grid-row: 2;
-    height: 40vh;
-  }
-
-  ._five {
-    grid-column: 3 / 3;
-    grid-row: 2;
-    height: 40vh;
+    &:nth-of-type(2) {
+      width: 65%;
+    }
   }
 }
 
@@ -90,5 +76,4 @@
   display: flex;
   justify-content: left;
   align-items: flex-end;
-  margin-top: 3%;
 }

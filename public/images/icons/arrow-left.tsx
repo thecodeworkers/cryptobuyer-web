@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
 const ArrowLeft = ({ color }) => (
-  <svg xmlns="http://www.w3.org/2000/svg"  width="23" height="24" viewBox="0 0 23 24">
+  <svg xmlns="http://www.w3.org/2000/svg"  width="23" height="20" viewBox="0 0 23 24">
     <defs>
       <clipPath id="arrowL">
         <rect width="23" height="24" fill="none"/>

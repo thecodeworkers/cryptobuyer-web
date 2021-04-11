@@ -11,7 +11,9 @@ const Blog = ({ content }) => {
         <title>CryptoBuyer - Blog</title>
       </Head>
       <Navbar color='#262833' />
-      <MainSection data={content} />
+      {content? (<>
+        <MainSection data={content} />
+      </>) : null}
       <Footer />
     </div>
   )

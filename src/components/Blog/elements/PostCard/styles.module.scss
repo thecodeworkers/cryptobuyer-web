@@ -1,0 +1,75 @@
+@import '../../../../../public/styles/index.scss';
+
+._container {
+  height: 100%;
+}
+
+._image {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+}
+
+._infoContainer {
+  height: 50%;
+  background-color: white;
+  display: flex;
+
+  ._previousInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $charade;
+
+    ._title{
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaRegular20;
+      margin: 5% 10% 0 10%
+    }
+
+    ._link {
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaRegular20;
+      margin: 0 10% 5% 10%;
+    }
+
+    ._subtitle {
+      font-family: $helveticaNowText;
+      font-size: $helveticaRegular14;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      margin: 0 10% 0% 10%;
+    }
+  }
+}
+
+._infoContainerRight {
+  height: 40%;
+  background-color: white;
+  display: flex;
+
+  ._previousInfo {
+    display: flex;
+    flex-direction: column;
+    color: $charade;
+
+    ._title {
+      margin: 5% 0;
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaRegular20;
+    }
+
+    ._subtitle {
+      font-family: $helveticaNowText;
+      font-size: $helveticaRegular14;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
