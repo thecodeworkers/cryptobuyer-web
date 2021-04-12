@@ -1,0 +1,5 @@
+export { default as FirstBanner } from './FirstBanner'
+export { default as SecondBanner } from './SecondBanner'
+export { default as Metrics } from './Metrics'
+export { default as Partnership } from './Partnership'
+export { default as CommercesSlider } from './CommercesSlider'

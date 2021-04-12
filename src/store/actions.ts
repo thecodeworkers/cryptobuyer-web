@@ -1,2 +1,2 @@
-export * from './resource/action'
 export * from './page/action'
+export * from './loader/action'

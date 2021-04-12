@@ -1,8 +1,7 @@
 import { useSelector } from 'react-redux'
-import { wrapper } from '../store'
-import { Navbar, Footer, FirstBanner, Metrics, GeneralButton, ThirdBanner, SecondBanner, CommercesSlider, Partnership } from '../components'
-import { getResources } from '../store/actions'
-import Head from 'next/head'
+import { wrapper } from '@store'
+import { getPages } from '@store/actions'
+import { Home } from '@components'
 
 const Home = () => {
 
@@ -26,7 +25,7 @@ const Home = () => {
 }
 
 export const getServerSideProps = wrapper.getServerSideProps(
-  ({ store }) => store.dispatch(getResources())
+  ({ store }) => store.dispatch(getPages('homePage'))
 )
 
 export default Home

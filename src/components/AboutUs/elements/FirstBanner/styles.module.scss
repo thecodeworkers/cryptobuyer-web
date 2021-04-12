@@ -1,0 +1,109 @@
+@import '../../../public/styles/index.scss';
+
+._main {
+  height: 100vh;
+}
+
+._content {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+._textParent {
+  width: 40%;
+  margin-top: 5%;
+  color: $white;
+  font-family: $helveticaNowText;
+  font-size: $helveticaBold64;
+
+  p {
+    margin-bottom: 2%;
+    font-family: $helveticaNowText;
+    font-size: $helveticaRegular20;
+  }
+}
+
+._subtitle {
+  font-family: $helveticaNowText;
+  font-size: $helveticaRegular20;
+  color: $white;
+  font-weight: 400;
+}
+
+._mainTitle {
+  padding-bottom: 3%;
+  font-family: $helveticaNowTextBold;
+  font-size: 2.5rem;
+}
+
+
+._bannerContainer {
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+
+
+  ._mainText {
+    font-family: $helveticaNowText;
+    color: $white;
+    padding: 0px 7.3%;
+    align-self: center;
+    width: 35%;
+
+    p {
+      margin-bottom: 2%;
+      font-family: $helveticaNowText;
+      font-size: $helveticaRegular20;
+    }
+  }
+}
+
+._middleCoin {
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 35%;
+  margin: auto;
+}
+
+._subtitleContainer {
+  height: 30vh;
+  background-color: $gallerySolid;
+  padding: 0px 7.3%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: $charade;
+
+  ._subtitleText {
+    font-family: $helveticaNowTextBold;
+    font-size: $helveticaBold64;
+    text-align: center;
+    width: 100%;
+    padding-top: 7vh;
+
+    strong {
+      color: $easternBlue;
+    }
+  }
+
+  ._meetOurTeam p {
+    font-family: $helveticaNowText;
+    font-size: $helveticaRegular20;
+  }
+}
+
+._downarrow {
+  cursor: pointer;
+}

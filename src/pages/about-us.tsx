@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
-import { Navbar, Team, MainAbout } from '../components'
-import Head from 'next/head'
+import { AboutUs } from '@components'
+import { wrapper } from '@store'
+import { getPages } from '@store/actions'
 
 const AboutUs = () => {
 
@@ -18,4 +19,8 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export const getServerSideProps = wrapper.getServerSideProps(
+  ({ store }) => store.dispatch(getPages('aboutPage'))
+)
+
+export default AboutUsPage
