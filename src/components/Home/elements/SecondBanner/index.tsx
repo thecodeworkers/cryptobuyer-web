@@ -1,8 +1,7 @@
 import { memo, useRef } from 'react'
-import { GeneralButton } from '@components'
 import styles from './styles.module.scss'
-
-const SecondBanner = ({ data, content }) => {
+import { GeneralButton } from '@components'
+const SecondBanner = ({ section, content }) => {
 
   const publicityBannerRef = useRef()
 
@@ -28,7 +27,7 @@ const SecondBanner = ({ data, content }) => {
       <div className='_publicity' />
       <style jsx>{`
       ._publicity{
-        background-image: url(${data?.mediaItemUrl});
+        background-image: url(${section?.mediaItemUrl});
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

@@ -1,4 +1,4 @@
-import { aboutId } from '@utils/pageIds'
+import { aboutId } from '../../utils/pageIds'
 
 const about = `
   aboutPage:page(id: "${aboutId}")  {
