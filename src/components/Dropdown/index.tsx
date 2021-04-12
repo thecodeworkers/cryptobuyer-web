@@ -1,14 +1,28 @@
-import styles from './styles.module.scss';
-import { memo } from 'react';
+import styles from './styles.module.scss'
+import { memo } from 'react'
+import { useRouter } from 'next/router'
+import { useDispatch } from 'react-redux'
+import { setLoader } from '../../store/actions'
 
 const Dropdown = ({ show }) => {
+
+  const router = useRouter()
+  const dispatch = useDispatch()
+
+  const navigation = (route, loader: boolean = false) => {
+    if (router.pathname != route) {
+      if (loader) dispatch(setLoader(true))
+      router.push(route)
+    }
+  }
+
   return (
     <div className={show ? styles._main : styles._hidden}>
       <div className={styles._leftSide}>
         <h4 className={styles._greenTitle}> Para ti</h4>
 
         <div className={styles._link}>
-          <h4>Cryptobuyer</h4>
+          <h4 onClick={() => navigation('/for-you', true)}>Cryptobuyer</h4>
           <p>compra criptos con tu moneda local</p>
         </div>
 
@@ -40,7 +54,7 @@ const Dropdown = ({ show }) => {
       <div className={styles._rightSide}>
         <h4 className={styles._greenTitle}>Para tu negocio</h4>
         <div className={styles._link}>
-          <h4>Pay</h4>
+          <h4 onClick={() => navigation('/for-business', true)}>Pay</h4>
           <p>
             Recibe tus pagos
             de forma instantánea
@@ -59,7 +73,7 @@ const Dropdown = ({ show }) => {
         <h4 className={styles._greenTitle}>Para tu Profesionales</h4>
 
         <div className={styles._link}>
-          <h4>Pro</h4>
+          <h4 onClick={() => navigation('/for-pro', true)}>Pro</h4>
           <p>
             Compra, vende e
             intercambia criptos
@@ -69,6 +83,6 @@ const Dropdown = ({ show }) => {
       </div>
     </div>
   )
-};
+}
 
-export default memo(Dropdown);
+export default memo(Dropdown)
