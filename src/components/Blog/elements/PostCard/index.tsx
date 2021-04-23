@@ -1,11 +1,24 @@
 import React from 'react'
 import styles from './styles.module.scss'
+import { useRouter } from 'next/router'
+import { useDispatch } from 'react-redux'
+import { setLoader } from '../../../../store/actions'
 
 const PostCard = ({ image, title = null, subtitle = null, share = true }) => {
 
+  const router = useRouter()
+  const dispatch = useDispatch()
+
+  const navigation = (route, loader: boolean = false) => {
+    if (router.pathname != route) {
+      /* if (loader) dispatch(setLoader(true)) */
+      router.push(route)
+    }
+  }
+
   return (
     <div className={styles._container}>
-      <div className={[styles._image, '_imageCover'].join(" ")} style={{backgroundImage:`url(${image})`}}></div>
+      <div onClick={() => navigation('/post', true)} className={[styles._image, '_imageCover'].join(" ")} style={{backgroundImage:`url(${image})`}}></div>
       {
         title ?
         <div className={ share ? styles._infoContainer : styles._infoContainerRight}>

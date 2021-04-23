@@ -9,6 +9,7 @@ const perPage = 5
 const MainSection = ({ data }) => {
   const [page, setPage] = useState(1)
   const {blogPage, outstanding, posts} = data
+  console.log(posts);
 
   return (
     <>
