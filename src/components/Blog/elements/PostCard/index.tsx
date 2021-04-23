@@ -2,7 +2,8 @@ import React from 'react'
 import styles from './styles.module.scss'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { getPost } from '../../../../store/actions'
+import { setLoader } from '../../../../store/actions'
+import { getPost } from '@store/actions'
 
 const PostCard = ({ data, preview, outstanding }) => {
 
@@ -10,7 +11,11 @@ const PostCard = ({ data, preview, outstanding }) => {
   const dispatch = useDispatch()
 
   const navigation = (route, loader: boolean = false) => {
+
+
     if (router.pathname != route) {
+
+       dispatch(getPost(data))
       /* if (loader) dispatch(setLoader(true)) */
       router.push(route)
     }
