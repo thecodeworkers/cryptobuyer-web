@@ -9,7 +9,6 @@ const perPage = 5
 const MainSection = ({ data }) => {
   const [page, setPage] = useState(1)
   const {blogPage, outstanding, posts} = data
-  console.log(posts);
 
   return (
     <>
@@ -26,9 +25,9 @@ const MainSection = ({ data }) => {
                 return (
                   <div key={index} className={[styles[`_item${index}`], styles._item].join(" ")}>
                     <PostCard
-                      image={post.post.image.mediaItemUrl}
-                      title={index == 2 ? null : post.post.title}
-                      subtitle={index == 2 ? null : post.post.subtitle}
+                      data={post}
+                      preview={index == 2 ? false : true}
+                      outstanding={false}
                     />
                   </div>
                 )
@@ -49,10 +48,9 @@ const MainSection = ({ data }) => {
               return (
                 <div key={index} className={styles._famousContainer}>
                   <PostCard
-                    image={item.post.image.mediaItemUrl}
-                    title={item.post.title}
-                    subtitle={item.post.subtitle}
-                    share={false}
+                    data={item}
+                    preview={true}
+                    outstanding={true}
                   />
                 </div>
               )

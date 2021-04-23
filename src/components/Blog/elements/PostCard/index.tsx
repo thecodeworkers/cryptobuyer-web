@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './styles.module.scss'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { setLoader } from '../../../../store/actions'
+import { getPost } from '../../../../store/actions'
 
-const PostCard = ({ image, title = null, subtitle = null, share = true }) => {
+const PostCard = ({ data, preview, outstanding }) => {
 
   const router = useRouter()
   const dispatch = useDispatch()
@@ -18,21 +18,21 @@ const PostCard = ({ image, title = null, subtitle = null, share = true }) => {
 
   return (
     <div className={styles._container}>
-      <div onClick={() => navigation('/post', true)} className={[styles._image, '_imageCover'].join(" ")} style={{backgroundImage:`url(${image})`}}></div>
+      <div onClick={() => navigation('/post', true)} className={[styles._image, '_imageCover'].join(" ")} style={{backgroundImage:`url(${data?.post?.image?.mediaItemUrl})`}}></div>
       {
-        title ?
-        <div className={ share ? styles._infoContainer : styles._infoContainerRight}>
+        preview ?
+        <div className={ preview ? styles._infoContainer : styles._infoContainerRight}>
           <div className={styles._previousInfo}>
-            <p className={styles._title}>{title}</p>
-            <p className={styles._subtitle}>{subtitle}</p>
-            { share ? <a className={styles._link} href="">SHARE</a> : null }
+            <p className={styles._title}>{data.post.title}</p>
+            <p className={styles._subtitle}>{data.post.subtitle}</p>
+            { preview ? <a className={styles._link} href="">SHARE</a> : null }
           </div>
         </div> : null
       }
       <style jsx>{`
         ._imageCover {
-          height: ${title && share ? '50%' :
-                    title && !share ? '60%' : '100%'}
+          height: ${preview && !outstanding ? '50%' :
+                    preview && outstanding ? '60%' : '100%'}
         }
         `}
       </style>
