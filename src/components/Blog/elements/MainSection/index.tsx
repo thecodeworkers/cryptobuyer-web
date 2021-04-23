@@ -35,12 +35,16 @@ const MainSection = ({ data }) => {
             }
           </div>
           <div className={styles._paginationContainer}>
-            <Pagination color='#707070' currentPage={page} items={posts} perPage={perPage} changePage={setPage}/>
+            {
+              posts.length ? (
+                <Pagination color='#707070' currentPage={page} items={posts} perPage={perPage} changePage={setPage}/>
+              ) : null
+            }
           </div>
         </section>
         <section className={styles._rightContainer}>
           {
-            outstanding.slice(0, 3).map((item, index) => {
+            outstanding?.slice(0, 3).map((item, index) => {
               return (
                 <div key={index} className={styles._famousContainer}>
                   <PostCard
