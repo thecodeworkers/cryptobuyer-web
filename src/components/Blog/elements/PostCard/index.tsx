@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { setLoader } from '../../../../store/actions'
+import { getPost } from '@store/actions'
 
 const PostCard = ({ image, title = null, subtitle = null, share = true }) => {
 
@@ -10,7 +11,11 @@ const PostCard = ({ image, title = null, subtitle = null, share = true }) => {
   const dispatch = useDispatch()
 
   const navigation = (route, loader: boolean = false) => {
+
+
     if (router.pathname != route) {
+
+       dispatch(getPost({image, title, subtitle,}))
       /* if (loader) dispatch(setLoader(true)) */
       router.push(route)
     }
