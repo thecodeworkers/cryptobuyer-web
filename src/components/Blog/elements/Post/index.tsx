@@ -7,19 +7,19 @@ import { useSelector } from 'react-redux'
 const Post = () => {
 
   const { post: { post } } = useSelector((state: any) => state)
-    console.log(post);
+  console.log(post);
 
-    const [postDate, setPostDate]= useState(null)
+  const [postDate, setPostDate] = useState(null)
 
   useEffect(() => {
-    if(post.date != []){
+    if (post.date != []) {
       let date = post?.date ? new Date(post?.date) : new Date()
       let day = date?.getDate()
       let month = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(new Date(date));
       let year = date?.getFullYear()
-      setPostDate( day + ' ' + month + ' ' + year)
+      setPostDate(day + ' ' + month + ' ' + year)
     }
-    if(post.date == []){
+    if (post.date == []) {
       setPostDate('')
     }
   }, [post.date])
@@ -55,8 +55,6 @@ const Post = () => {
                 <p className={styles._content}>{post?.post?.content}</p>
               </div>
             </div>
-
-
             <style jsx>{`
         ._imageCover {
             background-image:${`url(${post?.post?.image?.mediaItemUrl})`}
@@ -67,7 +65,6 @@ const Post = () => {
         </>) : null}
         <Footer />
       </div>
-
     </>
   )
 }

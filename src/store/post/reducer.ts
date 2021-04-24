@@ -2,7 +2,7 @@ import { SET_POST } from './action-types'
 import { AnyAction } from 'redux'
 
 const initialState = {
-  post: []
+  post: {}
 }
 
 const setPageReducer = (state = initialState, { type, payload }: AnyAction) => {
