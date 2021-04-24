@@ -45,7 +45,53 @@
   right: 0;
   top: -95px;
 }
+._image{
+  width: 500px;
+  height: 573px;
+}
 
 ._buttonContainer{
   width: 220px;
+}
+
+@include responsive(md) {
+._container{
+  height: 50rem;
+}
+._content{
+  flex-direction: column;
+  }
+._leftContainer{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+._title{
+  text-align: center;
+
+}
+._subtitle{
+  text-align: center;
+  width: 100%;
+}
+._buttonContainer{
+  width: 90%;
+}
+
+._pointContainer{
+  top: 20px;
+  left: -30px;
+
+}
+
+._rightContainer{
+  width: 100%;
+}
+._image{
+  width: 400px;
+  height: 450px;
+}
+
 }

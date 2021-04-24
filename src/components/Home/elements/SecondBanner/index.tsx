@@ -20,7 +20,7 @@ const SecondBanner = ({ data, content }) => {
           </div>
           <div className={styles._rightContainer}>
             <div className={styles._pointContainer}>
-              <img src='images/resource/point-sale.svg'></img>
+              <img src='images/resource/point-sale.svg' className={styles._image}></img>
             </div>
           </div>
         </div>
