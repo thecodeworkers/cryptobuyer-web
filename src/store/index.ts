@@ -28,9 +28,7 @@ const bindMiddleware = (middleware) => {
 }
 
 const reducer = (state, action) => {
-  if (action.type === HYDRATE) return { ...state, ...action.payload }
-  if (action.type == 'persist/REHYDRATE') return { ...action.payload, ...state }
-
+  if (action.type === HYDRATE || action.type ==+ 'persist/REHYDRATE') return { ...state, ...action.payload }
   return reducers(state, action)
 }
 
