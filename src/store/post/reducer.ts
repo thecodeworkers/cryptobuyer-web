@@ -1,14 +1,14 @@
-import { GET_POST } from './action-types'
+import { SET_POST } from './action-types'
 import { AnyAction } from 'redux'
 
 const initialState = {
   post: []
 }
 
-const getPageReducer = (state = initialState, { type, payload }: AnyAction) => {
+const setPageReducer = (state = initialState, { type, payload }: AnyAction) => {
 
   switch (type) {
-    case GET_POST:
+    case SET_POST:
       return { ...state, ...payload }
 
     default:
@@ -16,4 +16,4 @@ const getPageReducer = (state = initialState, { type, payload }: AnyAction) => {
   }
 }
 
-export default getPageReducer
+export default setPageReducer

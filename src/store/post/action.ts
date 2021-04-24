@@ -1,9 +1,9 @@
-import { GET_POST } from './action-types'
+import { SET_POST } from './action-types'
 
-export const getPost = (post: any) => {
+export const setPost = (post: any) => {
 
   return {
-    type: GET_POST,
+    type: SET_POST,
     payload: post
   }
 }

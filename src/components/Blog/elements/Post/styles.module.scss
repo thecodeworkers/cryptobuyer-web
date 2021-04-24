@@ -7,13 +7,15 @@
 
 ._post{
   width: 70%;
-  height: 60%;
+  height: 50%;
 }
 
 ._image {
   border-radius: 10px 10px 0 0;
   width: 100%;
-
+  height: 60%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 ._postContainer{
@@ -47,13 +49,14 @@
   background-color: white;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 
   ._previousInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     color: $charade;
-    border-radius: 10px;
+
     ._title{
       font-family: $helveticaNowTextBold;
       font-size: $helveticaRegular20;
@@ -79,38 +82,10 @@
   }
 }
 
-._infoContainerRight {
-  height: 40%;
-  background-color: white;
-  display: flex;
-
-  ._previousInfo {
-    display: flex;
-    flex-direction: column;
-    color: $charade;
-
-    ._title {
-      margin: 5% 0;
-      font-family: $helveticaNowTextBold;
-      font-size: $helveticaRegular20;
-    }
-
-    ._subtitle {
-      font-family: $helveticaNowText;
-      font-size: $helveticaRegular14;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-  }
-
-}
 
 ._textContainer{
   width: 100%;
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -135,5 +110,6 @@
   font-size: $helveticaRegular20;
   color: $charade;
   margin-bottom: 1rem;
+  overflow-y: scroll
 
 }

@@ -3,19 +3,16 @@ import styles from './styles.module.scss'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { setLoader } from '../../../../store/actions'
-import { getPost } from '@store/actions'
+import { setPost } from '@store/actions'
 
 const PostCard = ({ data, preview, outstanding }) => {
 
   const router = useRouter()
   const dispatch = useDispatch()
-
-  const navigation = (route, loader: boolean = false) => {
-
+  const navigation = (route, loader: boolean = false, post) => {
 
     if (router.pathname != route) {
-
-       dispatch(getPost(data))
+       dispatch(setPost({post: post}))
       /* if (loader) dispatch(setLoader(true)) */
       router.push(route)
     }
@@ -23,7 +20,7 @@ const PostCard = ({ data, preview, outstanding }) => {
 
   return (
     <div className={styles._container}>
-      <div onClick={() => navigation('/post', true)} className={[styles._image, '_imageCover'].join(" ")} style={{backgroundImage:`url(${data?.post?.image?.mediaItemUrl})`}}></div>
+      <div onClick={() => navigation('/post', true , data)} className={[styles._image, '_imageCover'].join(" ")} style={{backgroundImage:`url(${data?.post?.image?.mediaItemUrl})`}}></div>
       {
         preview ?
         <div className={ preview ? styles._infoContainer : styles._infoContainerRight}>
