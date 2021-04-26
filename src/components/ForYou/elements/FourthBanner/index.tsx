@@ -17,7 +17,7 @@ const FourthBanner = ({ data }) => {
           </div>
           <div className={styles._rightContainer}>
             <div className={styles._atmContainer}>
-              <img src='images/resource/atm.svg'></img>
+              <img className={styles._image} src='images/resource/atm.svg'></img>
             </div>
           </div>
         </div>
