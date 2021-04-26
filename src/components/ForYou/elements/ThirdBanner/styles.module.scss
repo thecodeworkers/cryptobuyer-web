@@ -54,3 +54,51 @@
 ._buttonContainer{
   width: 220px;
 }
+
+@include responsive(lg) {
+
+  ._image{
+    width: 400px;
+    height: 450px;
+  }
+  ._cardsContainer{
+    top: -30px;
+    left: -20px;
+  }
+
+}
+@include responsive(md) {
+
+  ._cardsContainer{
+    top: 0px;
+    left: -50px;
+  }
+
+  ._image{
+    width: 350px;
+    height: 400px;
+  }
+
+  }
+
+  @include responsive(sm) {
+
+    ._cardsContainer{
+      top: 0px;
+      left: -50px;
+    }
+
+    ._title{
+      font-size: 1.5rem;
+    }
+
+    ._subtitle{
+      width: 100%;
+    }
+    ._image{
+      width: 250px;
+      height: 300px;
+    }
+
+
+  }
