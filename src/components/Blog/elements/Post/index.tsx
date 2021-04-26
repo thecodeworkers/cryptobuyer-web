@@ -4,25 +4,24 @@ import { Navbar, Footer } from '@components'
 import Head from 'next/head'
 import { useSelector } from 'react-redux'
 
-const Post = () => {
+const Post = ({ id }) => {
 
-  const { post: { post } } = useSelector((state: any) => state)
-  console.log(post);
-
+  const { posts: { posts } } = useSelector((state: any) => state)
+  const post = (id) ? posts.find(data => id === data.id) : {};
   const [postDate, setPostDate] = useState(null)
 
+  const setDate = () => {
+    const date = post?.date ? new Date(post?.date) : new Date()
+    const day = date?.getDate()
+    const month = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(new Date(date));
+    const year = date?.getFullYear()
+    setPostDate(day + ' ' + month + ' ' + year)
+  }
+
   useEffect(() => {
-    if (post.date != []) {
-      let date = post?.date ? new Date(post?.date) : new Date()
-      let day = date?.getDate()
-      let month = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(new Date(date));
-      let year = date?.getFullYear()
-      setPostDate(day + ' ' + month + ' ' + year)
-    }
-    if (post.date == []) {
-      setPostDate('')
-    }
-  }, [post.date])
+    if (post?.date != []) setDate()
+    if (post?.date == []) setPostDate('')
+  }, [post?.date])
 
   return (
     <>

@@ -8,33 +8,25 @@ import { setPost } from '@store/actions'
 const PostCard = ({ data, preview, outstanding }) => {
 
   const router = useRouter()
-  const dispatch = useDispatch()
-  const navigation = (route, loader: boolean = false, post) => {
-
-    if (router.pathname != route) {
-       dispatch(setPost({post: post}))
-      /* if (loader) dispatch(setLoader(true)) */
-      router.push(route)
-    }
-  }
+  const navigation = (route) => { if (router.pathname != route) router.push(route) }
 
   return (
     <div className={styles._container}>
-      <div onClick={() => navigation('/post', true , data)} className={[styles._image, '_imageCover'].join(" ")} style={{backgroundImage:`url(${data?.post?.image?.mediaItemUrl})`}}></div>
+      <div onClick={() => navigation(`/post?id=${data.id}`)} className={[styles._image, '_imageCover'].join(" ")} style={{ backgroundImage: `url(${data?.post?.image?.mediaItemUrl})` }}></div>
       {
         preview ?
-        <div className={ preview ? styles._infoContainer : styles._infoContainerRight}>
-          <div className={styles._previousInfo}>
-            <p className={styles._title}>{data.post.title}</p>
-            <p className={styles._subtitle}>{data.post.subtitle}</p>
-            { preview ? <a className={styles._link} href="">SHARE</a> : null }
-          </div>
-        </div> : null
+          <div className={preview ? styles._infoContainer : styles._infoContainerRight}>
+            <div className={styles._previousInfo}>
+              <p className={styles._title}>{data.post.title}</p>
+              <p className={styles._subtitle}>{data.post.subtitle}</p>
+              {preview ? <a className={styles._link} href="">SHARE</a> : null}
+            </div>
+          </div> : null
       }
       <style jsx>{`
         ._imageCover {
           height: ${preview && !outstanding ? '50%' :
-                    preview && outstanding ? '60%' : '100%'}
+          preview && outstanding ? '60%' : '100%'}
         }
         `}
       </style>
