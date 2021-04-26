@@ -29,7 +29,7 @@ const bindMiddleware = (middleware) => {
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) return { ...state, ...action.payload }
-  if (action.type === 'persist/REHYDRATE') return { ...state, ...{ ...action.payload, ...state } }
+  if (action.type === 'persist/REHYDRATE') return { ...action.payload, ...state }
   return reducers(state, action)
 }
 
@@ -43,7 +43,7 @@ const makeStore: any = ({ isServer }) => {
   const persistConfig = {
     key: 'cryptobuyerRoot',
     storage,
-    //whitelist: ['post']
+    whitelist: ['posts', 'page']
   }
 
   const persistedReducer = persistReducer(persistConfig, reducer)
