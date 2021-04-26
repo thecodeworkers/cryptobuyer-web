@@ -54,6 +54,19 @@
   width: 220px;
 }
 
+@include responsive(lg) {
+
+  ._image{
+    width: 450px;
+    height: 500px;
+  }
+  ._pointContainer{
+    top: -30px;
+    left: 0;
+  }
+
+}
+
 @include responsive(md) {
 ._container{
   height: 46rem;
