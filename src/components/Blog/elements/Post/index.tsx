@@ -4,10 +4,8 @@ import { Navbar, Footer } from '@components'
 import Head from 'next/head'
 import { useSelector } from 'react-redux'
 
-const Post = ({ id }) => {
+const Post = ({ post }) => {
 
-  const { posts: { posts } } = useSelector((state: any) => state)
-  const post = (id) ? posts.find(data => id === data.id) : {};
   const [postDate, setPostDate] = useState(null)
 
   const setDate = () => {
