@@ -19,7 +19,6 @@ export const getPosts: any = () => async (dispatch, getState) => {
 }
 
 export const setPost: any = (id) => async (dispatch) => {
-  console.log('SETPOST')
   const result: any = await resource('post', id)
   dispatch(actionObject(SET_POST, result))
 }
