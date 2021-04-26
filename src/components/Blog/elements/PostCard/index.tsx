@@ -8,11 +8,17 @@ import { setPost } from '@store/actions'
 const PostCard = ({ data, preview, outstanding }) => {
 
   const router = useRouter()
-  const navigation = (route) => { if (router.pathname != route) router.push(route) }
+  const dispatch = useDispatch()
 
+    const navigation = (route, loader: boolean = false) => {
+      if (router.pathname != route) {
+        if (loader) dispatch(setLoader(true))
+        router.push(route)
+      }
+    }
   return (
     <div className={styles._container}>
-      <div onClick={() => navigation(`/post?id=${data.id}`)} className={[styles._image, '_imageCover'].join(" ")} style={{ backgroundImage: `url(${data?.post?.image?.mediaItemUrl})` }}></div>
+      <div onClick={() => navigation(`/post?id=${data.id}`, true)} className={[styles._image, '_imageCover'].join(" ")} style={{ backgroundImage: `url(${data?.post?.image?.mediaItemUrl})` }}></div>
       {
         preview ?
           <div className={preview ? styles._infoContainer : styles._infoContainerRight}>
