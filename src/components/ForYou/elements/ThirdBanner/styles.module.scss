@@ -83,9 +83,15 @@
 
   @include responsive(sm) {
 
+    ._content{
+      width: 100%;
+    }
+    ._container{
+      height: 20rem;
+    }
     ._cardsContainer{
-      top: 0px;
-      left: -50px;
+      top: 35px;
+      left: 0;
     }
 
     ._title{
@@ -94,10 +100,16 @@
 
     ._subtitle{
       width: 100%;
+      font-size: 1rem;
     }
     ._image{
-      width: 250px;
-      height: 300px;
+      width: 220px;
+      height: 250px;
+    }
+
+    ._buttonContainer{
+      width: 150px;
+
     }
 
 
