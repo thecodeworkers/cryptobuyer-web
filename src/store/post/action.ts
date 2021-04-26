@@ -1,7 +1,7 @@
-import { blog } from '@graphql/query'
+import { blog, resource } from '@graphql/query'
 import { GET_PAGES } from '@store/page/action-types'
 import { actionObject, Filter } from '@utils'
-import { GET_POSTS } from './action-types'
+import { GET_POSTS, SET_POST } from './action-types'
 
 export const getPosts: any = () => async (dispatch, getState) => {
 
@@ -17,3 +17,10 @@ export const getPosts: any = () => async (dispatch, getState) => {
   dispatch(actionObject(GET_POSTS, { posts: result.posts, outstanding: outstanding }))
   dispatch(actionObject(GET_PAGES, data))
 }
+
+export const setPost: any = (id) => async (dispatch) => {
+  console.log('SETPOST')
+  const result: any = await resource('post', id)
+  dispatch(actionObject(SET_POST, result))
+}
+

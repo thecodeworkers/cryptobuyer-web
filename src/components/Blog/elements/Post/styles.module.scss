@@ -1,0 +1,115 @@
+@import '../../../../../public/styles/index.scss';
+
+._container {
+  height: 100vh;
+  background: $gallerySolid;
+}
+
+._post{
+  width: 70%;
+  height: 50%;
+}
+
+._image {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+._postContainer{
+  height: 70vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+._leftContainer{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+._rightContainer{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+ ._infoContainer {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  ._previousInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $charade;
+
+    ._title{
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaRegular20;
+      margin: 5% 10% 5% 10%
+    }
+
+    ._link {
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaRegular20;
+      margin: 0 10% 5% 10%;
+    }
+
+    ._subtitle {
+      font-family: $helveticaNowText;
+      font-size: $helveticaRegular14;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      margin: 0 10% 5% 10%;
+    }
+  }
+}
+
+
+._textContainer{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+._date{
+  font-family: $helveticaNowText;
+  font-size: $helveticaRegular14;
+  color: $charade;
+  margin-bottom: 1rem;
+}
+
+._title{
+  font-family: $helveticaNowTextBold;
+  font-size: $helveticaBold64;
+  color: $charade;
+  margin-bottom: 1rem;
+
+}
+
+._content{
+  font-family: $helveticaNowText;
+  font-size: $helveticaRegular20;
+  color: $charade;
+  margin-bottom: 1rem;
+  overflow-y: scroll
+
+}
