@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Logo = ({ color }) => (
-<svg xmlns="http://www.w3.org/2000/svg" width="208.046" height="38.592" viewBox="0 0 208.046 38.592">
+const Logo = ({ color, size = null }) => (
+<svg xmlns="http://www.w3.org/2000/svg" width={size ?? '208.046'} height={size ?? '38.592'} viewBox="0 0 208.046 38.592">
 <g transform="translate(0 41.633)">
 <g transform="translate(77.575 -41.633)">
 <g transform="translate(0 0)">
