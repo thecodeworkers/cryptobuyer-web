@@ -36,7 +36,7 @@ const home = `
       }
       publicityBanner {
         title
-        subtitulo
+        subtitle
         publicityImage {
           mediaItemUrl
           mediaType
