@@ -158,13 +158,18 @@
 
   ._logoContainer{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 80px;
+    left:20px;
   }
 
   ._logo{
     width: 150px;
   }
-
+  ._whiteTitle{
+    font-size:1.8rem
+  }
+  ._whiteSubtitle{
+    font-size: 0.9rem;
+  }
 }
 
