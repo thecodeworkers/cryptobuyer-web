@@ -25,10 +25,13 @@ const SecondBanner = ({ data, content }) => {
           </div>
         </div>
       </div>
-      <div className='_publicity' />
+      <div className='_publicity' >
+      <p className={styles._title}>{data?.title}</p>
+      <p className={styles._subtitle}>{data?.subtitle}</p>
+        </div>
       <style jsx>{`
       ._publicity{
-        background-image: url(${data?.mediaItemUrl});
+        background-image: url(${data?.publicityImage?.mediaItemUrl});
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
