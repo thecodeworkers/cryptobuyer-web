@@ -7,7 +7,6 @@ import {
   Metrics,
   ThirdBanner,
   SecondBanner,
-  CommercesSlider,
   Partnership
 } from './elements'
 
@@ -21,8 +20,7 @@ const Home = ({ content }) => {
       {content ? (<>
         < FirstBanner data={content?.mainBanner} />
         <Metrics data={content?.counter} />
-        <SecondBanner data={content?.publicityBanner} content={content?.secondBanner} />
-        <CommercesSlider data={content?.allies} />
+        <SecondBanner data={content?.publicityBanner} content={content?.secondBanner} slider={content?.allies} />
         <ThirdBanner data={content?.thirdBanner} />
         <Partnership data={content?.patnership} />
         </>) : null}

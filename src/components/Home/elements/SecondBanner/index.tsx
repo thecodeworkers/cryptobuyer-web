@@ -1,11 +1,11 @@
 import { memo, useRef } from 'react'
-import { GeneralButton } from '@components'
+import { GeneralButton,  } from '@components'
 import styles from './styles.module.scss'
-
-const SecondBanner = ({ data, content }) => {
+import  CommercesSlider  from '../CommercesSlider'
+import { XptAtm } from '@images/logos'
+const SecondBanner = ({ data, content, slider }) => {
 
   const publicityBannerRef = useRef()
-
 
   return (
     <>
@@ -25,10 +25,22 @@ const SecondBanner = ({ data, content }) => {
           </div>
         </div>
       </div>
+      <CommercesSlider data={slider} />
       <div className='_publicity' >
-      <p className={styles._title}>{data?.title}</p>
-      <p className={styles._subtitle}>{data?.subtitle}</p>
+        <div className={styles._textContainer}>
+          <div className={styles._textContent}>
+            <p className={styles._whiteTitle}>{data?.title}</p>
+            <p className={styles._whiteSubtitle}>{data?.subtitle}</p>
+          </div>
+          <div className={styles._logoContainer}>
+            <div className={styles._logo}>
+            <XptAtm  color={'#fff'}/>
+            </div>
+          </div>
+
         </div>
+
+      </div>
       <style jsx>{`
       ._publicity{
         background-image: url(${data?.publicityImage?.mediaItemUrl});
@@ -37,6 +49,7 @@ const SecondBanner = ({ data, content }) => {
         background-position: center;
         width: 100%;
         height: 250px;
+        position:relative
       }
     `}</style>
     </>
