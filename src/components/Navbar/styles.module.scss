@@ -35,7 +35,6 @@
   font-size: 0.875rem;
 
   & li {
-    // color: $charade;
     cursor: pointer;
   }
 }
@@ -94,4 +93,24 @@
   margin-left: 3rem;
   position: relative;
   color: $easternBlue !important;
+}
+
+._responsive {
+  display: none;
+}
+
+@include responsive(xl) {
+  ._paddingLeft {
+    margin-left: 1.5rem;
+  }
+}
+
+@include responsive(lg) {
+  ._parent {
+    display: none;
+  }
+
+  ._responsive {
+    display: block;
+  }
 }

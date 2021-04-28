@@ -12,4 +12,4 @@ export { default as Loader } from './Loader'
 export { default as Blog } from './Blog'
 export { default as Post } from './Blog/elements/Post'
 export { default as Pagination } from './Pagination'
-
+export { default as NavbarResponsive } from './NavbarResponsive'
