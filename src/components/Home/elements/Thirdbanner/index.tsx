@@ -24,6 +24,14 @@ const ThirdBanner = ({ data }) => (
         width:100%;
         height: 40vw;
       }
+      @media(max-width: 678px) {
+        ._main{
+          height: 80vw;
+          background-position: center;
+          background-position-x: 65%
+
+        }
+      }
     `}</style>
   </>
 )
