@@ -2,6 +2,7 @@ import styles from './styles.module.scss'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { setLoader } from '../../store/actions'
+import { ResponsiveMenu } from '../'
 
 const NavbarResponsive = () => {
 
@@ -16,6 +17,7 @@ const NavbarResponsive = () => {
   }
 
   return (
+    <>
     <nav className={styles._parent}>
       <div className={styles._content}>
         <div onClick={() => navigation('/', true)}>
@@ -28,6 +30,9 @@ const NavbarResponsive = () => {
         </div>
       </div>
     </nav>
+
+    <ResponsiveMenu />
+    </>
   )
 };
 
