@@ -54,6 +54,9 @@
 ._buttonContainer{
   width: 220px;
 }
+._logo{
+  width: 150px;
+}
 
 @include responsive(lg) {
 
@@ -100,7 +103,7 @@
 
     ._subtitle{
       width: 90%;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     ._image{
       width: 220px;
@@ -110,6 +113,9 @@
     ._buttonContainer{
       width: 150px;
 
+    }
+    ._logo{
+      width: 100px;
     }
 
 

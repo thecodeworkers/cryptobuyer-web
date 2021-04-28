@@ -3,6 +3,7 @@ import { GeneralButton,  } from '@components'
 import styles from './styles.module.scss'
 import  CommercesSlider  from '../CommercesSlider'
 import { XptAtm, XptPro } from '@images/logos'
+
 const SecondBanner = ({ data, content, slider }) => {
 
   const publicityBannerRef = useRef()
