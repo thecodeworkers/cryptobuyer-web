@@ -35,9 +35,13 @@ const home = `
         }
       }
       publicityBanner {
-        mediaItemUrl
-        mediaType
-        slug
+        title
+        subtitle
+        publicityImage {
+          mediaItemUrl
+          mediaType
+          slug
+        }
       }
       secondBanner {
         subtitle

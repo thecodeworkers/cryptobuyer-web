@@ -4,8 +4,9 @@ import aboutPageQuery from './aboutPage'
 import forYouQuery from './forYouPage'
 import forBusinessQuery from './forBusinessPage'
 import proPageQuery from './proPage'
+import postQuery from './post'
 
-const resource = async (resource: any) => {
+const resource = async (resource: any, id = null) => {
 
   const resources = {
     'homePage': homePageQuery,
@@ -13,6 +14,7 @@ const resource = async (resource: any) => {
     'forYouPage': forYouQuery,
     'forBusinessPage': forBusinessQuery,
     'proPage': proPageQuery,
+    'post': postQuery(id)
   }
 
   const query = `
