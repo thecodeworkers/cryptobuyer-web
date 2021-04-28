@@ -10,7 +10,7 @@ const ThirdBanner = ({ data }) => {
         <div className={styles._content}>
           <div className={styles._leftContainer}>
             <div className={styles._cardsContainer}>
-              <img src='images/resource/cards.svg'></img>
+              <img className={styles._image} src='images/resource/cards.svg'></img>
             </div>
           </div>
           <div className={styles._rightContainer}>
