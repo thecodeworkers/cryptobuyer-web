@@ -2,7 +2,7 @@ import { memo, useRef } from 'react'
 import { GeneralButton,  } from '@components'
 import styles from './styles.module.scss'
 import  CommercesSlider  from '../CommercesSlider'
-import { XptAtm } from '@images/logos'
+import { XptAtm, XptPro } from '@images/logos'
 const SecondBanner = ({ data, content, slider }) => {
 
   const publicityBannerRef = useRef()
@@ -12,6 +12,7 @@ const SecondBanner = ({ data, content, slider }) => {
       <div className={styles._container} ref={publicityBannerRef}>
         <div className={styles._content}>
           <div className={styles._leftContainer}>
+            <XptPro color={'#262833'} />
             <p className={styles._title}>{content?.title}</p>
             <p className={styles._subtitle}>{content?.subtitle}</p>
             <div className={styles._buttonContainer}>
