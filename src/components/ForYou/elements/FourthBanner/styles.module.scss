@@ -54,3 +54,71 @@
 ._buttonContainer{
   width: 220px;
 }
+._logo{
+  width: 150px;
+}
+
+@include responsive(lg) {
+
+  ._image{
+    width: 400px;
+    height: 450px;
+  }
+  ._atmContainer{
+    top: 0;
+    left: -20px;
+  }
+
+}
+@include responsive(md) {
+
+  ._atmContainer{
+    top: 10px;
+    left: -10px;
+  }
+
+  ._image{
+    width: 300px;
+    height: 350px;
+  }
+
+  }
+
+  @include responsive(sm) {
+
+    ._content{
+      width: 90%;
+    }
+    ._container{
+      height: 22rem;
+    }
+    ._atmContainer{
+      top: 50px;
+      left: -20px;
+    }
+
+    ._title{
+      font-size: 1.2rem;
+
+    }
+
+    ._subtitle{
+      width: 90%;
+      font-size: 0.8rem;
+    }
+    ._image{
+      width: 200px;
+      height: 250px;
+    }
+
+    ._buttonContainer{
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+    ._logo{
+      width: 100px;
+      margin-top: 1rem;
+    }
+
+
+  }
