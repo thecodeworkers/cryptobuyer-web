@@ -6,7 +6,7 @@ import { DownArrow } from '../../../public/images/icons'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { setLoader } from '../../store/actions'
-
+import { NavbarResponsive } from '../../components'
 
 const Navbar = ({ color = '#262833' }) => {
 
@@ -40,7 +40,6 @@ const Navbar = ({ color = '#262833' }) => {
       <div className={styles._parent}>
         <div className={styles._main}>
           <div className={styles._leftSide}>
-
             <div className={styles._logoParent} onClick={() => navigation('/', true)}>
               <Logo color={color} />
             </div>
@@ -77,6 +76,10 @@ const Navbar = ({ color = '#262833' }) => {
         </div>
       </div>
 
+      <div className={styles._responsive}>
+        <NavbarResponsive />
+      </div>
+
       <style jsx>{`
     ._list {
       padding-left: 4rem;
@@ -89,6 +92,12 @@ const Navbar = ({ color = '#262833' }) => {
     ._list li {
       color: ${color};
       cursor: pointer;
+    }
+
+    @media(max-width: 1200px) {
+      ._list {
+        padding-left: 3rem;
+      }
     }
     `}</style>
     </>
