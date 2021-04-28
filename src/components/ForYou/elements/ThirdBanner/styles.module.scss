@@ -99,11 +99,11 @@
     }
 
     ._subtitle{
-      width: 100%;
-      font-size: 1rem;
+      width: 80%;
+      font-size: 0.8rem;
     }
     ._image{
-      width: 220px;
+      width: 180px;
       height: 250px;
     }
 
@@ -112,5 +112,7 @@
 
     }
 
-
+    ._rightContainer{
+      width: 50%;
+    }
   }
