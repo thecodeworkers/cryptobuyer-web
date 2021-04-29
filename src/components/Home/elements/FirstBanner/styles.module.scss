@@ -35,3 +35,41 @@
   margin-top: 2.6rem;
   width: 13.75rem;
 }
+
+
+@include responsive(md) {
+
+._title{
+  font-size: 2.5rem;
+
+}
+
+}
+
+@include responsive(sm) {
+
+  ._title{
+    text-align: center;
+    font-size: 2rem;
+
+  }
+
+  ._subtitle{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  ._textParent{
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  ._content{
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+  ._buttonContainer{
+    width: 100%;
+  }
+
+}

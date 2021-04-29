@@ -31,6 +31,14 @@ const FirstBanner = ({ data }) => {
         width:100%;
         height: 100vh;
       }
+
+      @media(max-width: 576px) {
+        ._main {
+          background-image: url('../images/resource/homePrincipal.png');
+          height: 100vh;
+          background-size: cover;
+        }
+      }
     `}</style>
     </>
   )
