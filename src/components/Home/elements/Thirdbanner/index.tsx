@@ -1,11 +1,16 @@
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
+import { XptPro } from '@images/logos'
 
 const ThirdBanner = ({ data }) => (
   <>
     <div className='_main'>
       <div className={styles._content}>
         <div className={styles._textParent}>
+          <div className={styles._logo}>
+          <XptPro color={'#262833'} />
+          </div>
+
           <h1 className={styles._title}> {data?.title} </h1>
           <p className={styles._subtitle}> {data?.subtitle} </p>
 
@@ -26,9 +31,10 @@ const ThirdBanner = ({ data }) => (
       }
       @media(max-width: 678px) {
         ._main{
-          height: 80vw;
-          background-position: center;
-          background-position-x: 65%
+        height: 130vw;
+        background-size: 100% 100%;
+        background-position: center;
+        background-image: url(../images/resource/home.png)
 
         }
       }

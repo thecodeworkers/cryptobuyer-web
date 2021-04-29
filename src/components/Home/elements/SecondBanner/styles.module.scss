@@ -138,7 +138,9 @@
   width: 400px;
   height: 450px;
 }
-
+._logo{
+  width: 180px;
+}
 }
 
 @include responsive(sm) {

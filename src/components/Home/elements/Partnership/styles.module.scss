@@ -16,3 +16,13 @@
 ._commerce{
   width: 7vw;
 }
+@include responsive(sm) {
+
+  ._commerce{
+    width: 11vw;
+  }
+  ._sliderContainer {
+    width: 90%;
+
+  }
+}
