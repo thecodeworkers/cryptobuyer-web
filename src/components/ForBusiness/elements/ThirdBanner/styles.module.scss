@@ -126,6 +126,9 @@ height: 473px;
 
 @include responsive(sm) {
 
+  ._leftContainer{
+    width: 60%;
+  }
   ._logo{
     width: 100px;
   }
