@@ -1,5 +1,7 @@
 import styles from './styles.module.scss'
 import { createMarkup } from '@utils'
+ import { XptPay } from '@images/logos'
+
 const SecondBanner = ({ data }) => {
 
   return (
@@ -12,6 +14,9 @@ const SecondBanner = ({ data }) => {
             </div>
           </div>
           <div className={styles._rightContainer}>
+            <div className={styles._logo}>
+             <XptPay color={'#262833'} />
+            </div>
             <div className={styles._title} dangerouslySetInnerHTML={createMarkup(data?.title)}></div>
             <p className={styles._subtitle}>{data?.subtitle}</p>
           </div>
