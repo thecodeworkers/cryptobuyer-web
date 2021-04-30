@@ -1,6 +1,6 @@
 
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './styles.module.scss'
 import { Toggle } from '@images/icons'
 import { Logo } from '@images/logos'
@@ -12,7 +12,7 @@ const ResponsiveMenu = ({ show = 0, method }: any) => {
 
   const router = useRouter()
   const dispatch = useDispatch()
-  const [dropdown, setDropdown] = useState(false)
+  const [dropdown, setDropdown] = useState(false);
 
   const dropdownStatus = () => setDropdown(dropdown => !dropdown)
 
@@ -20,15 +20,15 @@ const ResponsiveMenu = ({ show = 0, method }: any) => {
     if (router.pathname != route) {
       if (loader) dispatch(setLoader(true))
       router.push(route)
-      method(0)
+      method(2)
     }
   }
 
   const menuStatus = (show: number) => {
-    if(show === 0) return styles._staticMenu
-    if(show === 1) return styles._parentShow
-    if(show === 2) return styles._parentHide
-   }
+    if (show === 0) return styles._staticMenu
+    if (show === 1) return styles._parentShow
+    if (show === 2) return styles._parentHide
+  }
 
   return (
     <div className={menuStatus(show)} >
@@ -97,10 +97,9 @@ const ResponsiveMenu = ({ show = 0, method }: any) => {
 
               <button className={styles._signInBtn}>
                 Iniciar sesión
-            </button>
+                </button>
 
             </div>
-
             <div className={styles._responsiveFooter}>
               <div className={styles._elements} >
                 <div className={styles._logoParent}>
