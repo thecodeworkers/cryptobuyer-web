@@ -103,13 +103,16 @@
 ._commercesContainer {
     width: 50%;
     display: flex;
-    justify-content: inherit;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 ._commercesLogo {
     background-repeat: no-repeat;
     width: 200px;
     height: 140px;
+    margin-right: 1rem;
 }
 
 ._services {
@@ -122,5 +125,125 @@
             font-weight: 900;
         }
     }
+}
+
+@include responsive(xxxl) {
+  ._commercesLogo{
+    width: 180px;
+  }
+}
+
+@include responsive(xxl) {
+  ._commercesLogo{
+    width: 150px;
+  }
+}
+
+@include responsive(xl) {
+ ._commercesContainer{
+   width: 60%;
+ }
+ ._customerContainer{
+   width: 40% !important
+ }
+}
+
+
+@include responsive(lg) {
+
+  ._services{
+    width: 40%;
+  }
+
+  ._textParent{
+
+    h1{
+      font-size: 2rem;
+    }
+
+    p{
+      font-size: 0.8rem
+    }
+  }
+  ._basicForm{
+    width: 100%;
+  }
+  ._secondContainer{
+    padding: 0px 0px 0px 7.3%;
+  }
+
+  ._customerTitle{
+    font-size: 1.8rem;
+  }
+  ._customerContainer{
+    width: 30% !important
+  }
+  ._commercesContainer{
+    width: 70%;
+  }
+
+
+}
+
+@include responsive(md) {
+
+  ._basicForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+  }
+  ._input{
+    margin-left: 0;
+    width: 50px;
+    margin-top: 1rem;
+  }
+
+  ._textParent{
+    margin-top: 3rem;
+  }
+}
+
+@include responsive(md) {
+
+ ._content{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+ }
+  ._input{
+    margin-left: 0;
+    width: 50px;
+    margin-top: 1rem;
+  }
+
+  ._textParent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  ._subtitle{
+    text-align: center;
+  }
+  ._basicForm{
+    align-items: center;
+  }
+  ._input{
+    width: 300px;
+  }
+  ._services{
+     width: 100%;
+     text-align: center;
+  }
+
+  ._downarrow{
+    display: none;
+  }
+
 }
 
