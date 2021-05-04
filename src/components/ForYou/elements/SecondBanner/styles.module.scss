@@ -71,17 +71,62 @@
 
    h2{
      margin-bottom: 1rem !important;
+     font-size: 1.5rem !important;
    }
    p{
      margin-bottom: 1rem !important;
-     width: 90% !important
+     width: 90% !important;
+     font-size: 1rem !important;
    }
    ._button{
      margin-bottom: 1rem !important
    }
    strong{
-     font-size: 2rem !important;
+     font-size: 2.5rem !important;
    }
  }
 
 }
+
+
+@include responsive(md) {
+
+  ._coinContent{
+    display: none;
+  }
+  ._textContainer{
+    margin-bottom: 0;
+
+    h2{
+    width: 100% !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+    }
+    p{
+      width: 100% !important;
+      font-size: 0.8rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    ._button{
+      margin-bottom: 0.5rem !important;
+    }
+    strong{
+      font-size: 1.8rem !important;
+    }
+  }
+}
+
+@include responsive(sm) {
+
+  ._textContainer{
+    ._button{
+    width: 100% !important;
+    }
+
+    strong{
+      font-size: 2.5rem !important;
+    }
+  }
+
+}
+
