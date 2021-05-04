@@ -3,7 +3,6 @@ import { createMarkup } from '@utils'
 import { GeneralButton } from '@components'
 
 const FirstBanner = ({ data }) => {
-  console.log(data);
 
   return (
     <>
