@@ -12,6 +12,11 @@ forYouPage:page(id: "${forYouId}") {
         slug
         mediaItemUrl
       }
+      backgroundResponsive {
+        mediaItemUrl
+        slug
+        mediaType
+      }
       button {
         title
         link
@@ -23,6 +28,11 @@ forYouPage:page(id: "${forYouId}") {
       background {
         slug
         mediaItemUrl
+      }
+      backgroundResponsive {
+        mediaItemUrl
+        slug
+        mediaType
       }
       title
       subtitle

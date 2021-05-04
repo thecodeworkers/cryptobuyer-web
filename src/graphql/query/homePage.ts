@@ -20,6 +20,11 @@ const home = `
           mediaType
           mediaItemUrl
         }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
+        }
         button {
           link
           title
@@ -56,6 +61,11 @@ const home = `
           mediaType
           mediaItemUrl
           slug
+        }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
         }
         subtitle
         title
