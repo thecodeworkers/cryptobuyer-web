@@ -27,3 +27,22 @@
     font-size: $helveticaRegular20;
   }
 }
+
+
+@include responsive(md) {
+  ._parragraph {
+    width: 65%;
+    padding: 2rem 0;
+
+    & h1 {
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaRegular16;
+      margin-bottom: 0.8rem;
+    }
+
+    & p {
+      font-size:$helveticaRegular14 !important;
+      font-family: $helveticaNowText;
+    }
+  }
+}

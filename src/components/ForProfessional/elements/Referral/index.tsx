@@ -21,6 +21,14 @@ const Referral = ({ data }) => (
       width:100%;
       height: 20vw;
     }
+
+    @media (max-width: 996px) {
+      ._main {
+        background-size: cover;
+        height: 30vh;
+        background-position: center;
+      }
+    }
   `}</style>
   </>
 )
