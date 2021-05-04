@@ -12,6 +12,11 @@ const about = `
           mediaItemUrl
           slug
         }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
+        }
         coin {
           mediaType
           mediaItemUrl
