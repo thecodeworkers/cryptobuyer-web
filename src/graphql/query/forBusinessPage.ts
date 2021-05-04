@@ -12,6 +12,11 @@ forBusinessPage:page(id: "${forBusinessId}") {
         mediaItemUrl
         slug
       }
+      backgroundResponsive {
+        mediaItemUrl
+        slug
+        mediaType
+      }
       lowTitle
       button {
         title
