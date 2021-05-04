@@ -107,6 +107,14 @@
     align-items: center;
     flex-wrap: wrap;
 }
+._firstRow{
+  display: flex;
+  flex-direction: row;
+}
+._secondRow{
+  display: flex;
+  flex-direction: row;
+}
 
 ._commercesLogo {
     background-repeat: no-repeat;
@@ -199,10 +207,33 @@
     }
     ._commercesContainer{
       width: 100% !important;
+
     }
     ._commercesLogo{
-      margin-right: 0 !important;
+      margin-right: 10px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-content: center !important;
+
+
     }
+    ._firstRow{
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr,) !important;
+    }
+    ._secondRow{
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr,) !important;
+    }
+
+
+   /*  ._commercesLogo:nth-child(4){
+      grid-row: 2 !important;
+      grid-column: 2/3 !important;
+      background-color: red !important;
+
+    } */
+
   }
   ._basicForm{
     display: flex;
