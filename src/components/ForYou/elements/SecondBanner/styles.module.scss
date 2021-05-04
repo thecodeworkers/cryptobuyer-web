@@ -63,3 +63,25 @@
     margin: 0 2vw;
   }
 }
+
+
+@include responsive(lg) {
+ ._textContainer{
+   margin-bottom: 0;
+
+   h2{
+     margin-bottom: 1rem !important;
+   }
+   p{
+     margin-bottom: 1rem !important;
+     width: 90% !important
+   }
+   ._button{
+     margin-bottom: 1rem !important
+   }
+   strong{
+     font-size: 2rem !important;
+   }
+ }
+
+}
