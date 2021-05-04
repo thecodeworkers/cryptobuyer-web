@@ -31,7 +31,7 @@ const ThirdBanner = ({ data }) => (
       }
       @media(max-width: 678px) {
         ._main{
-        height: 100vh;
+        height: 70vh;
         background-size: cover;
         background-position: center;
         background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
