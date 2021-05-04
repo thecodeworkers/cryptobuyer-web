@@ -6,6 +6,7 @@ import { getPages } from '@store/actions'
 
 const AboutUsPage = () => {
   const { page: { aboutPage: { about } } } = useSelector((state: any) => state)
+
   return <AboutUs content={about} />
 }
 
