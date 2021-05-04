@@ -16,10 +16,10 @@ const ForYou = ({ content }) => {
       <Navbar color='#FFFFFF' />
       {(content) ? (<>
         <FirstBanner data={content?.mainBanner} reference={banner} />
-        <SecondBanner data={content?.secondBanner} reference={banner} />
+     {/*    <SecondBanner data={content?.secondBanner} reference={banner} />
         <MiddleBanner data={content?.customers} />
         <ThirdBanner data={content?.thirdBanner} />
-        <FourthBanner data={content?.fourthBanner} />
+        <FourthBanner data={content?.fourthBanner} /> */}
         <Footer />
       </>) : null}
     </div>
