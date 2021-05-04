@@ -190,13 +190,18 @@
   ._secondContainer{
     flex-direction: column !important;
     flex-wrap: nowrap !important;
+    height: 50vh !important;
+    padding: 0px 7.3% !important;
 
     ._customerContainer{
       width: 100% !important;
-
+      margin-top: 1rem !important;
     }
     ._commercesContainer{
       width: 100% !important;
+    }
+    ._commercesLogo{
+      margin-right: 0 !important;
     }
   }
   ._basicForm{
