@@ -3,6 +3,8 @@ import { createMarkup } from '@utils'
 import { GeneralButton } from '@components'
 
 const FirstBanner = ({ data }) => {
+  console.log(data);
+
   return (
     <>
       <div className='_main'>
@@ -34,9 +36,11 @@ const FirstBanner = ({ data }) => {
 
       @media(max-width: 576px) {
         ._main {
-          background-image: url('../images/resource/homePrincipal.png');
+          background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
           height: 100vh;
+          width: 100%;
           background-size: cover;
+          background-position: center;
         }
       }
     `}</style>
