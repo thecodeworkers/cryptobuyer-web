@@ -1,7 +1,5 @@
 @import '../../../public/styles/index.scss';
 
-
-
 @mixin menuStyle() {
   width: 100%;
   position: fixed;
@@ -222,7 +220,6 @@
     transform: translateX(-100%);
   }
 }
-
 
 
 @keyframes heartbeat
