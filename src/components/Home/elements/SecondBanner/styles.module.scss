@@ -66,14 +66,14 @@
 ._whiteTitle{
   font-size: $helveticaBold64;
   font-family: $helveticaNowTextBold;
-  color: $gallerySolid;
+  color: $white;
   margin-bottom: 1rem;
 }
 
 ._whiteSubtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
-  color: $gallerySolid;
+  color: $white;
   margin-bottom: 1rem;
 }
 
@@ -138,7 +138,9 @@
   width: 400px;
   height: 450px;
 }
-
+._logo{
+  width: 180px;
+}
 }
 
 @include responsive(sm) {

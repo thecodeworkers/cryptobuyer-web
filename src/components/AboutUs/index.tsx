@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import Navbar from '../Navbar'
 import { FirstBanner, SecondBanner } from './elements'
 import Head from 'next/head'
+import { Footer } from '@components'
 
 const AboutUs = ({ content }) => {
 
@@ -17,6 +18,7 @@ const AboutUs = ({ content }) => {
       <div ref={banner}>
         <SecondBanner data={content?.secondBanner} />
       </div>
+      <Footer />
     </div>
   )
 }

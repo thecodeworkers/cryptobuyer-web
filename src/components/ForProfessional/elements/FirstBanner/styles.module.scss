@@ -8,7 +8,7 @@
 }
 
 ._textContainer {
-  top: 23%;
+  top: 20%;
   position: absolute;
   width: 45%;
   color: $white;
@@ -72,5 +72,52 @@
     font-family: $helveticaNowText;
     font-size: $helveticaRegular14;
     margin-bottom: 0.7rem;
+  }
+}
+
+._proLogoParent {
+  width: 7.5rem;
+  display: none;
+}
+
+@include responsive(xxl) {
+  ._title {
+   font-size: $helveticaBold64 - 1;
+  }
+
+  ._logoParent {
+    & p {
+      display: none;
+    }
+  }
+}
+
+@include responsive(md) {
+  ._textContainer {
+    position: relative;
+    top: 6rem;
+    width: 100%;
+  }
+
+  ._title {
+    margin-top: 0.4rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  ._text {
+    font-size: 0.9rem;
+  }
+
+  ._btnParent {
+    width: 100%;
+  }
+
+  ._proLogoParent {
+    display: block;
+  }
+
+  ._secondTextParent {
+    display: none;
   }
 }
