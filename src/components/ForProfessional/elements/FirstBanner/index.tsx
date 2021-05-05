@@ -3,12 +3,16 @@ import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 import { scrolling } from '@utils'
 import { createMarkup } from '@utils'
+import { XptPro } from '@images/logos'
 
 const FirstBanner = ({ reference, data }) => (
   <>
     <div className='_main'>
       <section className={styles._content}>
         <div className={styles._textContainer}>
+          <div className={styles._proLogoParent}>
+            <XptPro color='white' />
+          </div>
           <h1 className={styles._title}> {data?.title} </h1>
           <p className={styles._text}> {data?.subtitle} </p>
           <div className={styles._btnParent}>
@@ -51,7 +55,7 @@ const FirstBanner = ({ reference, data }) => (
         background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: top;
       }
     }
   `}</style>
