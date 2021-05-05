@@ -62,3 +62,94 @@
     }
   }
 }
+
+
+
+@include responsive(lg) {
+
+  ._imageContainer{
+    ._contentImage{
+      width: unset !important;
+    }
+    img{
+      width: 150px !important;
+    }
+    ._imageBox{
+      width: unset;
+    }
+  }
+
+  ._textContainer{
+    h2{
+      width: 100% !important;
+    }
+    p{
+      width: 100% !important;
+    }
+  }
+
+}
+
+
+@include responsive(md) {
+
+  ._textContainer{
+    width: 100% !important;
+    justify-content: center ;
+    align-items: flex-start ;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    h2{
+      font-size: 1.8rem !important;
+      margin-bottom: 1rem !important;
+      margin-top: 2rem !important;
+    }
+    p{
+      font-size: 1rem !important;
+      width: 80% !important;
+    }
+  }
+
+  ._imageContainer{
+    width: 100% !important;
+
+    ._contentImage{
+      width: 100% !important;
+    }
+    ._imageBox{
+      display: grid !important;
+      grid-template-columns: repeat(2,1fr) !important;
+      grid-auto-rows: auto !important;
+      align-self: center !important;
+      width: 100% !important;
+      flex-wrap: nowrap !important;
+    }
+  }
+
+  ._container{
+     flex-direction: column !important;
+  }
+
+  ._button{
+    align-self: left;
+  }
+
+  ._imageContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+
+@include responsive(sm) {
+  ._button{
+    width: 100% !important;
+  }
+
+}
+
+
