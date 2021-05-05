@@ -252,8 +252,45 @@
   }
 }
 
-@include responsive(md) {
+@include responsive(sm) {
 
+  ._content{
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   width: 100%;
+   margin-top: 1.5rem;
+  }
+   ._input{
+     margin-left: 0;
+     width: 50px;
+     margin-top: 1rem;
+   }
 
-}
+   ._textParent{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+   }
+   ._subtitle{
+     text-align: center;
+   }
+   ._basicForm{
+     align-items: center;
+   }
+   ._input{
+     width: 300px;
+   }
+   ._services{
+      width: 100%;
+      text-align: center;
+   }
 
+   ._downarrow{
+     display: none;
+   }
+
+ }
