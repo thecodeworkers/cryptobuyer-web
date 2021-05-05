@@ -4,7 +4,7 @@ import { scrolling, createMarkup } from '@utils'
 const FirstBanner = ({ data, reference }) => {
   return (
     <>
-      <div className={styles.main}>
+      <div className={styles._main}>
         <div className='_bannerContainer'>
           <div className={styles._content}>
             <div className={styles._textParent}>
@@ -31,6 +31,12 @@ const FirstBanner = ({ data, reference }) => {
           background-size: 100% 100%;
           width:100%;
           height: 70vh;
+        }
+        @media(max-width: 576px) {
+          ._bannerContainer {
+            background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
+         }
+          }
         }
       `}</style>
     </>

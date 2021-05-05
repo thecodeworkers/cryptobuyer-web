@@ -21,7 +21,7 @@
   font-size: $helveticaBold64;
 
   p {
-    margin-bottom: 2%;
+    margin-bottom: 1rem;
     font-family: $helveticaNowText;
     font-size: $helveticaRegular20;
   }
@@ -106,4 +106,44 @@
 
 ._downarrow {
   cursor: pointer;
+}
+
+@include responsive(md) {
+  ._textParent{
+    width: 50%;
+  }
+  ._mainTitle{
+    font-size: 1.8rem;
+  }
+  ._subtitle{
+    font-size: 0.8rem ;
+
+  }
+}
+
+
+@include responsive(sm) {
+  ._middleCoin{
+   /*  height: 200px;
+    width: 200px;
+   margin: auto 0; */
+   display: none;
+ }
+ ._content{
+   align-items: flex-start;
+
+ }
+ ._subtitleContainer{
+
+
+ ._subtitleText{
+  font-size: 1.5rem;
+  padding-top: 2vh;
+ }
+}
+._textParent{
+  width: 100%;
+  margin-top: 8rem;
+}
+
 }
