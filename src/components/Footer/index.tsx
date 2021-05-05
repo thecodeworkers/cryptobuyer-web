@@ -1,9 +1,22 @@
 import styles from './styles.module.scss'
 import React from 'react'
 import { Logo } from '@images/logos'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useDispatch } from 'react-redux'
+import { setLoader } from '../../store/actions'
 
 const Footer = () => {
 
+  const router = useRouter()
+  const dispatch = useDispatch()
+
+  const navigation = (route, loader: boolean = false) => {
+    if (router.pathname != route) {
+      if (loader) dispatch(setLoader(true))
+      router.push(route)
+    }
+  }
   return (
     <>
       <footer className={styles._footerContainer}>
@@ -16,25 +29,25 @@ const Footer = () => {
           <div className={styles._content}>
             <div className={styles._linksContainer}>
               <div className={styles._links}>
-                <a className={styles._linkBold}>Pro</a>
+                <a onClick={() => navigation('/for-pro', true)} className={styles._linkBold}>Para traders</a>
                 <a className={styles._link}>Go to</a>
                 <a className={styles._link}>Beneficios</a>
                 <a className={styles._link}>Servicios</a>
               </div>
               <div className={styles._links}>
-                <a className={styles._linkBold}>Pay</a>
+                <a onClick={() => navigation('/for-you', true)} className={styles._linkBold}>Para ti</a>
                 <a className={styles._link}>Comienza</a>
                 <a className={styles._link}>Beneficios</a>
                 <a className={styles._link}>Servicio</a>
               </div>
               <div className={styles._links}>
-                <a className={styles._linkBold}>ATM</a>
+                <a onClick={() => navigation('/for-business', true)} className={styles._linkBold}>Para tu negocio</a>
                 <a className={styles._link}>Qué es ATM</a>
                 <a className={styles._link}>Beneficios</a>
                 <a className={styles._link}>Noticias</a>
               </div>
               <div className={styles._links}>
-                <a className={styles._linkBold}>Blog</a>
+                <a onClick={() => navigation('/blog', true)} className={styles._linkBold}>Blog</a>
                 <a className={styles._link}>Destacados</a>
                 <a className={styles._link}>Noticias</a>
                 <p className={styles._link}></p>
