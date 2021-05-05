@@ -39,10 +39,10 @@ const ForYouFirstBanner = ({ data, reference }) => {
         }
         @media(max-width: 576px) {
         ._main{
-          background-image: url(/images/banners/foryou.png);
+          background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
           height: 100vh;
-          background-size: cover;
           background-position: center;
+         background-size:cover
         }
         }
       `}</style>
