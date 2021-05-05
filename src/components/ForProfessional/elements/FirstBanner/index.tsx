@@ -45,7 +45,8 @@ const FirstBanner = ({ reference, data }) => (
   ._main {
       background-image: url(${data?.background?.mediaItemUrl});
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
+      background-position: center;
       width:100%;
       height: 100vh;
     }
@@ -53,8 +54,6 @@ const FirstBanner = ({ reference, data }) => (
     @media(max-width: 768px) {
       ._main {
         background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
-        background-size: cover;
-        background-repeat: no-repeat;
         background-position: top;
       }
     }
