@@ -3,12 +3,16 @@ import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 import { scrolling } from '@utils'
 import { createMarkup } from '@utils'
+import { XptPro } from '@images/logos'
 
 const FirstBanner = ({ reference, data }) => (
   <>
     <div className='_main'>
       <section className={styles._content}>
-        {/* <div className={styles._textContainer}>
+        <div className={styles._textContainer}>
+          <div className={styles._proLogoParent}>
+            <XptPro color='white' />
+          </div>
           <h1 className={styles._title}> {data?.title} </h1>
           <p className={styles._text}> {data?.subtitle} </p>
           <div className={styles._btnParent}>
@@ -33,7 +37,7 @@ const FirstBanner = ({ reference, data }) => (
               <img src='images/icons/complete-arrow-down.svg' />
             </div>
           </div>
-        </div> */}
+        </div>
       </section>
     </div>
 
@@ -41,9 +45,17 @@ const FirstBanner = ({ reference, data }) => (
   ._main {
       background-image: url(${data?.background?.mediaItemUrl});
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
+      background-position: center;
       width:100%;
       height: 100vh;
+    }
+
+    @media(max-width: 768px) {
+      ._main {
+        background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
+        background-position: top;
+      }
     }
   `}</style>
   </>
