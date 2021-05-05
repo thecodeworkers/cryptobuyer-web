@@ -28,6 +28,11 @@ const pro = `
           slug
           mediaItemUrl
         }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
+        }
         title
         subtitle
         discount

@@ -24,6 +24,15 @@ const Referral = ({ data }) => (
 
     @media (max-width: 996px) {
       ._main {
+        background-position: center;
+        background-size: cover;
+        height: 35vw;
+      }
+    }
+
+    @media (max-width: 768px) {
+      ._main {
+        background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
         background-size: cover;
         height: 30vh;
         background-position: center;
