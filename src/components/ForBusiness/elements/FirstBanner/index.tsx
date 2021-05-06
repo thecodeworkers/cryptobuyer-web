@@ -55,7 +55,7 @@ const FirstBanner = ({ data, content, reference }) => {
         }
         @media(max-width: 576px) {
           ._bannerContainer {
-            height: 100vh;
+            height: 80vh;
             background-size: cover;
             background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
             background-position: center
