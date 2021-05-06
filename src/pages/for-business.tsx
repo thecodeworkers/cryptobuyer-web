@@ -10,7 +10,7 @@ const ForBusinessPage = () => {
   return <ForBusiness content={for_business} />
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(
+export const getStaticProps = wrapper.getStaticProps(
   ({ store }) => store.dispatch(getPages('forBusinessPage'))
 )
 

@@ -11,7 +11,7 @@ const ForProfessionalPage = () => {
   return <ForProfessional content={pro} />
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(
+export const getStaticProps = wrapper.getStaticProps(
   ({ store }) => store.dispatch(getPages('proPage'))
 )
 

@@ -9,7 +9,7 @@ const ForYouPage = () => {
   return <ForYou content={for_you} />
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(
+export const getStaticProps = wrapper.getStaticProps(
   ({ store }) => store.dispatch(getPages('forYouPage'))
 )
 

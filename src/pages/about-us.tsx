@@ -10,7 +10,7 @@ const AboutUsPage = () => {
   return <AboutUs content={about} />
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(
+export const getStaticProps = wrapper.getStaticProps(
   ({ store }) => store.dispatch(getPages('aboutPage'))
 )
 

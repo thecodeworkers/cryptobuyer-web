@@ -9,7 +9,7 @@ const BlogPage = () => {
   return <Blog content={{ posts, outstanding, blogPage }} />
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(
+export const getStaticProps = wrapper.getStaticProps(
   ({ store }) => store.dispatch(getPosts())
 )
 
