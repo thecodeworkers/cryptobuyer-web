@@ -9,7 +9,7 @@ const HomePage = () => {
   return <Home content={home} />
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(
+export const getStaticProp = wrapper.getStaticProps(
   ({ store }) => store.dispatch(getPages('homePage'))
 )
 
