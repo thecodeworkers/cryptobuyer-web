@@ -77,3 +77,54 @@
   justify-content: left;
   align-items: flex-end;
 }
+
+
+@include responsive(md) {
+
+  ._titlesContainer {
+    width: 90%;
+    color: $charade;
+    margin-bottom: 5%;
+    margin-top: 4rem;
+
+    ._mainTitle {
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaBold64 - 0.7;
+      line-height: 1.8rem;
+    }
+
+    ._description {
+      font-family: $helveticaNowText;
+      font-size: $helveticaRegular16;
+      margin: 3% auto;
+    }
+  }
+
+  ._leftContainer {
+    width: 100%;
+  }
+
+  ._postsContainer {
+    flex-flow: column wrap;
+    height: auto;
+    width: 100%;
+
+    ._item {
+      height: 60vh;
+      width: 100%;
+      margin: 1.5rem 0;
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  ._rightContainer {
+    display: none;
+  }
+
+  ._paginationContainer {
+    margin: 2rem 0;
+  }
+}
