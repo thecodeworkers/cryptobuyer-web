@@ -42,7 +42,7 @@
 
 
 ._bannerContainer {
-  height: 70vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -124,17 +124,22 @@
 
 @include responsive(sm) {
   ._middleCoin{
-   /*  height: 200px;
+    height: 200px;
     width: 200px;
-   margin: auto 0; */
-   display: none;
+    margin: auto 0;
+    right: unset;
+    top: unset;
+    left: -40px;
  }
  ._content{
    align-items: flex-start;
 
  }
+ ._main{
+   height: 115vh;
+ }
  ._subtitleContainer{
-
+  height: 15vh;
 
  ._subtitleText{
   font-size: 1.5rem;
@@ -143,7 +148,10 @@
 }
 ._textParent{
   width: 100%;
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
+._meetOurTeam{
+  display: none;
+}
 }
