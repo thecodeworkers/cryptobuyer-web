@@ -30,9 +30,18 @@ const FirstBanner = ({ data, content, reference }) => {
             <p className={styles._customerSubtitles}>{content?.subtitle}</p>
           </div>
           <div className={styles._commercesContainer}>
-            <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[0]?.image?.mediaItemUrl})` }}></div>
-            <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[1]?.image?.mediaItemUrl})` }}></div>
-            <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[2]?.image?.mediaItemUrl})` }}></div>
+            <div className={styles._firstRow}>
+              <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[0]?.image?.mediaItemUrl})` }}></div>
+              <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[1]?.image?.mediaItemUrl})` }}></div>
+              <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[2]?.image?.mediaItemUrl})` }}></div>
+            </div>
+
+            <div className={styles._secondRow}>
+              <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[3]?.image?.mediaItemUrl})` }}></div>
+              <div className={styles._commercesLogo} style={{ backgroundImage: `url(${content?.commerces[4]?.image?.mediaItemUrl})` }}></div>
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -43,6 +52,14 @@ const FirstBanner = ({ data, content, reference }) => {
           background-size: 100% 100%;
           width:100%;
           height: 70vh;
+        }
+        @media(max-width: 576px) {
+          ._bannerContainer {
+            height: 100vh;
+            background-size: cover;
+            background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
+            background-position: center
+          }
         }
       `}</style>
     </>
