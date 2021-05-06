@@ -10,9 +10,10 @@ const FirstBanner = ({ data, reference }) => {
             <div className={styles._textParent}>
               <h1 className={styles._mainTitle}>{data?.title}</h1>
               <div className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.content)}></div>
+              <div className={styles._middleCoin} style={{ backgroundImage: `url(${data?.coin?.mediaItemUrl})` }}></div>
             </div>
           </div>
-          <div className={styles._middleCoin} style={{ backgroundImage: `url(${data?.coin?.mediaItemUrl})` }}></div>
+
         </div>
 
         <div className={styles._subtitleContainer}>

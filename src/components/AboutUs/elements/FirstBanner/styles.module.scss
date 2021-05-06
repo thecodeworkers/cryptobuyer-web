@@ -124,12 +124,11 @@
 
 @include responsive(sm) {
   ._middleCoin{
-    height: 200px;
+    height: 130px;
     width: 200px;
-    margin: auto 0;
     right: unset;
     top: unset;
-    left: -40px;
+    left: -50px;
  }
  ._content{
    align-items: flex-start;
