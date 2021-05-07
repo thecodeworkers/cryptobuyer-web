@@ -2,23 +2,23 @@ import { GraphQlClient, normalized } from '@utils'
 import blogPageQuery from './blogPage'
 
 const posts = `
-posts {
-  nodes {
-    title
-    id
-    date
-    post {
-      outstanding
+  posts(first: 10000000) {
+    nodes {
       title
-      subtitle
-      content
-      image {
-        mediaItemUrl
-        slug
+      id
+      date
+      post {
+        outstanding
+        title
+        subtitle
+        content
+        image {
+          mediaItemUrl
+          slug
+        }
       }
     }
   }
-}
 `
 
 const blog = async () => {
