@@ -102,7 +102,6 @@
   font-size: $helveticaBold64;
   color: $charade;
   margin-bottom: 1rem;
-
 }
 
 ._content{
@@ -111,5 +110,55 @@
   color: $charade;
   margin-bottom: 1rem;
   overflow-y: scroll
+}
 
+._arrowBack {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+  margin-left: 7.5%;
+  display: none;
+}
+
+
+@include responsive(md) {
+
+  ._post {
+    height: 60vh;
+    width: 85%;
+    margin-bottom: 3%;
+  }
+
+  ._container{
+    height: auto;
+  }
+
+  ._postContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  ._leftContainer {
+    width: 100%;
+    margin-top: 7rem;
+  }
+
+  ._rightContainer {
+    width: 85%;
+    margin-bottom: 5%;
+    overflow: auto;
+  }
+
+  ._title {
+    font-size: $helveticaBold64 - 1;
+  }
+
+  ._content {
+    overflow-y: auto
+  }
+
+  ._arrowBack {
+    display: block;
+  }
 }
