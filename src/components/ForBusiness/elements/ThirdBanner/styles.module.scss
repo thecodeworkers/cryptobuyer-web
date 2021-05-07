@@ -32,12 +32,13 @@
   color: $white;
   margin-bottom: 1rem;
   line-height: 1.2;
+  width: 350px;
 }
 ._subtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $white;
-  width: 70%;
+  width: 350px;
   margin-bottom: 1rem;
 }
 
@@ -77,6 +78,18 @@
 ._image{
   width: 500px;
   height: 573px;
+}
+
+@include responsive(lg) {
+
+._title{
+  width: 100%;
+}
+
+._subtitle{
+  width: 70%;
+}
+
 }
 @include responsive(lg) {
 

@@ -19,13 +19,14 @@
 ._text {
   font-family: $helveticaNowText;
   margin-top: 1rem;
-  width: 90%;
+  width: 500px;
 }
 
 ._title {
   font-family: $helveticaNowTextBold;
   font-size: $helveticaBold64;
   line-height: 1.2;
+  width: 500px;
 }
 
 ._btnParent {
@@ -57,6 +58,17 @@
   cursor: pointer;
   display: inline-block;
   margin-top: 0.5rem;
+}
+
+@include responsive(xl) {
+
+
+  ._title{
+    width: 100%;
+  }
+  ._text{
+    width: 90%;
+  }
 }
 
 @include responsive(md) {
