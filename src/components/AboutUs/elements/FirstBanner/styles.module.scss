@@ -32,6 +32,7 @@
   font-size: $helveticaRegular20;
   color: $white;
   font-weight: 400;
+  width: 530px;
 }
 
 ._mainTitle {
@@ -106,6 +107,19 @@
 
 ._downarrow {
   cursor: pointer;
+}
+
+
+@include responsive(xl) {
+
+  ._mainTitle{
+
+    width: 100%;
+  }
+  ._subtitle{
+    width: 100%;
+
+  }
 }
 
 @include responsive(md) {

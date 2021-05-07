@@ -32,6 +32,7 @@
   color: $charade;
   margin-bottom: 1rem;
   line-height: 1.2;
+  width: 380px;
 }
 ._subtitle{
   font-size: $helveticaRegular24;
@@ -39,6 +40,7 @@
   color: $charade;
   width: 70%;
   margin-bottom: 1rem;
+  width: 480px;
 }
 
 ._rightContainer{
@@ -57,6 +59,18 @@
 }
 ._logo{
   width: 150px;
+}
+
+@include responsive(xl) {
+
+
+  ._title{
+    width: 100%;
+  }
+  ._subtitle{
+    width: 70%;
+  }
+
 }
 
 @include responsive(lg) {

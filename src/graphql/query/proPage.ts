@@ -17,6 +17,11 @@ const pro = `
           slug
           mediaType
         }
+        qrCode {
+          mediaItemUrl
+          slug
+          mediaType
+        }
         button {
           title
           link
@@ -27,6 +32,11 @@ const pro = `
         background {
           slug
           mediaItemUrl
+        }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
         }
         title
         subtitle

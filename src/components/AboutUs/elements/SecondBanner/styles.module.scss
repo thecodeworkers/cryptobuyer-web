@@ -57,6 +57,7 @@
         h2 {
           font-family: $helveticaNowTextBold;
           font-size: $helveticaBold60;
+          line-height: 1.2;
         }
         p {
           font-family: $helveticaNowText;
@@ -80,6 +81,7 @@
         h2 {
           font-family: $helveticaNowTextBold;
           font-size: $helveticaBold60;
+          line-height: 1.2;
         }
         p {
           width: 58%;
@@ -106,6 +108,8 @@
     }
   }
 }
+
+
 
 
 @include responsive(md)  {

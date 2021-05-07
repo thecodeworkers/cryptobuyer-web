@@ -32,6 +32,7 @@
   font-family: $helveticaNowTextBold;
   color: $charade;
   margin-bottom: 1rem;
+  width: 300px;
   strong {
     color: $easternBlue;
   }
@@ -41,7 +42,7 @@
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $charade;
-  width: 70%;
+  width: 410px;
   margin-bottom: 1rem;
 }
 
@@ -61,6 +62,15 @@
 
 ._logo{
   width: 180px;
+}
+
+@include responsive(xl) {
+  ._title{
+    width: 100%;
+  }
+  ._subtitle{
+    width: 70%;
+  }
 }
 
 @include responsive(lg) {

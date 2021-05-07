@@ -23,13 +23,14 @@
         font-family: $helveticaNowTextBold;
         font-size: $helveticaBold64;
         line-height: 1.2;
+        width: 520px;
     }
 
     p {
         margin: 2% 0;
         font-family: $helveticaNowText;
         font-size: $helveticaRegular20;
-        width: 80%;
+        width: 450px;
         line-height: 1.5rem;
     }
 }
@@ -93,12 +94,14 @@
         font-family: $helveticaNowTextBold;
         font-size: $helveticaBold64;
         line-height: 1.2;
+        width: 450px;
     }
 
     ._customerSubtitles {
         font-family: $helveticaNowText;
         font-size: $helveticaRegular20;
         margin-top: 5%;
+        width: 450px;
     }
 }
 
@@ -155,6 +158,26 @@
  ._customerContainer{
    width: 40% !important
  }
+
+ ._textParent {
+
+  h1 {
+      width: 100% !important;
+  }
+
+  p {
+      width: 80% !important ;
+  }
+}
+._secondContainer{
+  ._customerTitle{
+    width: 100% !important;
+  }
+  ._customerSubtitles{
+    width: 100% !important;
+  }
+}
+
 }
 
 
