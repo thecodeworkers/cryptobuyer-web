@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { Navbar, Footer } from '@components'
 import Head from 'next/head'
-import { useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
+import { useDispatch } from 'react-redux'
+import { setLoader } from '../../../../store/actions'
 
 const Post = ({ post }) => {
 
+  const router = useRouter()
+  const dispatch = useDispatch()
   const [postDate, setPostDate] = useState(null)
 
   const setDate = () => {
@@ -21,6 +25,13 @@ const Post = ({ post }) => {
     if (post?.date == []) setPostDate('')
   }, [post?.date])
 
+  const navigation = (route, loader: boolean = false) => {
+    if (router.pathname != route) {
+      if (loader) dispatch(setLoader(true))
+      router.push(route)
+    }
+  }
+
   return (
     <>
       <div className={styles._container}>
@@ -31,6 +42,8 @@ const Post = ({ post }) => {
         {post ? (<>
           <div className={styles._postContainer}>
             <div className={styles._leftContainer}>
+
+              <img src='images/icons/back-arrow.svg' className={styles._arrowBack} onClick={() => navigation('blog', true)}></img>
               <div className={styles._post}>
 
                 <div className={[styles._image, '_imageCover'].join(" ")} style={{ backgroundImage: `url(${post?.post?.image?.mediaItemUrl})` }}></div>
@@ -55,7 +68,6 @@ const Post = ({ post }) => {
             <style jsx>{`
         ._imageCover {
             background-image:${`url(${post?.post?.image?.mediaItemUrl})`}
-            height
         `}
             </style>
           </div>

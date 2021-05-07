@@ -4,13 +4,6 @@ import { createMarkup } from '@utils'
 const Referral = ({ data }) => (
   <>
     <section className='_main'>
-      <div className={styles._content}>
-          <div className={styles._parragraph}>
-              <h1> {data?.title} </h1>
-              <div dangerouslySetInnerHTML={createMarkup(data?.subtitle)}></div>
-              <div dangerouslySetInnerHTML={createMarkup(data?.discount)}></div>
-          </div>
-      </div>
     </section>
 
   <style jsx>{`
@@ -22,8 +15,9 @@ const Referral = ({ data }) => (
       height: 20vw;
     }
 
-    @media (max-width: 996px) {
+    @media (max-width: 768px) {
       ._main {
+        background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
         background-size: cover;
         height: 30vh;
         background-position: center;
