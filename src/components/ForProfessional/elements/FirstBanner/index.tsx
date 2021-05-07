@@ -8,7 +8,7 @@ const FirstBanner = ({ reference, data }) => (
   <>
     <div className='_main'>
       <section className={styles._content}>
-        {/* <div className={styles._textContainer}>
+        <div className={styles._textContainer}>
           <h1 className={styles._title}> {data?.title} </h1>
           <p className={styles._text}> {data?.subtitle} </p>
           <div className={styles._btnParent}>
@@ -33,7 +33,7 @@ const FirstBanner = ({ reference, data }) => (
               <img src='images/icons/complete-arrow-down.svg' />
             </div>
           </div>
-        </div> */}
+        </div>
       </section>
     </div>
 
