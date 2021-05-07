@@ -17,6 +17,11 @@ const pro = `
           slug
           mediaType
         }
+        qrCode {
+          mediaItemUrl
+          slug
+          mediaType
+        }
         button {
           title
           link
