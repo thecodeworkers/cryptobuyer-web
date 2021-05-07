@@ -70,7 +70,7 @@ const Dropdown = ({ show }) => {
           </p>
         </div>
 
-        <h4 className={styles._greenTitle}>Para tu Profesionales</h4>
+        <h4 className={styles._greenTitle}>Para traders</h4>
 
         <div className={styles._link}>
           <h4 onClick={() => navigation('/for-pro', true)}>Pro</h4>

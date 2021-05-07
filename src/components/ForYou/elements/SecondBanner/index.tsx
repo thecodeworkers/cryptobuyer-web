@@ -16,7 +16,7 @@ const SecondBanner = ({ data, reference }) => {
             <h2>{data?.title}</h2>
             <p>{data?.subtitle}</p>
             <div className={styles._button}>
-              <GeneralButton height={3.5} backgroundColor='#FFFFFF' textColor='#262833' text={data?.button?.title} />
+              <GeneralButton height={3} backgroundColor='#FFFFFF' textColor='#262833' text={data?.button?.title} />
             </div>
             <div className={styles._more} dangerouslySetInnerHTML={createMarkup(data?.counter)} ></div>
           </div>
@@ -39,6 +39,13 @@ const SecondBanner = ({ data, reference }) => {
           width:100%;
           height: 45vw;
           position: relative;
+        }
+        @media(max-width: 575px) {
+          ._main{
+            height: 50vh;
+            background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
+
+          }
         }
       `}</style>
     </>

@@ -50,7 +50,7 @@ const Logo = ({ color }) => (
         </g>
       </g>
     </g>
-    <line id="Línea_20" data-name="Línea 20" y2="23.956" transform="translate(860.476 208.794)" fill="none" stroke={color} stroke-miterlimit="10" stroke-width="1.25"/>
+    <line id="Línea_20" data-name="Línea 20" y2="23.956" transform="translate(860.476 208.794)" fill="none" stroke={color} strokeMiterlimit="10" strokeWidth="1.25"/>
     <g id="Grupo_1076" data-name="Grupo 1076" transform="translate(869.879 214.166)">
       <path id="Trazado_3561" data-name="Trazado 3561" d="M1281.338,311.38c.048,3.977-1.854,5.933-5.814,5.98h-.143c-2.31,0-3.657-.689-4.382-2.078v5.774h-1.432V306H1271v1.569c.732-1.329,2.09-2,4.383-2.028C1279.33,305.493,1281.291,307.4,1281.338,311.38Zm-1.436.017c-.038-3.132-1.305-4.551-4.368-4.551h-.135c-3.16.038-4.434,1.48-4.4,4.658s1.35,4.591,4.5,4.551S1279.941,314.575,1279.9,311.4Z" transform="translate(-1269.567 -305.54)" fill={color}/>
       <path id="Trazado_3562" data-name="Trazado 3562" d="M1416.021,305.549v1.3H1416c-3.16.038-4.438,1.48-4.4,4.658v5.4h-1.432V306.007h1.432v1.569c.732-1.329,2.09-2,4.383-2.028Z" transform="translate(-1395.787 -305.547)" fill={color}/>

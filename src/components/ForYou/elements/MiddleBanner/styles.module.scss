@@ -23,15 +23,14 @@
       font-size: $helveticaBold64;
       color: $charade;
       margin-bottom: 2rem;
-      width: 480px;
+      line-height: 1.2;
     }
     p {
       font-family: $helveticaNowText;
       font-size: $helveticaRegular24;
       color: $charade;
-      width: 480px;
       margin-bottom: 1.5rem;
-      line-height: 2rem;
+      line-height: 1.2rem;
     }
     ._button {
       width: 250px;
@@ -49,8 +48,7 @@
     overflow-x: hidden;
     align-items: center;
     img {
-      height: auto;
-      width: 200px;
+      width: 22vh;
     }
     ._imageBox {
       width: 100%;
@@ -71,9 +69,7 @@
     ._contentImage{
       width: unset !important;
     }
-    img{
-      width: 150px !important;
-    }
+
     ._imageBox{
       width: unset;
     }
@@ -149,6 +145,18 @@
   ._button{
     width: 100% !important;
   }
+
+  ._textContainer{
+
+    h2{
+      line-height: 1.2;
+      font-size: 1.5rem !important;
+    }
+    p{
+      font-size: 0.8rem !important;
+    }
+  }
+
 
 }
 
