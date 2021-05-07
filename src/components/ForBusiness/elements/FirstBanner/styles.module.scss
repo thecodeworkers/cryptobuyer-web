@@ -22,6 +22,7 @@
     h1 {
         font-family: $helveticaNowTextBold;
         font-size: $helveticaBold64;
+        line-height: 1.2;
     }
 
     p {
@@ -91,6 +92,7 @@
     ._customerTitle {
         font-family: $helveticaNowTextBold;
         font-size: $helveticaBold64;
+        line-height: 1.2;
     }
 
     ._customerSubtitles {
@@ -118,8 +120,7 @@
 
 ._commercesLogo {
     background-repeat: no-repeat;
-    width: 200px;
-    height: 140px;
+    width: 18vh;
     margin-right: 1rem;
 }
 
@@ -135,17 +136,17 @@
     }
 }
 
-@include responsive(xxxl) {
-  ._commercesLogo{
-    width: 180px;
-  }
-}
+// @include responsive(xxxl) {
+//   ._commercesLogo{
+//     width: 180px;
+//   }
+// }
 
-@include responsive(xxl) {
-  ._commercesLogo{
-    width: 150px;
-  }
-}
+// @include responsive(xxl) {
+//   ._commercesLogo{
+//     width: 150px;
+//   }
+// }
 
 @include responsive(xl) {
  ._commercesContainer{
@@ -198,7 +199,7 @@
   ._secondContainer{
     flex-direction: column !important;
     flex-wrap: nowrap !important;
-    height: 50vh !important;
+    height: 40vh !important;
     padding: 0px 7.3% !important;
 
     ._customerContainer{
@@ -214,7 +215,7 @@
       display: flex !important;
       justify-content: center !important;
       align-content: center !important;
-
+      width: 14vh !important;
 
     }
     ._firstRow{

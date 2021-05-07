@@ -98,6 +98,10 @@
     left: 0;
   }
 
+  ._logo{
+    width: 200px;
+  }
+
 }
 
 @include responsive(md) {
@@ -171,7 +175,7 @@
 
   ._logoContainer{
     position: absolute;
-    top: 80px;
+    top: 70px;
     left:20px;
   }
 
@@ -179,7 +183,8 @@
     width: 150px;
   }
   ._whiteTitle{
-    font-size:1.8rem
+    font-size:1.8rem;
+    line-height:1.2
   }
   ._whiteSubtitle{
     font-size: 0.9rem;

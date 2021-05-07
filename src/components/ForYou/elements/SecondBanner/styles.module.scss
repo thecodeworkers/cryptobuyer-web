@@ -19,6 +19,7 @@
       color: $charade;
       margin-bottom: 2rem;
       width: 400px;
+      line-height: 1.2;
     }
     p {
       font-family: $helveticaNowText;
@@ -121,6 +122,11 @@
   ._textContainer{
     ._button{
     width: 100% !important;
+    }
+
+    h2{
+      line-height: 1.2 !important;
+      margin-bottom: 0.5;
     }
 
     strong{
