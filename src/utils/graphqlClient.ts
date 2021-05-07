@@ -1,6 +1,7 @@
+import { fallbackUrl } from './path'
 import axios from 'axios'
 
-const WP_API_URL = process.env.WP_API_URL
+const WP_API_URL = process.env.WP_API_URL || fallbackUrl
 
 const GraphQlClient = async (query, variables = {}) => {
   try {
