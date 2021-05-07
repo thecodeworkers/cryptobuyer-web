@@ -21,7 +21,7 @@
   font-size: $helveticaBold64;
 
   p {
-    margin-bottom: 2%;
+    margin-bottom: 1rem;
     font-family: $helveticaNowText;
     font-size: $helveticaRegular20;
   }
@@ -42,7 +42,7 @@
 
 
 ._bannerContainer {
-  height: 70vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,4 +106,51 @@
 
 ._downarrow {
   cursor: pointer;
+}
+
+@include responsive(md) {
+  ._textParent{
+    width: 50%;
+  }
+  ._mainTitle{
+    font-size: 1.8rem;
+  }
+  ._subtitle{
+    font-size: 0.8rem ;
+
+  }
+}
+
+
+@include responsive(sm) {
+  ._middleCoin{
+    height: 130px;
+    width: 200px;
+    right: unset;
+    top: unset;
+    left: -50px;
+ }
+ ._content{
+   align-items: flex-start;
+
+ }
+ ._main{
+   height: 115vh;
+ }
+ ._subtitleContainer{
+  height: 15vh;
+
+ ._subtitleText{
+  font-size: 1.5rem;
+  padding-top: 2vh;
+ }
+}
+._textParent{
+  width: 100%;
+  margin-top: 6rem;
+}
+
+._meetOurTeam{
+  display: none;
+}
 }
