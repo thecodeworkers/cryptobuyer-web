@@ -37,6 +37,14 @@ const ForYouFirstBanner = ({ data, reference }) => {
           width:100%;
           height: 100vh;
         }
+        @media(max-width: 576px) {
+        ._main{
+          background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
+          height: 100vh;
+          background-position: center;
+         background-size:cover
+        }
+        }
       `}</style>
     </>
   )
