@@ -3,7 +3,6 @@ import { LinkedIn } from '@images/icons'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { Footer } from '@components'
 
 const SecondBanner = ({ data }) => {
 
