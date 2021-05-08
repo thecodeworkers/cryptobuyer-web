@@ -16,7 +16,7 @@ const SecondBanner = ({ data, reference }) => {
             <h2>{data?.title}</h2>
             <p>{data?.subtitle}</p>
             <div className={styles._button}>
-              <GeneralButton height={3} backgroundColor='#FFFFFF' textColor='#262833' text={data?.button?.title} />
+              <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#262833' text={data?.button?.title} />    {/* #FFFFFF */}
             </div>
             <div className={styles._more} dangerouslySetInnerHTML={createMarkup(data?.counter)} ></div>
           </div>

@@ -20,7 +20,7 @@ const SecondBanner = ({ data, content, slider }) => {
             <p className={styles._title}>{content?.title}</p>
             <p className={styles._subtitle}>{content?.subtitle}</p>
             <div className={styles._buttonContainer}>
-              <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text='Quiero enviar dinero' />
+              <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#262833' text='Quiero enviar dinero' />  {/* #262833 */}
             </div>
           </div>
           <div className={styles._rightContainer}>

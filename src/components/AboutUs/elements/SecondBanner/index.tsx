@@ -11,11 +11,10 @@ const SecondBanner = ({ data }) => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 4,
+    slidesToShow: 4 ,
     slidesToScroll: 4,
     arrows: false,
     autoplay: true,
-    centerMode: true,
     variableWidth: true,
     centerPadding: 0,
     responsive: [
