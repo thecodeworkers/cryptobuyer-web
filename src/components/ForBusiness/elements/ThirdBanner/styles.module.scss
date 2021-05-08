@@ -72,6 +72,19 @@
  margin-left: 1rem;
  font-size: $helveticaRegular14;
 }
+
+._inputError {
+  background-color: $doveGray;
+  width: 180px;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  color: $white;
+  border-radius: 10px;
+  border: 1px solid red;
+  margin-left: 1rem;
+  font-size: $helveticaRegular14;
+}
+
 ._logo{
   width: 250px;
 }

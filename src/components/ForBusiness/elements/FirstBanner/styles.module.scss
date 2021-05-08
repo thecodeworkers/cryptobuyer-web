@@ -67,10 +67,23 @@
     padding: 0.5rem 1rem;
     color: $easternBlue;
     border-radius: 10px;
-    border:none;
+    border: none;
     margin-left: 1rem;
     font-size: $helveticaRegular14;
 }
+
+._inputError {
+  background-color: rgba(44, 172, 179, 0.2);
+  width: 180px;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  color: $easternBlue;
+  border-radius: 10px;
+  border: 1px solid red;
+  margin-left: 1rem;
+  font-size: $helveticaRegular14;
+}
+
 
 ._downarrow {
     cursor: pointer;

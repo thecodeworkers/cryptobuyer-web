@@ -92,8 +92,8 @@
       ._investors {
         width: 100%;
         img {
-          height: auto;
-          width: 17vw;
+
+          width: 25vh
         }
         ._investBox {
           width: 100%;
@@ -102,13 +102,45 @@
           flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
-          height: 16vw;
+          height: 25vw;
         }
       }
     }
   }
 }
 
+@include responsive(xxl)  {
+  ._textContainer{
+
+    ._investors {
+
+      img {
+
+        width: 20vh !important
+      }
+  }
+  }
+}
+
+@include responsive(xl)  {
+  ._textContainer{
+
+    ._investors {
+
+      img {
+
+        width: 18vh !important
+      }
+  }
+  }
+}
+
+// @include responsive(lg)  {
+//   ._textContainer{
+
+
+//   }
+// }
 
 
 

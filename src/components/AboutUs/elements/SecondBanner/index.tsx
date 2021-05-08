@@ -7,6 +7,8 @@ import { Footer } from '@components'
 
 const SecondBanner = ({ data }) => {
 
+  console.log(data)
+
   const teamSlider = {
     dots: false,
     infinite: true,
@@ -44,8 +46,8 @@ const SecondBanner = ({ data }) => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     arrows: false,
     autoplay: true,
   }
