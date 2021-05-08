@@ -49,6 +49,7 @@
   font-size: $opensansBold16;
   margin-bottom: 1.5rem;
   margin-right: 3rem;
+  cursor: pointer;
 }
 
 ._speechMain{
@@ -140,3 +141,41 @@
   animation: heartbeat 1s ease infinite;
 }
 
+._responsiveFooter {
+  background-color: $charade;
+  display: none;
+  padding: 2rem;
+}
+
+._elements {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+._logosParent {
+  display: inline-flex;
+}
+
+._logoParent {
+  width: 10rem;
+}
+
+@include responsive(md) {
+    ._footerContainer{
+      display: none;
+    }
+
+  ._responsiveFooter {
+    display: flex;
+  }
+
+  ._logo {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

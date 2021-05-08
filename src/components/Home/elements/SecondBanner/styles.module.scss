@@ -1,0 +1,212 @@
+@import '../../../../../public/styles/index.scss';
+
+._container{
+  height: 28.125rem;
+  background-color: $gallerySolid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+._content{
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+}
+._leftContainer{
+  width: 50%;
+}
+
+._title{
+  font-size: $helveticaBold64;
+  font-family: $helveticaNowTextBold;
+  color: $charade;
+  margin-bottom: 1rem;
+  width: 470px;
+}
+._subtitle{
+  font-size: $helveticaRegular24;
+  font-family: $helveticaNowText;
+  color: $charade;
+  width: 365px;
+  margin-bottom: 1rem;
+}
+
+._rightContainer{
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+}
+._pointContainer{
+  position: absolute;
+  right: 0;
+  top: -95px;
+}
+._image{
+  width: 500px;
+  height: 573px;
+}
+
+._buttonContainer{
+  width: 220px;
+}
+
+._textContainer{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  margin: 0 auto;
+}
+
+._whiteTitle{
+  font-size: $helveticaBold64;
+  font-family: $helveticaNowTextBold;
+  color: $white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+._whiteSubtitle{
+  font-size: $helveticaRegular24;
+  font-family: $helveticaNowText;
+  color: $white;
+  margin-bottom: 1rem;
+}
+
+._textContent{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+._logo{
+  width: 250px;
+}
+
+@include responsive(xl) {
+
+  ._title{
+    width: 100%;
+
+  }
+
+  ._subtitle{
+    width: 70%;
+  }
+
+
+}
+
+@include responsive(lg) {
+
+  ._image{
+    width: 450px;
+    height: 500px;
+  }
+  ._pointContainer{
+    top: -30px;
+    left: 0;
+  }
+
+  ._logo{
+    width: 200px;
+  }
+
+}
+
+@include responsive(md) {
+._container{
+  height: 46rem;
+}
+._content{
+  flex-direction: column;
+  }
+._leftContainer{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+._title{
+  text-align: center;
+
+}
+._subtitle{
+  text-align: center;
+  width: 100%;
+}
+._buttonContainer{
+  width: 90%;
+}
+
+._pointContainer{
+  top: 10px;
+  left: 80px;
+}
+
+._rightContainer{
+  width: 100%;
+}
+._image{
+  width: 400px;
+  height: 450px;
+}
+._logo{
+  width: 180px;
+}
+}
+
+@include responsive(sm) {
+
+  ._container{
+    height: 45rem;
+  }
+  ._pointContainer{
+    top: 40px;
+    left: -10px;
+  }
+
+  ._title{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.2;
+  }
+
+  ._subtitle{
+    font-size: 0.9rem
+  }
+
+  ._image{
+    width: 350px;
+    height: 400px;
+  }
+
+  ._logoContainer{
+    position: absolute;
+    top: 70px;
+    left:20px;
+  }
+
+  ._logo{
+    width: 150px;
+  }
+  ._whiteTitle{
+    font-size:1.8rem;
+    line-height:1.2
+  }
+  ._whiteSubtitle{
+    font-size: 0.9rem;
+  }
+  ._leftContainer{
+    margin-top: 1.5rem;
+  }
+}
+

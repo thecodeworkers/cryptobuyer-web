@@ -1,16 +1,21 @@
-import { aboutId } from '../../utils/pageIds'
+import { aboutId } from '@utils/pageIds'
 
 const about = `
-  aboutPage:page(id: "cG9zdDo3Nw==") {
+  aboutPage:page(id: "${aboutId}")  {
     about {
-      subtitle
       mainBanner {
+        subtitle
         content
         title
         background {
           mediaType
           mediaItemUrl
           slug
+        }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
         }
         coin {
           mediaType

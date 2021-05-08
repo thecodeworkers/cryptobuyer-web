@@ -4,4 +4,4 @@ const LinkedIn = () => (
   </svg>
 )
 
-export default LinkedIn;
+export default LinkedIn

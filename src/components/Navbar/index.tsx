@@ -1,15 +1,18 @@
-import { useEffect, useState } from 'react'
-import styles from './styles.module.scss';
-import { Dropdown } from '../';
+import { useState } from 'react'
+import styles from './styles.module.scss'
+import { Dropdown } from '../'
 import { Logo } from '../../../public/images/logos'
 import { DownArrow } from '../../../public/images/icons'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
+import { useDispatch } from 'react-redux'
+import { setLoader } from '../../store/actions'
+import { NavbarResponsive } from '../../components'
 
 const Navbar = ({ color = '#262833' }) => {
 
   const router = useRouter()
   const [show, setShow] = useState(false)
+  const dispatch = useDispatch()
 
   const showPoint = (route) => {
     if (router.pathname == route) {
@@ -26,16 +29,18 @@ const Navbar = ({ color = '#262833' }) => {
     return !products ? styles._paddingLeft : styles._products
   }
 
-  const gotToHome = () => {
-    if (router.pathname != '/') router.push('/');
+  const navigation = (route, loader: boolean = false) => {
+    if (router.pathname != route) {
+      if (loader) dispatch(setLoader(true))
+      router.push(route)
+    }
   }
   return (
     <>
       <div className={styles._parent}>
         <div className={styles._main}>
           <div className={styles._leftSide}>
-
-            <div className={styles._logoParent} onClick={gotToHome}>
+            <div className={styles._logoParent} onClick={() => navigation('/', true)}>
               <Logo color={color} />
             </div>
 
@@ -49,17 +54,12 @@ const Navbar = ({ color = '#262833' }) => {
                   <Dropdown show={show} />
 
                 </li>
-                <Link href='/about-us'>
-                  <li className={activeColor('/about-us')} > Sobre Nosotros
+                <li className={activeColor('/about-us')} onClick={() => navigation('/about-us', true)} > Sobre Nosotros
                   {showPoint('/about-us')}
-                  </li>
-                </Link>
-
-                <Link href='/blog'>
-                  <li className={activeColor('/blog')}> Blog
+                </li>
+                <li className={activeColor('/blog')} onClick={() => navigation('/blog', true)}> Blog
                    {showPoint('/blog')}
-                  </li>
-                </Link >
+                </li>
               </ul>
             </div>
           </div>
@@ -76,6 +76,10 @@ const Navbar = ({ color = '#262833' }) => {
         </div>
       </div>
 
+      <div className={styles._responsive}>
+        <NavbarResponsive />
+      </div>
+
       <style jsx>{`
     ._list {
       padding-left: 4rem;
@@ -89,9 +93,15 @@ const Navbar = ({ color = '#262833' }) => {
       color: ${color};
       cursor: pointer;
     }
+
+    @media(max-width: 1200px) {
+      ._list {
+        padding-left: 3rem;
+      }
+    }
     `}</style>
     </>
   )
 };
 
-export default Navbar;
+export default Navbar

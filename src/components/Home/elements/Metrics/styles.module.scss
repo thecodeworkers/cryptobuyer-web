@@ -1,0 +1,62 @@
+@import '../../../../../public/styles/index.scss';
+
+._main {
+  width: 100%;
+  background-color: $charade;
+  display: flex;
+  justify-content: center;
+}
+
+._content {
+  width: 85%;
+}
+
+._text {
+  padding: 4rem 0px;
+  width: auto;
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+
+._metricsOne {
+  display: inline-block;
+}
+
+._count {
+  color: $white;
+  font-size: 65px;
+  font-family: $helveticaNowText;
+  margin-left: 1.5rem;
+}
+
+._littleText {
+  color: $white;
+  font-family: $helveticaNowText;
+  text-align: right;
+}
+
+@include responsive(md) {
+  ._text{
+  justify-content: center;
+  padding: 1.5rem 0;
+
+  }
+  ._littleText{
+    margin-left: 1rem;
+
+  }
+  ._count{
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  ._content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+
+}

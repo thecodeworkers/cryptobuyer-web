@@ -1,0 +1,114 @@
+@import '../../../../../public/styles/index.scss';
+
+._content {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+._textParent {
+  width: 50%;
+}
+
+._title {
+  font-family: $helveticaNowTextBold;
+  font-size: $helveticaBold64;
+  line-height: 1.2;
+  width: 500px;
+}
+
+._subtitle {
+  font-family: $helveticaNowText;
+  width: 80%;
+  margin-top: 1rem;
+  font-size: $helveticaRegular24;
+  width:570px
+}
+
+._buttonParent {
+  width: 220px;
+  margin-top: 1.5rem;
+}
+._logo{
+  width: 250px;
+}
+
+@include responsive(xl) {
+
+  ._title{
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  ._subtitle{
+    width: 70%;
+  }
+
+
+ }
+
+@include responsive(lg) {
+
+ ._title{
+   font-size: 1.2rem;
+ }
+
+ ._logo{
+  width: 200px;
+}
+
+}
+
+@include responsive(md) {
+
+  ._title{
+    font-size: 1rem;
+
+  }
+  ._subtitle{
+    font-size: 0.8rem;
+  }
+
+  ._buttonParent{
+    width:180px
+  }
+
+  ._logo{
+    width: 180px;
+  }
+
+
+}
+
+@include responsive(sm) {
+
+  ._title{
+    font-size: 1rem;
+  }
+  ._subtitle{
+    font-size: 0.8rem;
+  }
+
+  ._buttonParent{
+    width:100%
+  }
+
+  ._content {
+    flex-direction: column;
+    justify-content: flex-start;
+
+  }
+  ._textParent{
+    width: 95%;
+
+  }
+  ._logo{
+    width: 120px;
+    margin-top: 1rem;
+  }
+
+}
+

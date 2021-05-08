@@ -1,0 +1,356 @@
+@import '../../../../../public/styles/index.scss';
+
+._main {
+    height: 100vh;
+}
+
+._content {
+    height: 100%;
+    display: flex;
+    width: 85%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+._textParent {
+    width: 50%;
+    margin-top: 5%;
+    color: $charade;
+
+    h1 {
+        font-family: $helveticaNowTextBold;
+        font-size: $helveticaBold64;
+        line-height: 1.2;
+        width: 520px;
+    }
+
+    p {
+        margin: 2% 0;
+        font-family: $helveticaNowText;
+        font-size: $helveticaRegular20;
+        width: 450px;
+        line-height: 1.2;
+    }
+}
+
+._subtitle {
+    font-family: $helveticaNowText;
+    font-size: $helveticaRegular20;
+    color: $charade;
+    font-weight: 400;
+}
+
+._firstContainer{
+    height: 25.125rem;
+    background-color: $gallerySolid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._basicForm {
+    display: flex;
+    width: 75%;
+    color: $easternBlue;
+
+    ._buttonContainer {
+        width: 160px;
+    }
+}
+
+._input{
+    background-color: rgba(44, 172, 179, 0.2);
+    width: 180px;
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    color: $easternBlue;
+    border-radius: 10px;
+    border: none;
+    margin-left: 1rem;
+    font-size: $helveticaRegular14;
+}
+
+._inputError {
+  background-color: rgba(44, 172, 179, 0.2);
+  width: 180px;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  color: $easternBlue;
+  border-radius: 10px;
+  border: 1px solid red;
+  margin-left: 1rem;
+  font-size: $helveticaRegular14;
+}
+
+
+._downarrow {
+    cursor: pointer;
+}
+
+._secondContainer {
+    height: 30vh;
+    background-color: $gallerySolid;
+    padding: 0px 7.3%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $charade;
+    justify-content: space-between;
+
+    ._customerContainer {
+        width: 50%;
+    }
+
+    ._customerTitle {
+        font-family: $helveticaNowTextBold;
+        font-size: $helveticaBold64;
+        line-height: 1.2;
+        width: 450px;
+    }
+
+    ._customerSubtitles {
+        font-family: $helveticaNowText;
+        font-size: $helveticaRegular20;
+        margin-top: 5%;
+        width: 450px;
+    }
+}
+
+._commercesContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+._firstRow{
+  display: flex;
+  flex-direction: row;
+}
+._secondRow{
+  display: flex;
+  flex-direction: row;
+}
+
+._commercesLogo {
+    background-repeat: no-repeat;
+    width: 18vh;
+    margin-right: 1rem;
+}
+
+._services {
+    ._servicesText {
+        font-family: $helveticaNowText;
+        font-size: $helveticaRegular20;
+        margin: 5% 0 3% 0;
+
+        strong {
+            font-weight: 900;
+        }
+    }
+}
+
+// @include responsive(xxxl) {
+//   ._commercesLogo{
+//     width: 180px;
+//   }
+// }
+
+// @include responsive(xxl) {
+//   ._commercesLogo{
+//     width: 150px;
+//   }
+// }
+
+@include responsive(xl) {
+ ._commercesContainer{
+   width: 60%;
+ }
+ ._customerContainer{
+   width: 40% !important
+ }
+
+ ._textParent {
+
+  h1 {
+      width: 100% !important;
+  }
+
+  p {
+      width: 80% !important ;
+  }
+}
+._secondContainer{
+  ._customerTitle{
+    width: 100% !important;
+  }
+  ._customerSubtitles{
+    width: 100% !important;
+  }
+}
+
+}
+
+
+@include responsive(lg) {
+
+  ._services{
+    width: 40%;
+  }
+
+  ._textParent{
+
+    h1{
+      font-size: 2rem;
+    }
+
+    p{
+      font-size: 0.8rem
+    }
+  }
+  ._basicForm{
+    width: 100%;
+  }
+  ._secondContainer{
+    padding: 0px 0px 0px 7.3%;
+  }
+
+  ._customerTitle{
+    font-size: 1.8rem;
+  }
+  ._customerContainer{
+    width: 30% !important
+  }
+  ._commercesContainer{
+    width: 70%;
+  }
+
+
+}
+
+@include responsive(md) {
+
+  ._secondContainer{
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    height: 40vh !important;
+    padding: 0px 7.3% !important;
+
+    ._customerContainer{
+      width: 100% !important;
+      margin-top: 1rem !important;
+    }
+    ._commercesContainer{
+      width: 100% !important;
+
+    }
+    ._commercesLogo{
+      margin-right: 0px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-content: center !important;
+      width: 14vh !important;
+
+    }
+    ._firstRow{
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr,) !important;
+    }
+    ._secondRow{
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr,) !important;
+    }
+
+
+   /*  ._commercesLogo:nth-child(4){
+      grid-row: 2 !important;
+      grid-column: 2/3 !important;
+      background-color: red !important;
+
+    } */
+
+  }
+  ._basicForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+  }
+  ._input{
+    margin-left: 0;
+    width: 50px;
+    margin-top: 1rem;
+  }
+
+  ._textParent{
+    margin-top: 3rem;
+  }
+}
+
+@include responsive(sm) {
+
+  ._content{
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   width: 100%;
+   margin-top: 1.5rem;
+  }
+   ._input{
+     margin-left: 0;
+     width: 50px;
+     margin-top: 1rem;
+   }
+
+   ._textParent{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+
+     h1{
+      line-height: 1;
+      font-size: 1.5rem;
+      width: 90%;
+     }
+     p{
+       line-height: 1.2;
+     }
+   }
+   ._subtitle{
+     text-align: center;
+   }
+   ._basicForm{
+     align-items: center;
+     margin-top: 0.8rem;
+   }
+   ._input{
+     width: 300px;
+   }
+   ._services{
+      width: 100%;
+      text-align: center;
+   }
+
+   ._downarrow{
+     display: none;
+   }
+
+   ._customerContainer{
+    ._customerTitle{
+      font-size: 1.5rem;
+      line-height: 1.3;
+    }
+
+    ._customerSubtitles{
+      font-size: 0.8rem;
+    }
+   }
+
+
+
+ }

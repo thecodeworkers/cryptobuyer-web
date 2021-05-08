@@ -1,4 +1,4 @@
-import { homeId } from '../../utils/pageIds'
+import { homeId } from '@utils/pageIds'
 
 const home = `
   homePage:page(id: "${homeId}") {
@@ -20,6 +20,11 @@ const home = `
           mediaType
           mediaItemUrl
         }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
+        }
         button {
           link
           title
@@ -35,9 +40,13 @@ const home = `
         }
       }
       publicityBanner {
-        mediaItemUrl
-        mediaType
-        slug
+        title
+        subtitle
+        publicityImage {
+          mediaItemUrl
+          mediaType
+          slug
+        }
       }
       secondBanner {
         subtitle
@@ -52,6 +61,11 @@ const home = `
           mediaType
           mediaItemUrl
           slug
+        }
+        backgroundResponsive {
+          mediaItemUrl
+          slug
+          mediaType
         }
         subtitle
         title

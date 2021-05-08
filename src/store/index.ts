@@ -2,21 +2,21 @@ import { createStore, applyMiddleware } from 'redux'
 import { HYDRATE, createWrapper } from 'next-redux-wrapper'
 import thunkMiddleware from 'redux-thunk'
 import reducers from './reducers'
-import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+import createWebStorage from 'redux-persist/lib/storage/createWebStorage'
 
 const createNoopStorage = () => {
   return {
     getItem(_key) {
-      return Promise.resolve(null);
+      return Promise.resolve(null)
     },
     setItem(_key, value) {
-      return Promise.resolve(value);
+      return Promise.resolve(value)
     },
     removeItem(_key) {
-      return Promise.resolve();
+      return Promise.resolve()
     },
-  };
-};
+  }
+}
 
 const bindMiddleware = (middleware) => {
   if (process.env.NODE_ENV !== 'production') {
@@ -28,11 +28,8 @@ const bindMiddleware = (middleware) => {
 }
 
 const reducer = (state, action) => {
-  if (action.type === HYDRATE) {
-    const nextState = { ...state, ...action.payload }
-    return nextState
-  }
-
+  if (action.type === HYDRATE) return { ...state, ...action.payload }
+  if (action.type === 'persist/REHYDRATE') action.payload = { ...action.payload, ...state }
   return reducers(state, action)
 }
 
@@ -41,11 +38,12 @@ const makeStore: any = ({ isServer }) => {
   if (isServer) return createStoreHook(reducer)
 
   const { persistStore, persistReducer } = require('redux-persist')
-  const storage = typeof window !== "undefined" ? createWebStorage("local") : createNoopStorage();
+  const storage = typeof window !== "undefined" ? createWebStorage("local") : createNoopStorage()
 
   const persistConfig = {
-    key: 'buscaoRoot',
-    storage
+    key: 'cryptobuyerRoot',
+    storage,
+    whitelist: ['posts', 'page']
   }
 
   const persistedReducer = persistReducer(persistConfig, reducer)

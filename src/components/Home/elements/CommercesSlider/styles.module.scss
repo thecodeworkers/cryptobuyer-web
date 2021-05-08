@@ -1,0 +1,29 @@
+@import '../../../../../public/styles/index.scss';
+
+._sliderContainer {
+  padding: 0.5rem 0px;
+  width: 85%;
+  margin: 0px auto;
+  background:$white
+}
+
+._slider{
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+._commerce{
+  width: 14vw;
+}
+
+@include responsive(sm) {
+
+  ._commerce{
+    width: 14vw;
+  }
+  ._sliderContainer {
+    width: 95%;
+
+  }
+}

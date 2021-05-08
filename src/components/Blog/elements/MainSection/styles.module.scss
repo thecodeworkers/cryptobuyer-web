@@ -1,0 +1,135 @@
+@import '../../../../../public/styles/index.scss';
+
+._main {
+  height: inherit;
+  display: flex;
+}
+
+._leftContainer {
+  height: inherit;
+  padding: 10% 5% 5% 7%;
+  width: 75%;
+  background-color: $gallerySolid;
+}
+
+._rightContainer {
+  width: 25%;
+  padding: 12% 7% 5% 5%;
+
+  ._famousContainer {
+    margin-bottom: 20%;
+    color: $charade;
+    height: 35vh;
+
+    ._famousTitle {
+      font-size: $helveticaRegular20;
+      font-family: $helveticaNowTextBold;
+      margin: 5% auto;
+    }
+
+    ._famousDescription {
+      font-size: $helveticaRegular14;
+      font-family: $helveticaNowText;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+}
+
+._titlesContainer {
+  width: 90%;
+  color: $charade;
+  margin-bottom: 5%;
+
+  ._mainTitle {
+    font-family: $helveticaNowTextBold;
+    font-size: $helveticaBold64;
+  }
+
+  ._description {
+    font-family: $helveticaNowText;
+    font-size: $helveticaRegular22;
+    margin: 3% auto;
+  }
+}
+
+._postsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh;
+
+  ._item {
+    height: 45vh;
+    width: 31%;
+
+    &:nth-of-type(2) {
+      width: 65%;
+    }
+  }
+}
+
+._paginationContainer {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+
+@include responsive(md) {
+
+  ._titlesContainer {
+    width: 90%;
+    color: $charade;
+    margin-bottom: 5%;
+    margin-top: 4rem;
+
+    ._mainTitle {
+      font-family: $helveticaNowTextBold;
+      font-size: $helveticaBold64 - 0.7;
+      line-height: 1.8rem;
+    }
+
+    ._description {
+      font-family: $helveticaNowText;
+      font-size: $helveticaRegular16;
+      margin: 3% auto;
+    }
+  }
+
+  ._leftContainer {
+    width: 100%;
+    padding: 10% 5% 5% 5%;
+  }
+
+  ._postsContainer {
+    flex-flow: column wrap;
+    height: auto;
+    width: 100%;
+
+    ._item {
+      height: 60vh;
+      width: 100%;
+      margin: 1.5rem 0;
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  ._rightContainer {
+    display: none;
+  }
+
+
+  ._paginationContainer {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}
