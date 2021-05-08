@@ -26,7 +26,6 @@ const setResources = (data, page, resources) => {
   switch (resources) {
     case 'aboutPage':
       page.about.secondBanner.investors = reduceArray(4, page.about?.secondBanner?.investors);
-      console.log(page.about.secondBanner.investors)
       break;
     case 'forYouPage':
       page.for_you.customers.commerces = reduceArray(4, page.for_you?.customers?.commerces);
