@@ -33,13 +33,12 @@
   color: $charade;
   margin-bottom: 1rem;
   line-height: 1.2;
-  width: 430px;
 }
 ._subtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $charade;
-  width: 330px;
+  width: 70%;
   margin-bottom: 1rem;
 }
 
@@ -66,17 +65,6 @@
   ._cardsContainer{
     top: -30px;
     left: -20px;
-  }
-
-}
-
-@include responsive(lg) {
-
-  ._title{
-    width: 100%;
-  }
-  ._subtitle{
-    width: 70%;
   }
 
 }

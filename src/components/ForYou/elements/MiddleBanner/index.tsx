@@ -11,9 +11,11 @@ const MiddleBanner = ({ data }) => {
           <div className={styles._textContainer}>
             <h2>{data?.title}</h2>
             <p>{data?.subtitle}</p>
+            <a href="http://buscao.net/" target='_blank'>
             <div className={styles._button}>
-              <GeneralButton height={3} backgroundColor='#262833' textColor='#fff' text={data?.button?.title} />
+                <GeneralButton height={3} backgroundColor='#262833' textColor='#fff' text={data?.button?.title} />
             </div>
+            </a>
           </div>
           <div className={styles._imageContainer}>
             <div className={styles._contentImage}>

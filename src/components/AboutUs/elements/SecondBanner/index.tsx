@@ -44,11 +44,25 @@ const SecondBanner = ({ data }) => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     arrows: false,
     autoplay: true,
+    rows: 2,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          rows: 2
+        }
+      },
+    ]
   }
+
 
   return (
     <div className={styles._secondBanner}>
@@ -89,10 +103,7 @@ const SecondBanner = ({ data }) => {
             <Slider {...investorSlider}>
               {data?.investors?.map((value, index) => {
                 return (
-                  <div className={styles._investBox} key={index}>
-                    {value.map((value, index) => <img key={index} src={value.imagen.mediaItemUrl} alt={value.imagen.slug} width='auto' height='auto' />)}
-                  </div>
-                )
+                    <img key={index} src={value.imagen.mediaItemUrl} alt={value.imagen.slug} width='100%' height='100%' />)
               }
               )}
             </Slider>
