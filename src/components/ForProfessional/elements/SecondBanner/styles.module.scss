@@ -125,3 +125,10 @@
     }
   }
 }
+
+@include responsive(sm) {
+
+  ._title {
+    font-size: 1.3rem
+  }
+}
