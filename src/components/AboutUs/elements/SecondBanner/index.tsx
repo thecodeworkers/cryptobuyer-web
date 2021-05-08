@@ -73,7 +73,7 @@ const SecondBanner = ({ data }) => {
               return (
                 <div className={styles._teamItem} key={index}>
                   <div className={styles._socialNetwork}>{<LinkedIn />}</div>
-                  <img src={value.imagen.mediaItemUrl} alt={value.imagen.slug} width='100px' height='100px' ></img>
+                  <img src={value?.imagen?.mediaItemUrl} alt={value?.imagen?.slug} width='100px' height='100px' ></img>
                   <p className={styles._name} >{value.name}</p>
                   <p className={styles._title} >{value.jobTitle}</p>
                 </div>
@@ -103,7 +103,7 @@ const SecondBanner = ({ data }) => {
             <Slider {...investorSlider}>
               {data?.investors?.map((value, index) => {
                 return (
-                    <img key={index} src={value.imagen.mediaItemUrl} alt={value.imagen.slug} width='100%' height='100%' />)
+                    <img key={index} src={value?.imagen?.mediaItemUrl} alt={value?.imagen?.slug} width='100%' height='100%' />)
               }
               )}
             </Slider>

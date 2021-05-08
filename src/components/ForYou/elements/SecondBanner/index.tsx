@@ -25,7 +25,7 @@ const SecondBanner = ({ data, reference }) => {
           {data?.currencies?.map((currency, index) => {
             return (
               <div className={styles._coin} key={index}>
-                <img src={currency.image.mediaItemUrl} alt={currency.image.slug} width='100%' height='100%' />
+                <img src={currency?.image?.mediaItemUrl} alt={currency?.image?.slug} width='100%' height='100%' />
               </div>
             )
           })}

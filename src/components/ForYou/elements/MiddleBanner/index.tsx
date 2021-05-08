@@ -24,7 +24,7 @@ const MiddleBanner = ({ data }) => {
                   <div className={styles._imageBox} key={index}>
                     {commerce.map((image, index) => (
                     <div className={styles._imageContent}>
-                      <img key={index} src={image.image.mediaItemUrl} alt={image.image.slug} width='auto' height='auto' />
+                      <img key={index} src={image?.image?.mediaItemUrl} alt={image?.image?.slug} width='auto' height='auto' />
                     </div>))}
                   </div>
                 )
