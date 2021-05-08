@@ -24,7 +24,7 @@ const resource = async (resource: any, id = null) => {
   `
   const result: any = await GraphQlClient(query)
 
-  return 'nodes' in result[resource] ? normalized(result[resource].nodes) : normalized(result[resource])
+  return (result) ? 'nodes' in result[resource] ? normalized(result[resource].nodes) : normalized(result[resource]) : {}
 }
 
 export default resource

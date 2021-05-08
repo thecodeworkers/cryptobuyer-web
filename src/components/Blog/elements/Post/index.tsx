@@ -7,7 +7,6 @@ import { useDispatch } from 'react-redux'
 import { setLoader } from '../../../../store/actions'
 
 const Post = ({ post }) => {
-
   const router = useRouter()
   const dispatch = useDispatch()
   const [postDate, setPostDate] = useState(null)
@@ -32,6 +31,8 @@ const Post = ({ post }) => {
     }
   }
 
+  const postImage = post?.post?.image?.mediaItemUrl
+
   return (
     <>
       <div className={styles._container}>
@@ -46,7 +47,7 @@ const Post = ({ post }) => {
               <img src='images/icons/back-arrow.svg' className={styles._arrowBack} onClick={() => navigation('blog', true)}></img>
               <div className={styles._post}>
 
-                <div className={[styles._image, '_imageCover'].join(" ")} style={{ backgroundImage: `url(${post?.post?.image?.mediaItemUrl})` }}></div>
+                <div className={[styles._image, '_imageCover'].join(" ")} style={{ backgroundImage: `url(${postImage ? postImage : ''})` }}></div>
 
                 <div className={styles._infoContainer}>
                   <div className={styles._previousInfo}>
@@ -66,9 +67,9 @@ const Post = ({ post }) => {
               </div>
             </div>
             <style jsx>{`
-        ._imageCover {
-            background-image:${`url(${post?.post?.image?.mediaItemUrl})`}
-        `}
+            ._imageCover {
+              background-image:${`url(${postImage ? postImage : ''})`}
+            `}
             </style>
           </div>
         </>) : null}
