@@ -16,7 +16,7 @@ const SecondBanner = ({ data }) => (
               <h2 className={styles._title}>{data?.title}</h2>
               <p className={styles._subtitle}>{data?.subtitle}</p>
               <div className={styles._buttonContainer}>
-                <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#FFFFFF' text={data?.button?.title} />
+                <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#FFFFFF' text={data?.button?.title} />  {/* #2CACB3 */}
               </div>
           </div>
         </div>

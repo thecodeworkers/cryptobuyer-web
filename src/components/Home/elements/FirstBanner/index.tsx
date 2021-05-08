@@ -15,7 +15,7 @@ const FirstBanner = ({ data }) => {
             <div className={styles._buttonContainer}>
               <GeneralButton
                 height={3}
-                backgroundColor='#F7C906'
+                backgroundColor='#ecf0f1' //#F7C906
                 textColor='#262833'
                 text={data?.button?.title}
               />
@@ -28,7 +28,8 @@ const FirstBanner = ({ data }) => {
       ._main {
         background-image: url(${data?.background?.mediaItemUrl});
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
+        background-position: center;
         width:100%;
         height: 100vh;
       }

@@ -19,10 +19,10 @@ const Dropdown = ({ show }) => {
   return (
     <div className={show ? styles._main : styles._hidden}>
       <div className={styles._leftSide}>
-        <h4 className={styles._greenTitle}> Para ti</h4>
+        <h4 className={styles._greenTitle} onClick={() => navigation('/for-you', true)}> Para ti</h4>
 
         <div className={styles._link}>
-          <h4 onClick={() => navigation('/for-you', true)}>Cryptobuyer</h4>
+          <h4 >Cryptobuyer</h4>
           <p>compra criptos con tu moneda local</p>
         </div>
 
@@ -52,9 +52,9 @@ const Dropdown = ({ show }) => {
       <div className={styles._line} />
 
       <div className={styles._rightSide}>
-        <h4 className={styles._greenTitle}>Para tu negocio</h4>
+        <h4 className={styles._greenTitle} onClick={() => navigation('/for-business', true)}> Para tu negocio</h4>
         <div className={styles._link}>
-          <h4 onClick={() => navigation('/for-business', true)}>Pay</h4>
+          <h4 >Pay</h4>
           <p>
             Recibe tus pagos
             de forma instantánea
@@ -70,10 +70,10 @@ const Dropdown = ({ show }) => {
           </p>
         </div>
 
-        <h4 className={styles._greenTitle}>Para traders</h4>
+        <h4 className={styles._greenTitle} onClick={() => navigation('/for-pro', true)}>Para traders</h4>
 
         <div className={styles._link}>
-          <h4 onClick={() => navigation('/for-pro', true)}>Pro</h4>
+          <h4 >Pro</h4>
           <p>
             Compra, vende e
             intercambia criptos

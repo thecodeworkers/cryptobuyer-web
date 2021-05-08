@@ -13,7 +13,7 @@ const MiddleBanner = ({ data }) => {
             <p>{data?.subtitle}</p>
             <a href="http://buscao.net/" target='_blank'>
             <div className={styles._button}>
-                <GeneralButton height={3} backgroundColor='#262833' textColor='#fff' text={data?.button?.title} />
+                <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#fff' text={data?.button?.title} />  {/* #262833 */}
             </div>
             </a>
           </div>
@@ -23,8 +23,8 @@ const MiddleBanner = ({ data }) => {
                 return (
                   <div className={styles._imageBox} key={index}>
                     {commerce.map((image, index) => (
-                    <div className={styles._imageContent}>
-                      <img key={index} src={image?.image?.mediaItemUrl} alt={image?.image?.slug} width='auto' height='auto' />
+                    <div className={styles._imageContent}  key={index} >
+                      <img src={image?.image?.mediaItemUrl} alt={image?.image?.slug} width='auto' height='auto' />
                     </div>))}
                   </div>
                 )
