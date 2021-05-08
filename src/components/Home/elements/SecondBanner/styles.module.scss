@@ -25,12 +25,13 @@
   font-family: $helveticaNowTextBold;
   color: $charade;
   margin-bottom: 1rem;
+  width: 470px;
 }
 ._subtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $charade;
-  width: 70%;
+  width: 365px;
   margin-bottom: 1rem;
 }
 
@@ -68,6 +69,7 @@
   font-family: $helveticaNowTextBold;
   color: $white;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 ._whiteSubtitle{
@@ -87,6 +89,20 @@
   width: 250px;
 }
 
+@include responsive(xl) {
+
+  ._title{
+    width: 100%;
+
+  }
+
+  ._subtitle{
+    width: 70%;
+  }
+
+
+}
+
 @include responsive(lg) {
 
   ._image{
@@ -96,6 +112,10 @@
   ._pointContainer{
     top: -30px;
     left: 0;
+  }
+
+  ._logo{
+    width: 200px;
   }
 
 }
@@ -171,7 +191,7 @@
 
   ._logoContainer{
     position: absolute;
-    top: 80px;
+    top: 70px;
     left:20px;
   }
 
@@ -179,7 +199,8 @@
     width: 150px;
   }
   ._whiteTitle{
-    font-size:1.8rem
+    font-size:1.8rem;
+    line-height:1.2
   }
   ._whiteSubtitle{
     font-size: 0.9rem;

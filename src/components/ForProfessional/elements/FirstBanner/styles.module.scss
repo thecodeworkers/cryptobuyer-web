@@ -22,7 +22,8 @@
 
 ._title {
   font-family: $helveticaNowTextBold;
-  font-size: $helveticaBold64;
+  font-size: 1.8rem;
+  width: 450px;
 }
 
 ._btnParent {
@@ -90,6 +91,13 @@
       display: none;
     }
   }
+}
+@include responsive(xl) {
+  ._title {
+   font-size: $helveticaBold64 - 1;
+   width: 100%;
+  }
+
 }
 
 @include responsive(md) {

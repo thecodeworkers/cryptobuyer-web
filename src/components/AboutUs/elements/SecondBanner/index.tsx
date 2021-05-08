@@ -3,7 +3,6 @@ import { LinkedIn } from '@images/icons'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { Footer } from '@components'
 
 const SecondBanner = ({ data }) => {
 
@@ -11,11 +10,10 @@ const SecondBanner = ({ data }) => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 4,
+    slidesToShow: 4 ,
     slidesToScroll: 4,
     arrows: false,
     autoplay: true,
-    centerMode: true,
     variableWidth: true,
     centerPadding: 0,
     responsive: [
@@ -44,11 +42,25 @@ const SecondBanner = ({ data }) => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     arrows: false,
     autoplay: true,
+    rows: 2,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          rows: 2
+        }
+      },
+    ]
   }
+
 
   return (
     <div className={styles._secondBanner}>
@@ -59,7 +71,7 @@ const SecondBanner = ({ data }) => {
               return (
                 <div className={styles._teamItem} key={index}>
                   <div className={styles._socialNetwork}>{<LinkedIn />}</div>
-                  <img src={value.imagen.mediaItemUrl} alt={value.imagen.slug} width='100px' height='100px' ></img>
+                  <img src={value?.imagen?.mediaItemUrl} alt={value?.imagen?.slug} width='100px' height='100px' ></img>
                   <p className={styles._name} >{value.name}</p>
                   <p className={styles._title} >{value.jobTitle}</p>
                 </div>
@@ -89,10 +101,7 @@ const SecondBanner = ({ data }) => {
             <Slider {...investorSlider}>
               {data?.investors?.map((value, index) => {
                 return (
-                  <div className={styles._investBox} key={index}>
-                    {value.map((value, index) => <img key={index} src={value.imagen.mediaItemUrl} alt={value.imagen.slug} width='auto' height='auto' />)}
-                  </div>
-                )
+                    <img key={index} src={value?.imagen?.mediaItemUrl} alt={value?.imagen?.slug} width='100%' height='100%' />)
               }
               )}
             </Slider>

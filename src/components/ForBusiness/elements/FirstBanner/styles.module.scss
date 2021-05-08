@@ -22,14 +22,16 @@
     h1 {
         font-family: $helveticaNowTextBold;
         font-size: $helveticaBold64;
+        line-height: 1.2;
+        width: 520px;
     }
 
     p {
         margin: 2% 0;
         font-family: $helveticaNowText;
         font-size: $helveticaRegular20;
-        width: 80%;
-        line-height: 1.5rem;
+        width: 450px;
+        line-height: 1.2;
     }
 }
 
@@ -65,10 +67,23 @@
     padding: 0.5rem 1rem;
     color: $easternBlue;
     border-radius: 10px;
-    border:none;
+    border: none;
     margin-left: 1rem;
     font-size: $helveticaRegular14;
 }
+
+._inputError {
+  background-color: rgba(44, 172, 179, 0.2);
+  width: 180px;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  color: $easternBlue;
+  border-radius: 10px;
+  border: 1px solid red;
+  margin-left: 1rem;
+  font-size: $helveticaRegular14;
+}
+
 
 ._downarrow {
     cursor: pointer;
@@ -91,12 +106,15 @@
     ._customerTitle {
         font-family: $helveticaNowTextBold;
         font-size: $helveticaBold64;
+        line-height: 1.2;
+        width: 450px;
     }
 
     ._customerSubtitles {
         font-family: $helveticaNowText;
         font-size: $helveticaRegular20;
         margin-top: 5%;
+        width: 450px;
     }
 }
 
@@ -118,8 +136,7 @@
 
 ._commercesLogo {
     background-repeat: no-repeat;
-    width: 200px;
-    height: 140px;
+    width: 18vh;
     margin-right: 1rem;
 }
 
@@ -135,17 +152,17 @@
     }
 }
 
-@include responsive(xxxl) {
-  ._commercesLogo{
-    width: 180px;
-  }
-}
+// @include responsive(xxxl) {
+//   ._commercesLogo{
+//     width: 180px;
+//   }
+// }
 
-@include responsive(xxl) {
-  ._commercesLogo{
-    width: 150px;
-  }
-}
+// @include responsive(xxl) {
+//   ._commercesLogo{
+//     width: 150px;
+//   }
+// }
 
 @include responsive(xl) {
  ._commercesContainer{
@@ -154,6 +171,26 @@
  ._customerContainer{
    width: 40% !important
  }
+
+ ._textParent {
+
+  h1 {
+      width: 100% !important;
+  }
+
+  p {
+      width: 80% !important ;
+  }
+}
+._secondContainer{
+  ._customerTitle{
+    width: 100% !important;
+  }
+  ._customerSubtitles{
+    width: 100% !important;
+  }
+}
+
 }
 
 
@@ -198,7 +235,7 @@
   ._secondContainer{
     flex-direction: column !important;
     flex-wrap: nowrap !important;
-    height: 50vh !important;
+    height: 40vh !important;
     padding: 0px 7.3% !important;
 
     ._customerContainer{
@@ -214,7 +251,7 @@
       display: flex !important;
       justify-content: center !important;
       align-content: center !important;
-
+      width: 14vh !important;
 
     }
     ._firstRow{
@@ -281,7 +318,7 @@
       width: 90%;
      }
      p{
-       line-height: 1.3;
+       line-height: 1.2;
      }
    }
    ._subtitle{
@@ -289,7 +326,7 @@
    }
    ._basicForm{
      align-items: center;
-     margin-top: 1rem;
+     margin-top: 0.8rem;
    }
    ._input{
      width: 300px;

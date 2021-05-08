@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 ._content{
@@ -31,12 +32,14 @@
   font-family: $helveticaNowTextBold;
   color: $white;
   margin-bottom: 1rem;
+  line-height: 1.2;
+  width: 350px;
 }
 ._subtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $white;
-  width: 70%;
+  width: 350px;
   margin-bottom: 1rem;
 }
 
@@ -69,6 +72,19 @@
  margin-left: 1rem;
  font-size: $helveticaRegular14;
 }
+
+._inputError {
+  background-color: $doveGray;
+  width: 180px;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  color: $white;
+  border-radius: 10px;
+  border: 1px solid red;
+  margin-left: 1rem;
+  font-size: $helveticaRegular14;
+}
+
 ._logo{
   width: 250px;
 }
@@ -76,6 +92,18 @@
 ._image{
   width: 500px;
   height: 573px;
+}
+
+@include responsive(lg) {
+
+._title{
+  width: 100%;
+}
+
+._subtitle{
+  width: 70%;
+}
+
 }
 @include responsive(lg) {
 
@@ -135,9 +163,10 @@ height: 473px;
 
   ._title{
     font-size: 1.15rem;
+    line-height: 1.2;
   }
   ._subtitle{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   ._image{

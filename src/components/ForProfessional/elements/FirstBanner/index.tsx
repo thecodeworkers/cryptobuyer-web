@@ -16,13 +16,13 @@ const FirstBanner = ({ reference, data }) => (
           <h1 className={styles._title}> {data?.title} </h1>
           <p className={styles._text}> {data?.subtitle} </p>
           <div className={styles._btnParent}>
-            <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#FFFFFF' text={data?.button?.title} />
+            <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#FFFFFF' text={data?.button?.title} />  {/* #2CACB3 */}
           </div>
         </div>
 
         <div className={styles._secondTextParent}>
           <div className={styles._icons}>
-            <img src='images/icons/qr.png' width='120px'></img>
+            <img src={data?.qrCode?.mediaItemUrl} width='120px'></img>
 
             <div className={styles._logoParent}>
               <p>Escanea para descargar</p>

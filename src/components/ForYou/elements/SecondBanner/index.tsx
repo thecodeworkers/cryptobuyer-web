@@ -16,7 +16,7 @@ const SecondBanner = ({ data, reference }) => {
             <h2>{data?.title}</h2>
             <p>{data?.subtitle}</p>
             <div className={styles._button}>
-              <GeneralButton height={3.5} backgroundColor='#FFFFFF' textColor='#262833' text={data?.button?.title} />
+              <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#262833' text={data?.button?.title} />    {/* #FFFFFF */}
             </div>
             <div className={styles._more} dangerouslySetInnerHTML={createMarkup(data?.counter)} ></div>
           </div>
@@ -25,7 +25,7 @@ const SecondBanner = ({ data, reference }) => {
           {data?.currencies?.map((currency, index) => {
             return (
               <div className={styles._coin} key={index}>
-                <img src={currency.image.mediaItemUrl} alt={currency.image.slug} width='100%' height='100%' />
+                <img src={currency?.image?.mediaItemUrl} alt={currency?.image?.slug} width='100%' height='100%' />
               </div>
             )
           })}
@@ -39,6 +39,13 @@ const SecondBanner = ({ data, reference }) => {
           width:100%;
           height: 45vw;
           position: relative;
+        }
+        @media(max-width: 575px) {
+          ._main{
+            height: 60vh;
+            background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
+
+          }
         }
       `}</style>
     </>
