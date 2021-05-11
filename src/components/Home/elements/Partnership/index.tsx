@@ -22,7 +22,9 @@ const Partnership = ({ data }) => {
             data.map((item, index) => {
               return (
                 <div className={styles._slider} key={index} >
-                  <img src={item?.image?.mediaItemUrl} className={styles._commerce} />
+                   <a href={item?.imageRouter} target='_blank'>
+                  <img  src={item?.image?.mediaItemUrl} className={styles._commerce} />
+                  </a>
                 </div>
               )
             })
