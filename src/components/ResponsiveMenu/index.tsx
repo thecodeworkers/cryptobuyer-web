@@ -7,6 +7,7 @@ import { Logo } from '@images/logos'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { setLoader } from '../../store/actions'
+import { seletedReference } from '../../store/actions'
 
 const ResponsiveMenu = ({ show = 0, method }: any) => {
 
@@ -16,9 +17,18 @@ const ResponsiveMenu = ({ show = 0, method }: any) => {
   const [ height, setHeight ] = useState(0)
   const dropdownStatus = () => setDropdown(dropdown => !dropdown)
 
-  const navigation = (route, loader: boolean = false) => {
+  // const navigation = (route, loader: boolean = false) => {
+  //   if (router.pathname != route) {
+  //     if (loader) dispatch(setLoader(true))
+  //     router.push(route)
+  //     method(0)
+  //   }
+  // }
+
+  const navigation = (route, loader: boolean = false, reference = null, key = '') => {
     if (router.pathname != route) {
       if (loader) dispatch(setLoader(true))
+      if (reference) dispatch(seletedReference({ [key]: reference }))
       router.push(route)
       method(0)
     }
@@ -30,7 +40,6 @@ const ResponsiveMenu = ({ show = 0, method }: any) => {
     element.addEventListener('touchmove', (e) => { e.preventDefault() });
     return () => { element.removeEventListener('touchmove', () => {}) }
   }, []);
-
 
   const menuStatus = (show: number) => {
     if (show === 0) return styles._staticMenu
@@ -66,18 +75,18 @@ const ResponsiveMenu = ({ show = 0, method }: any) => {
                         <div>
                           <ul className={styles._linksList}>
                             <li onClick={() => navigation('/for-you', true)}>Para ti</li>
-                            <li>Crytopbuyer</li>
-                            <li>Visa</li>
-                            <li>Pay</li>
-                            <li>ATM</li>
+                            <li onClick={() => navigation('/for-you', true)}>Crytopbuyer</li>
+                            <li onClick={() => navigation('/for-you', true, 'visa', 'forYouReference')}>Visa</li>
+                            <li onClick={() => navigation('/for-you', true, 'pay', 'forYouReference')}>Pay</li>
+                            <li onClick={() => navigation('/for-you', true, 'atm', 'forYouReference')}>ATM</li>
                           </ul>
                         </div>
 
                         <div className={styles._secondListParent}>
                           <ul className={styles._linksList}>
                             <li onClick={() => navigation('/for-business', true)}>Para tu negocio</li>
-                            <li>Pay</li>
-                            <li>ATM</li>
+                            <li onClick={() => navigation('/for-business', true, 'pay', 'forBusinessReference')}>Pay</li>
+                            <li onClick={() => navigation('/for-business', true, 'atm', 'forBusinessReference')}>ATM</li>
                           </ul>
                         </div>
                       </div>
@@ -85,7 +94,7 @@ const ResponsiveMenu = ({ show = 0, method }: any) => {
                       <div className={styles._secondRow}>
                         <ul className={styles._linksList}>
                           <li onClick={() => navigation('/for-pro', true)}>Para profesionales</li>
-                          <li>Pro</li>
+                          <li onClick={() => navigation('/for-pro', true, 'second', 'forProReference')}>Pro</li>
                         </ul>
                       </div>
                     </>

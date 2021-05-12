@@ -2,9 +2,9 @@
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 
-const SecondBanner = ({ data }) => (
+const SecondBanner = ({ data, reference }) => (
   <>
-    <div className={styles._main}>
+    <div className={styles._main} ref={reference}>
       <div className={styles._container}>
         <div className={styles._content}>
           <div className={styles._leftContainer}>
