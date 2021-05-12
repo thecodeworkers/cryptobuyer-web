@@ -46,8 +46,8 @@ const SecondBanner = ({ data, reference }) => {
           ._main{
             height: 60vh;
             background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
-
-          }
+            background-position:center;
+            background-size: cover
         }
       `}</style>
     </>
