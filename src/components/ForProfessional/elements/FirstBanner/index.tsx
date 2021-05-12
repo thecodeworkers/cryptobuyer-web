@@ -16,7 +16,9 @@ const FirstBanner = ({ reference, data }) => (
           <h1 className={styles._title}> {data?.title} </h1>
           <p className={styles._text}> {data?.subtitle} </p>
           <div className={styles._btnParent}>
-            <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#FFFFFF' text={data?.button?.title} />  {/* #2CACB3 */}
+          <a href={data?.button?.link} rel={"noopener"} target='_blank'>
+            <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#FFFFFF' text={data?.button?.title} />
+          </a>
           </div>
         </div>
 

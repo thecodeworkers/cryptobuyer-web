@@ -13,12 +13,14 @@ const FirstBanner = ({ data }) => {
             <p className={styles._subtitle} > {data?.subtitle} </p>
 
             <div className={styles._buttonContainer}>
+            <a href={data?.button?.link} rel={"noopener"} target='_blank'>
               <GeneralButton
                 height={3}
-                backgroundColor='#ecf0f1' //#F7C906
+                backgroundColor='#F7C906'
                 textColor='#262833'
                 text={data?.button?.title}
               />
+              </a>
             </div>
           </div>
         </div>

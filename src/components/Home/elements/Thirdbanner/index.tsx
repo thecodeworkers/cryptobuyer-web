@@ -15,7 +15,9 @@ const ThirdBanner = ({ data }) => (
           <p className={styles._subtitle}> {data?.subtitle} </p>
 
           <div className={styles._buttonParent}>
-            <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#fff' text={data?.button?.title} /> {/* #262833 */}
+          <a href={data?.button?.link} rel={"noopener"} target='_blank'>
+            <GeneralButton height={3} backgroundColor='#262833' textColor='#fff' text={data?.button?.title} />
+          </a>
           </div>
         </div>
       </div>
