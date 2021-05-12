@@ -144,9 +144,8 @@
 @include responsive(md) {
 
   ._post {
-    height: 60vh;
+    height: 55vh;
     width: 85%;
-    margin-bottom: 3%;
   }
 
   ._container{
@@ -167,7 +166,6 @@
     width: 85%;
     margin-bottom: 5%;
     overflow: auto;
-
   }
 
   ._title {
@@ -180,5 +178,13 @@
 
   ._arrowBack {
     display: block;
+  }
+
+  ._postContainer{
+    padding-top: 2%;
+  }
+
+  ._image {
+    height: 50%;
   }
 }

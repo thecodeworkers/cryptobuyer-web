@@ -74,7 +74,14 @@ const Post = ({ post }) => {
               background-repeat: no-repeat;
               background-size:cover;
               background-position: top;
-            `}
+              }
+
+              @media(max-width: 768px) {
+                ._imageCover {
+                  background-size:100% 100%;
+                }
+            `
+            }
             </style>
           </div>
         </>) : null}
