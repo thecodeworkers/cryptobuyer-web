@@ -3,10 +3,10 @@ import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 import { XptAtm } from '@images/logos'
 
-const FourthBanner = ({ data }) => {
+const FourthBanner = ({ data, reference }) => {
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main} ref={reference}>
       <div className={styles._container}>
         <div className={styles._content}>
           <div className={styles._leftContainer}>

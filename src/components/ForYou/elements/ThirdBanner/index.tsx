@@ -2,10 +2,10 @@ import { memo, useRef } from 'react'
 import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 
-const ThirdBanner = ({ data }) => {
+const ThirdBanner = ({ data, reference }) => {
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main} ref={reference} >
       <div className={styles._container} >
         <div className={styles._content}>
           <div className={styles._leftContainer}>
