@@ -16,7 +16,9 @@ const FourthBanner = ({ data, reference }) => {
             <p className={styles._title}>{data?.title}</p>
             <p className={styles._subtitle}>{data?.subtitle}</p>
             <div className={styles._buttonContainer}>
-              <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#262833' text={data?.button?.title} /> {/* #fff */}
+            <a href={data?.button?.link} rel={"noopener"} target='_blank'>
+              <GeneralButton height={3} backgroundColor='#fff' textColor='#262833' text={data?.button?.title} />
+           </a>
             </div>
           </div>
           <div className={styles._rightContainer}>
