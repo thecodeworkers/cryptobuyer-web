@@ -1,19 +1,20 @@
 import styles from './styles.module.scss'
 import React from 'react'
 import { Logo } from '@images/logos'
-import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { setLoader } from '../../store/actions'
+import { setLoader, seletedReference } from '@store/actions'
 
 const Footer = () => {
 
   const router = useRouter()
   const dispatch = useDispatch()
 
-  const navigation = (route, loader: boolean = false) => {
+
+  const navigation = (route, loader: boolean = false, reference = null, key = '') => {
     if (router.pathname != route) {
       if (loader) dispatch(setLoader(true))
+      if (reference) dispatch(seletedReference({ [key]: reference }))
       router.push(route)
     }
   }
@@ -29,28 +30,31 @@ const Footer = () => {
           <div className={styles._content}>
             <div className={styles._linksContainer}>
               <div className={styles._links}>
-                <a onClick={() => navigation('/for-pro', true)} className={styles._linkBold}>Para traders</a>
-                <a className={styles._link}>Go to</a>
-                <a className={styles._link}>Beneficios</a>
-                <a className={styles._link}>Servicios</a>
-              </div>
-              <div className={styles._links}>
                 <a onClick={() => navigation('/for-you', true)} className={styles._linkBold}>Para ti</a>
-                <a className={styles._link}>Comienza</a>
-                <a className={styles._link}>Beneficios</a>
-                <a className={styles._link}>Servicio</a>
+                <a className={styles._link} onClick={() => navigation('/for-you', true)}>Cryptobuyer</a>
+                <a className={styles._link} onClick={() => navigation('/for-you', true, 'visa', 'forYouReference')}>Visa</a>
+                <a className={styles._link} onClick={() => navigation('/for-you', true, 'pay', 'forYouReference')}>Pay</a>
+                <a className={styles._link} onClick={() => navigation('/for-you', true, 'atm', 'forYouReference')}>ATM</a>
               </div>
               <div className={styles._links}>
                 <a onClick={() => navigation('/for-business', true)} className={styles._linkBold}>Para tu negocio</a>
-                <a className={styles._link}>Qué es ATM</a>
-                <a className={styles._link}>Beneficios</a>
-                <a className={styles._link}>Noticias</a>
+                <a className={styles._link} onClick={() => navigation('/for-business', true, 'pay', 'forBusinessReference')}>Pay</a>
+                <a className={styles._link} onClick={() => navigation('/for-business', true, 'atm', 'forBusinessReference')}>ATM</a>
+                <p className={styles._link}></p>
+                <p className={styles._link}></p>
+              </div>
+              <div className={styles._links}>
+                <a onClick={() => navigation('/for-pro', true)} className={styles._linkBold}>Para traders</a>
+                <a className={styles._link} onClick={() => navigation('/for-pro', true, 'second', 'forProReference')}>Pro</a>
+                <p className={styles._link}> </p>
+                <p className={styles._link}> </p>
+                <p className={styles._link}> </p>
+
+
               </div>
               <div className={styles._links}>
                 <a onClick={() => navigation('/blog', true)} className={styles._linkBold}>Blog</a>
-                <a className={styles._link}>Destacados</a>
-                <a className={styles._link}>Noticias</a>
-                <p className={styles._link}></p>
+                <p className={styles._link}> </p>
               </div>
             </div>
 

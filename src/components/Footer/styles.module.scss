@@ -31,7 +31,6 @@
 ._links{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -41,6 +40,7 @@
   font-size: $openSansRegular15;
   margin-bottom: 1.5rem;
   margin-right: 3rem;
+  cursor: pointer;
 }
 
 ._linkBold{
