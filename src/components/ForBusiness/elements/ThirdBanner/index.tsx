@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'
 import { subscribeUser } from '../../../../store/actions'
 import Swal from 'sweetalert2'
 
-const ThirdBanner = ({ data }) => {
+const ThirdBanner = ({ data, reference }) => {
 
   const dispatch = useDispatch()
   const [input, setInput] = useState('')
@@ -34,7 +34,7 @@ const ThirdBanner = ({ data }) => {
   }
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main} ref={reference}>
       <div className={styles._container}>
         <div className={styles._content}>
           <div className={styles._leftContainer}>

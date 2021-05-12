@@ -1,17 +1,20 @@
 import styles from './styles.module.scss'
-import { memo } from 'react'
+import { memo, useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { setLoader } from '../../store/actions'
+import { setLoader, seletedReference } from '../../store/actions'
+import { scrollTo } from '../../utils/common'
+
 
 const Dropdown = ({ show }) => {
 
   const router = useRouter()
   const dispatch = useDispatch()
 
-  const navigation = (route, loader: boolean = false) => {
+  const navigation = (route, loader: boolean = false, reference = null, key = '') => {
     if (router.pathname != route) {
       if (loader) dispatch(setLoader(true))
+      if (reference) dispatch(seletedReference({ [key]: reference }))
       router.push(route)
     }
   }
@@ -21,17 +24,17 @@ const Dropdown = ({ show }) => {
       <div className={styles._leftSide}>
         <h4 className={styles._greenTitle} onClick={() => navigation('/for-you', true)}> Para ti</h4>
 
-        <div className={styles._link}>
-          <h4 >Cryptobuyer</h4>
+        <div className={styles._link} onClick={() => navigation('/for-you', true)}>
+          <h4>Cryptobuyer</h4>
           <p>compra criptos con tu moneda local</p>
         </div>
 
-        <div className={styles._link}>
+        <div className={styles._link} onClick={() => navigation('/for-you', true, 'visa', 'forYouReference')}>
           <h4>Visa</h4>
           <p>Afiliate y paga con tu tarjeta a nivel mundial</p>
         </div>
 
-        <div className={styles._link}>
+        <div className={styles._link} onClick={() => navigation('/for-you', true, 'pay', 'forYouReference')}>
           <h4>Pay</h4>
           <p>
             Paga rápido y seguro
@@ -39,7 +42,7 @@ const Dropdown = ({ show }) => {
           </p>
         </div>
 
-        <div className={styles._link}>
+        <div className={styles._link} onClick={() => navigation('/for-you', true, 'atm', 'forYouReference')}>
           <h4>ATM</h4>
           <p>
             Compra criptomonedas
@@ -53,7 +56,7 @@ const Dropdown = ({ show }) => {
 
       <div className={styles._rightSide}>
         <h4 className={styles._greenTitle} onClick={() => navigation('/for-business', true)}> Para tu negocio</h4>
-        <div className={styles._link}>
+        <div className={styles._link} onClick={() => navigation('/for-business', true, 'pay', 'forBusinessReference')}>
           <h4 >Pay</h4>
           <p>
             Recibe tus pagos
@@ -61,7 +64,7 @@ const Dropdown = ({ show }) => {
           </p>
         </div>
 
-        <div className={styles._link}>
+        <div className={styles._link} onClick={() => navigation('/for-business', true, 'atm', 'forBusinessReference')}>
           <h4>ATM</h4>
           <p>
             Habilita un cajero de
@@ -72,7 +75,7 @@ const Dropdown = ({ show }) => {
 
         <h4 className={styles._greenTitle} onClick={() => navigation('/for-pro', true)}>Para traders</h4>
 
-        <div className={styles._link}>
+        <div className={styles._link} onClick={() => navigation('/for-pro', true, 'second', 'forProReference')} >
           <h4 >Pro</h4>
           <p>
             Compra, vende e
