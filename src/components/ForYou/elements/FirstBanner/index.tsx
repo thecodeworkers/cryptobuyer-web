@@ -36,6 +36,7 @@ const ForYouFirstBanner = ({ data, reference }) => {
           background-image: url(${data?.background?.mediaItemUrl});
           background-repeat: no-repeat;
           background-size: cover;
+          background-position: center;
           width:100%;
           height: 100vh;
         }

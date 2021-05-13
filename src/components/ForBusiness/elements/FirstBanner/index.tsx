@@ -71,8 +71,6 @@ const FirstBanner = ({ data, content, reference }) => {
             <img className={styles._commercesLogo} src={content?.commerces[3]?.image?.mediaItemUrl}></img>
             <img className={styles._commercesLogo} src={content?.commerces[4]?.image?.mediaItemUrl}></img>
             </div>
-
-
           </div>
         </div>
       </div>
