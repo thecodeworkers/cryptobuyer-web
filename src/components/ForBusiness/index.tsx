@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react'
+import React, { useCallback, useState, } from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import { FirstBanner, SecondBanner, ThirdBanner } from './elements'
@@ -9,9 +9,11 @@ import { scrollTo } from '../../utils/common'
 const ForBusiness = ({ content }) => {
 
   const { scrollReference } = useSelector((state: any) => state)
+  const [reference, setReference ] = useState(null)
 
   const payRef = useCallback((node) => {
     scrollingReference(node, 'pay')
+    setReference(node)
   }, [])
 
   const atmRef = useCallback((node) => {
@@ -24,6 +26,7 @@ const ForBusiness = ({ content }) => {
     }
   }
 
+  const scrollDown = () => scrollTo(reference)
   return (
     <div>
       <Head>
@@ -31,8 +34,8 @@ const ForBusiness = ({ content }) => {
       </Head>
       <Navbar color='#262833' />
       {content ? (<>
-        <FirstBanner data={content?.mainBanner} content={content?.customers} reference={payRef} />
-         <div ref={payRef}>
+        <FirstBanner data={content?.mainBanner} content={content?.customers} scrollMethod={scrollDown} />
+         <div ref={payRef || reference}>
           <SecondBanner data={content?.thirdBanner} />
         </div>
         <ThirdBanner data={content?.fourthBanner} reference={atmRef} />

@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
 import { scrolling, createMarkup } from '@utils'
 
-const ForYouFirstBanner = ({ data, reference }) => {
+const ForYouFirstBanner = ({ data, reference, scrollMethod }) => {
 
   return (
     <>
@@ -23,7 +23,7 @@ const ForYouFirstBanner = ({ data, reference }) => {
             <div className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></div>
             <div>
               <p className={styles._serviceText}>Conoce todos nuestros servicios <b>para ti</b></p>
-              <div className={styles._arrowParent} onClick={() => scrolling(reference)} >
+              <div className={styles._arrowParent} onClick={scrollMethod} >
                 <img src='images/icons/complete-arrow-down.svg' />
               </div>
             </div>
