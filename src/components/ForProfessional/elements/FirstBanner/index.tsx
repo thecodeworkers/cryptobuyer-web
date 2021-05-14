@@ -24,7 +24,7 @@ const FirstBanner = ({ reference, data }) => (
 
         <div className={styles._secondTextParent}>
           <div className={styles._icons}>
-            <img src={data?.qrCode?.mediaItemUrl} width='120px'></img>
+            <img src={data?.qrCode?.mediaItemUrl} width='100px' alt='QR code'></img>
 
             <div className={styles._logoParent}>
               <p>Escanea para descargar</p>
