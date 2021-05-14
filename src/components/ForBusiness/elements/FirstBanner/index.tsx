@@ -91,6 +91,7 @@ const FirstBanner = ({ data, content, scrollMethod }) => {
           background-image: url(${data?.background?.mediaItemUrl});
           background-repeat: no-repeat;
           background-size: cover;
+          background-position: top;
           width:100%;
           height: 70vh;
         }
@@ -100,7 +101,7 @@ const FirstBanner = ({ data, content, scrollMethod }) => {
             height: 80vh;
             background-size: cover;
             background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
-            background-position: center
+            background-position: center;
           }
         }
       `}</style>
