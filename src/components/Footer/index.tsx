@@ -59,7 +59,13 @@ const Footer = () => {
             </div>
 
             <div className={styles._speechMain}>
-
+              {/* <div className={styles._speechTextContainer}>
+                <div className={styles._speechContainer}>
+                  <a className={styles._speechText}>Prensa</a>
+                  <a className={styles._speechText}>Terminos y condiciones</a>
+                  <a className={styles._speechText}>Política de privacidad</a>
+                </div>
+              </div> */}
 
               <div className={styles._speechContainer}>
                 <p className={styles._speech}>Llevo usando la plataforma desde sus inicios,
