@@ -65,13 +65,15 @@ const Navbar = ({ color = '#262833' }) => {
           </div>
 
           <div>
-            <a className={styles._signUp}>
+            <a className={styles._signUp} href='https://cryptobuyer.io/accounts/signup/' target='_blank' rel='noopener'>
               Registrarse
-          </a>
+           </a>
 
-            <button className={styles._signInBtn}>
-              Iniciar sesión
-            </button>
+            <a href='https://cryptobuyer.io/accounts/login/' target='_blank' rel='noopener'>
+              <button className={styles._signInBtn}>
+                Iniciar sesión
+              </button>
+            </a>
           </div>
         </div>
       </div>
