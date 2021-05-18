@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import styles from './styles.module.scss'
-import { Dropdown } from '../'
-import { Logo } from '../../../public/images/logos'
-import { DownArrow } from '../../../public/images/icons'
+import { memo, useState } from 'react'
+import { Logo } from '@images/logos'
+import { DownArrow } from '@images/icons'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
-import { setLoader } from '../../store/actions'
-import { NavbarResponsive } from '../../components'
+import { setLoader } from '@store/actions'
+import { NavbarResponsive } from '@components'
+import Dropdown from '../Dropdown'
+import styles from './styles.module.scss'
 
 const Navbar = ({ color = '#262833' }) => {
-
   const router = useRouter()
   const [show, setShow] = useState(false)
   const dispatch = useDispatch()
@@ -51,7 +50,7 @@ const Navbar = ({ color = '#262833' }) => {
                    <span className={styles._icon}> <DownArrow fill={color} /> </span>
                   </span>
                   {showPoint('/products')}
-                  <Dropdown show={show} />
+                  <Dropdown show={show} onPress={() => setShow(show => !show)} />
 
                 </li>
                 <li className={activeColor('/about-us')} onClick={() => navigation('/about-us', true)} > Sobre Nosotros
@@ -106,4 +105,4 @@ const Navbar = ({ color = '#262833' }) => {
   )
 };
 
-export default Navbar
+export default memo(Navbar)
