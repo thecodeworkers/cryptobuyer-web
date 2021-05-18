@@ -1,21 +1,30 @@
 import styles from './styles.module.scss'
-import { memo, useRef, useEffect } from 'react'
+import { memo } from 'react'
 import { useRouter } from 'next/router'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setLoader, seletedReference } from '../../store/actions'
-import { scrollTo } from '../../utils/common'
-
 
 const Dropdown = ({ show }) => {
-
-  const router = useRouter()
+  const { scrollReference } = useSelector((state: any) => state)
   const dispatch = useDispatch()
+  const router = useRouter()
 
   const navigation = (route, loader: boolean = false, reference = null, key = '') => {
     if (router.pathname != route) {
       if (loader) dispatch(setLoader(true))
-      if (reference) dispatch(seletedReference({ [key]: reference }))
+      if (reference) dispatch(seletedReference({ [key]: { current: reference } }))
       router.push(route)
+
+      return ;
+    }
+
+    if (reference) {
+      dispatch(seletedReference({
+        [key]: {
+          current: reference,
+          [reference]: !scrollReference.forYouReference[reference]
+        }
+      }))
     }
   }
 

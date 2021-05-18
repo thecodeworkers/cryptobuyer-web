@@ -2,9 +2,21 @@ import { AnyAction } from 'redux'
 import { SET_REFERENCE } from './action-types'
 
 const initialState = {
-  forYouReference: null,
-  forBusinessReference: null,
-  forProReference: null
+  forYouReference: {
+    current: '',
+    visa: false,
+    pay: false,
+    atm: false
+  },
+  forBusinessReference: {
+    current: '',
+    pay: false,
+    atm: false
+  },
+  forProReference: {
+    current: '',
+    second: false
+  }
 }
 
 const pageReducer = (state = initialState, { type, payload }: AnyAction) => {

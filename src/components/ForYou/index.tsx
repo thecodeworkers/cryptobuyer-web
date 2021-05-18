@@ -1,31 +1,30 @@
-import React, { useRef, useEffect, useCallback, useState } from 'react'
+import React, { useCallback, useState } from 'react'
+import { FirstBanner, SecondBanner, ThirdBanner, FourthBanner, MiddleBanner } from './elements'
+import { scrollTo } from '@utils/common'
+import { useSelector } from 'react-redux'
+import Head from 'next/head'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { FirstBanner, SecondBanner, ThirdBanner, FourthBanner, MiddleBanner } from './elements'
-import Head from 'next/head'
-import { scrollTo } from '../../utils/common'
-import { useSelector } from 'react-redux'
 
 const ForYou = ({ content }) => {
-
-  const { scrollReference } = useSelector((state: any) => state)
+  const { scrollReference: { forYouReference } } = useSelector((state: any) => state)
   const [ reference, setReference ] = useState()
 
   const payRef = useCallback((node) => {
     scrollingReference(node, 'pay')
     setReference(node)
-  }, [])
+  }, [forYouReference?.pay])
 
   const visaRef = useCallback((node) => {
     scrollingReference(node, 'visa')
-  }, [])
+  }, [forYouReference?.visa])
 
   const atmRef = useCallback((node) => {
     scrollingReference(node, 'atm')
-  }, [])
+  }, [forYouReference?.atm])
 
   const scrollingReference = (node, state) => {
-    if(scrollReference?.forYouReference == state) {
+    if(forYouReference?.current == state) {
       if(node) scrollTo(node)
     }
   }

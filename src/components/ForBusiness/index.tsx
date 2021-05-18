@@ -1,27 +1,26 @@
 import React, { useCallback, useState, } from 'react'
+import { FirstBanner, SecondBanner, ThirdBanner } from './elements'
+import { scrollTo } from '@utils/common'
+import { useSelector } from 'react-redux'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { FirstBanner, SecondBanner, ThirdBanner } from './elements'
 import Head from 'next/head'
-import { useSelector } from 'react-redux'
-import { scrollTo } from '../../utils/common'
 
 const ForBusiness = ({ content }) => {
-
-  const { scrollReference } = useSelector((state: any) => state)
+  const { scrollReference: { forBusinessReference } } = useSelector((state: any) => state)
   const [reference, setReference ] = useState(null)
 
   const payRef = useCallback((node) => {
     scrollingReference(node, 'pay')
     setReference(node)
-  }, [])
+  }, [forBusinessReference?.pay])
 
   const atmRef = useCallback((node) => {
     scrollingReference(node, 'atm')
-  }, [])
+  }, [forBusinessReference?.atm])
 
   const scrollingReference = (node, state) => {
-    if(scrollReference?.forBusinessReference == state) {
+    if(forBusinessReference?.current == state) {
       if(node) scrollTo(node)
     }
   }
