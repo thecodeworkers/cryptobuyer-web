@@ -124,7 +124,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+
 }
 ._firstRow{
   display: flex;
@@ -255,10 +255,6 @@
 
     }
     ._firstRow{
-      display: grid !important;
-      grid-template-columns: repeat(3, 1fr,) !important;
-    }
-    ._secondRow{
       display: grid !important;
       grid-template-columns: repeat(2, 1fr,) !important;
     }

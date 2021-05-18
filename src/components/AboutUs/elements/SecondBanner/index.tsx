@@ -48,6 +48,7 @@ const SecondBanner = ({ data }) => {
     autoplay: true,
     rows: 2,
 
+
     responsive: [
       {
         breakpoint: 768,
@@ -55,7 +56,8 @@ const SecondBanner = ({ data }) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          rows: 2
+          rows: 2,
+          centerMode:true,
         }
       },
     ]
