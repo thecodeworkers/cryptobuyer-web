@@ -31,7 +31,8 @@
   font-size: $helveticaBold64;
   font-family: $helveticaNowTextBold;
   color: $charade;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.1;
   width: 300px;
   strong {
     color: $easternBlue;
@@ -44,6 +45,7 @@
   color: $charade;
   width: 410px;
   margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 ._rightContainer{
