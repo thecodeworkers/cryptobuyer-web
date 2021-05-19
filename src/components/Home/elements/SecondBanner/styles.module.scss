@@ -24,15 +24,16 @@
   font-size: $helveticaBold64;
   font-family: $helveticaNowTextBold;
   color: $charade;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
   width: 470px;
+  line-height: 1.1;
 }
 ._subtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $charade;
   width: 365px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 ._rightContainer{
@@ -76,7 +77,7 @@
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $white;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 ._textContent{
@@ -87,6 +88,7 @@
 
 ._logo{
   width: 250px;
+  margin-bottom: 2rem;
 }
 
 @include responsive(xl) {
