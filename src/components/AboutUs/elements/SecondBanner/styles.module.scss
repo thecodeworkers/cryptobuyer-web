@@ -95,7 +95,6 @@
           width: 25vh
         }
         ._investBox {
-          background-color: orange;
           width: 100vw;
           height: 100%;
         }
@@ -111,7 +110,7 @@
 
       img {
 
-        width: 20vh !important
+        width: 25vh !important
       }
   }
   }
@@ -130,12 +129,19 @@
   }
 }
 
-// @include responsive(lg)  {
-//   ._textContainer{
+ @include responsive(lg)  {
 
+    ._textContainer{
 
-//   }
-// }
+      ._investors {
+
+        img {
+
+          width: 16vh !important
+        }
+      }
+    }
+ }
 
 
 

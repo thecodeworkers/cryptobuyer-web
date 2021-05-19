@@ -70,16 +70,10 @@ const FirstBanner = ({ data, content, scrollMethod }) => {
             <p className={styles._customerSubtitles}>{content?.subtitle}</p>
           </div>
           <div className={styles._commercesContainer}>
-            <div className={styles._firstRow}>
               <img className={styles._commercesLogo} src={content?.commerces[0]?.image?.mediaItemUrl}></img>
               <img className={styles._commercesLogo} src={content?.commerces[1]?.image?.mediaItemUrl}></img>
               <img className={styles._commercesLogo} src={content?.commerces[2]?.image?.mediaItemUrl}></img>
-            </div>
-
-            <div className={styles._secondRow}>
               <img className={styles._commercesLogo} src={content?.commerces[3]?.image?.mediaItemUrl}></img>
-              <img className={styles._commercesLogo} src={content?.commerces[4]?.image?.mediaItemUrl}></img>
-            </div>
           </div>
         </div>
 
