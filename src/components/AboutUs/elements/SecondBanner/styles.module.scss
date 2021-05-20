@@ -91,6 +91,9 @@
       }
       ._investors {
         width: 100%;
+        display: flex;
+        justify-content: center;
+
         img {
           width: 25vh
         }
@@ -192,4 +195,9 @@
       width: 100% !important;
     }
   }
+}
+
+
+._customSlider {
+  width: 85%;
 }
