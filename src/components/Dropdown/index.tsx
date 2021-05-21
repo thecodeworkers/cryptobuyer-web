@@ -22,7 +22,7 @@ const Dropdown = ({ show, onPress }) => {
       dispatch(seletedReference({
         [args[3]]: {
           current: args[2],
-          [args[2]]: !scrollReference.forYouReference[args[2]]
+          [args[2]]: !scrollReference[args[3]][args[2]]
         }
       }))
     }
@@ -36,9 +36,9 @@ const Dropdown = ({ show, onPress }) => {
   return (
     <div className={show ? styles._main : styles._hidden}>
       <div className={styles._leftSide}>
-        <h4 className={styles._greenTitle} onClick={() => clickOption('/for-you', true)}> Para ti</h4>
+        <h4 className={styles._greenTitle} onClick={() => clickOption('/for-you', true, 'hero', 'forYouReference')}> Para ti</h4>
 
-        <div className={styles._link} onClick={() => clickOption('/for-you', true)}>
+        <div className={styles._link} onClick={() => clickOption('/for-you', true, 'hero', 'forYouReference')}>
           <h4>Cryptobuyer</h4>
           <p>compra criptos con tu moneda local</p>
         </div>
@@ -69,7 +69,7 @@ const Dropdown = ({ show, onPress }) => {
       <div className={styles._line} />
 
       <div className={styles._rightSide}>
-        <h4 className={styles._greenTitle} onClick={() => clickOption('/for-business', true)}> Para tu negocio</h4>
+        <h4 className={styles._greenTitle} onClick={() => clickOption('/for-business', true, 'hero', 'forBusinessReference')}> Para tu negocio</h4>
         <div className={styles._link} onClick={() => clickOption('/for-business', true, 'pay', 'forBusinessReference')}>
           <h4 >Pay</h4>
           <p>
@@ -87,7 +87,7 @@ const Dropdown = ({ show, onPress }) => {
           </p>
         </div>
 
-        <h4 className={styles._greenTitle} onClick={() => clickOption('/for-pro', true)}>Para traders</h4>
+        <h4 className={styles._greenTitle} onClick={() => clickOption('/for-pro', true, 'hero', 'forProReference')}>Para traders</h4>
 
         <div className={styles._link} onClick={() => clickOption('/for-pro', true, 'second', 'forProReference')} >
           <h4 >Pro</h4>

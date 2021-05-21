@@ -4,17 +4,20 @@ import { SET_REFERENCE } from './action-types'
 const initialState = {
   forYouReference: {
     current: '',
+    hero: false,
     visa: false,
     pay: false,
     atm: false
   },
   forBusinessReference: {
     current: '',
+    hero: false,
     pay: false,
     atm: false
   },
   forProReference: {
     current: '',
+    hero: false,
     second: false
   }
 }

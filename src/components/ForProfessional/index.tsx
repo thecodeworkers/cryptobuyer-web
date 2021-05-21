@@ -10,6 +10,10 @@ const ForProfessional = ({ content }) => {
   const { scrollReference: { forProReference } } = useSelector((state: any) => state)
   const section = useRef()
 
+  const heroRef = useCallback((node) => {
+    scrollingReference(node, 'hero')
+  }, [forProReference?.hero])
+
   const secondBanner = useCallback((node) => {
     scrollingReference(node, 'second')
   }, [forProReference?.second])
@@ -27,7 +31,7 @@ const ForProfessional = ({ content }) => {
       </Head>
       <Navbar color='#FFFFFF' />
       {(content) && (<>
-        <FirstBanner reference={section} data={content?.mainBanner}/>
+        <FirstBanner mainRef={heroRef} reference={section} data={content?.mainBanner}/>
         <div ref={section}>
           <Referral data={content?.secondBanner} />
         </div>
@@ -36,7 +40,6 @@ const ForProfessional = ({ content }) => {
       </>)
       }
     </div>
-
   )
 }
 
