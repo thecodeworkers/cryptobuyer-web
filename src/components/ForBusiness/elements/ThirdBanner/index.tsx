@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './styles.module.scss'
-import { GeneralButton } from '@components'
+import { GeneralButton, Toast } from '@components'
 import { XptAtm } from '@images/logos'
 import { useDispatch } from 'react-redux'
 import { subscribeUser } from '../../../../store/actions'
-import Swal from 'sweetalert2'
 
-const ThirdBanner = ({ data }) => {
+const ThirdBanner = ({ data, reference }) => {
 
+  let timeout
+  const [show, setShow ] = useState(0)
   const dispatch = useDispatch()
   const [input, setInput] = useState('')
   const [isValid, setIsValid] = useState(0)
@@ -25,16 +26,21 @@ const ThirdBanner = ({ data }) => {
     if(isValid === 1) {
       dispatch(subscribeUser(input))
       setInput('');
-      Swal.fire({
-        icon: 'success',
-        title: 'Gracias por suscribirte',
-        confirmButtonText: 'Ok',
-      })
+      setShow(1);
+
+      timeout = setTimeout(() => {
+        setShow(2)
+      }, 2000)
     }
   }
 
+  useEffect(() => {
+    return () => { clearTimeout(timeout) }
+  }, [])
+
   return (
-    <div className={styles.main}>
+    <>
+    <div className={styles.main} ref={reference}>
       <div className={styles._container}>
         <div className={styles._content}>
           <div className={styles._leftContainer}>
@@ -59,6 +65,9 @@ const ThirdBanner = ({ data }) => {
         </div>
       </div>
     </div>
+    <Toast status={show}></Toast>
+    </>
+
   )
 }
 

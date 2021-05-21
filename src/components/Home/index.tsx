@@ -18,7 +18,7 @@ const Home = ({ content }) => {
       </Head>
       <Navbar />
       {content ? (<>
-        < FirstBanner data={content?.mainBanner} />
+        <FirstBanner data={content?.mainBanner} />
         <Metrics data={content?.counter} />
         <SecondBanner data={content?.publicityBanner} content={content?.secondBanner} slider={content?.allies} />
         <ThirdBanner data={content?.thirdBanner} />

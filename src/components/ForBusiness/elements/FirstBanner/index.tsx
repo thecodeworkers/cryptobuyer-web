@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import styles from './styles.module.scss'
-import { GeneralButton } from '@components'
-import { scrolling, createMarkup } from '@utils'
+import { useState, useEffect  } from 'react'
+import { GeneralButton, Toast } from '@components'
+import { createMarkup } from '@utils'
 import { useDispatch } from 'react-redux'
 import { subscribeUser } from '../../../../store/actions';
-import Swal from 'sweetalert2'
+import styles from './styles.module.scss'
 
-const FirstBanner = ({ data, content, reference }) => {
-
+const FirstBanner = ({ data, content, scrollMethod, reference }) => {
+  let timeout;
   const dispatch = useDispatch()
   const [input, setInput] = useState('')
+  const [show, setShow] = useState(0)
   const [isValid, setIsValid] = useState(0)
 
   const inputHandler = (event: any) => {
@@ -25,17 +25,21 @@ const FirstBanner = ({ data, content, reference }) => {
     if(isValid === 1) {
       dispatch(subscribeUser(input))
       setInput('');
-      Swal.fire({
-        icon: 'success',
-        title: 'Gracias por suscribirte',
-        confirmButtonText: 'Ok',
-      })
+      setShow(1);
+
+      timeout = setTimeout(() => {
+        setShow(2)
+      }, 2000);
     }
   }
 
+  useEffect(() => {
+    return () => { clearTimeout(timeout) }
+  }, [])
+
   return (
     <>
-      <div className={styles.main}>
+      <div className={styles.main} ref={reference}>
         <div className='_bannerContainer'>
           <div className={styles._content}>
             <div className={styles._textParent}>
@@ -45,12 +49,17 @@ const FirstBanner = ({ data, content, reference }) => {
                 <div className={styles._buttonContainer}>
                   <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#262833' text={data?.button?.title} method={fetch}/>
                 </div>
-                <input type='string' className={isValid === 0 || isValid === 1 ? styles._input : styles._inputError} onChange={inputHandler} value={input} />
+                <input
+                  type='string'
+                  className={isValid === 0 || isValid === 1 ? styles._input : styles._inputError}
+                  onChange={inputHandler}
+                  value={input}
+                />
               </div>
             </div>
             <div className={styles._services}>
               <div className={styles._servicesText} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)} ></div>
-              <img src={'images/icons/complete-arrow-down.svg'} className={styles._downarrow} onClick={() => scrolling(reference)}></img>
+              <img src='images/icons/complete-arrow-down.svg' className={styles._downarrow} onClick={scrollMethod}></img>
             </div>
           </div>
         </div>
@@ -60,36 +69,32 @@ const FirstBanner = ({ data, content, reference }) => {
             <p className={styles._customerSubtitles}>{content?.subtitle}</p>
           </div>
           <div className={styles._commercesContainer}>
-            <div className={styles._firstRow}>
               <img className={styles._commercesLogo} src={content?.commerces[0]?.image?.mediaItemUrl}></img>
               <img className={styles._commercesLogo} src={content?.commerces[1]?.image?.mediaItemUrl}></img>
               <img className={styles._commercesLogo} src={content?.commerces[2]?.image?.mediaItemUrl}></img>
-
-            </div>
-
-            <div className={styles._secondRow}>
-            <img className={styles._commercesLogo} src={content?.commerces[3]?.image?.mediaItemUrl}></img>
-            <img className={styles._commercesLogo} src={content?.commerces[4]?.image?.mediaItemUrl}></img>
-            </div>
-
-
+              <img className={styles._commercesLogo} src={content?.commerces[3]?.image?.mediaItemUrl}></img>
           </div>
         </div>
+
+        <Toast status={show}></Toast>
       </div>
+
       <style jsx>{`
         ._bannerContainer {
           background-image: url(${data?.background?.mediaItemUrl});
           background-repeat: no-repeat;
-          background-size: 100% 100%;
+          background-size: cover;
+          background-position: top;
           width:100%;
           height: 70vh;
         }
+
         @media(max-width: 576px) {
           ._bannerContainer {
             height: 80vh;
             background-size: cover;
             background-image: url(${data?.backgroundResponsive?.mediaItemUrl});
-            background-position: center
+            background-position: center;
           }
         }
       `}</style>

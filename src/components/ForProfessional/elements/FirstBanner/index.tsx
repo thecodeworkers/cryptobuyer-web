@@ -5,9 +5,9 @@ import { scrolling } from '@utils'
 import { createMarkup } from '@utils'
 import { XptPro } from '@images/logos'
 
-const FirstBanner = ({ reference, data }) => (
+const FirstBanner = ({ reference, data, mainRef }) => (
   <>
-    <div className='_main'>
+    <div className='_main' ref={mainRef}>
       <section className={styles._content}>
         <div className={styles._textContainer}>
           <div className={styles._proLogoParent}>
@@ -16,13 +16,15 @@ const FirstBanner = ({ reference, data }) => (
           <h1 className={styles._title}> {data?.title} </h1>
           <p className={styles._text}> {data?.subtitle} </p>
           <div className={styles._btnParent}>
-            <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#FFFFFF' text={data?.button?.title} />  {/* #2CACB3 */}
+          <a href={data?.button?.link} rel={"noopener"} target='_blank'>
+            <GeneralButton height={3} backgroundColor='#2CACB3' textColor='#FFFFFF' text={data?.button?.title} />
+          </a>
           </div>
         </div>
 
         <div className={styles._secondTextParent}>
           <div className={styles._icons}>
-            <img src={data?.qrCode?.mediaItemUrl} width='120px'></img>
+            <img src={data?.qrCode?.mediaItemUrl} width='100px' alt='QR code'></img>
 
             <div className={styles._logoParent}>
               <p>Escanea para descargar</p>

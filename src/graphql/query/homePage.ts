@@ -38,6 +38,7 @@ const home = `
           mediaItemUrl
           slug
         }
+        imageRouter
       }
       publicityBanner {
         title

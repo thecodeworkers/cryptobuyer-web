@@ -44,19 +44,21 @@ const Post = ({ post }) => {
           <div className={styles._postContainer}>
             <div className={styles._leftContainer}>
 
-              <img src='images/icons/back-arrow.svg' className={styles._arrowBack} onClick={() => navigation('blog', true)}></img>
-              <div className={styles._post}>
+              <img src='images/icons/back-arrow.svg' className={styles._arrowBack} onClick={() => navigation('blog', true)} ></img>
 
-                <div className={[styles._image, '_imageCover'].join(" ")} style={{ backgroundImage: `url(${postImage ? postImage : ''})` }}></div>
+                <div className={styles._post}>
 
-                <div className={styles._infoContainer}>
-                  <div className={styles._previousInfo}>
-                    <p className={styles._title}>{post?.post?.title}</p>
-                    <p className={styles._subtitle}>{post?.post?.subtitle}</p>
-                    <a className={styles._link} href="">SHARE</a>
+                  <div className={[styles._image, '_imageCover'].join(" ")} ></div>
+
+                  <div className={styles._infoContainer}>
+                    <div className={styles._previousInfo}>
+                      <p className={styles._title}>{post?.post?.title}</p>
+                      <p className={styles._subtitle}>{post?.post?.subtitle}</p>
+                      <a className={styles._link} href="">SHARE</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+
             </div>
 
             <div className={styles._rightContainer}>
@@ -68,8 +70,18 @@ const Post = ({ post }) => {
             </div>
             <style jsx>{`
             ._imageCover {
-              background-image:${`url(${postImage ? postImage : ''})`}
-            `}
+              background-image:${`url(${postImage ? postImage : ''})`};
+              background-repeat: no-repeat;
+              background-size:cover;
+              background-position: top;
+              }
+
+              @media(max-width: 768px) {
+                ._imageCover {
+                  background-size:100% 100%;
+                }
+            `
+            }
             </style>
           </div>
         </>) : null}

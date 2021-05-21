@@ -103,6 +103,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.875rem;
+  width: 100%;
 }
 
 ._buttonsParent {
@@ -199,6 +200,11 @@
 
 ._secondRow {
   margin-bottom: 0.8rem;
+}
+
+._centerLink {
+  text-align: center;
+  display: block;
 }
 
 @keyframes menu-in {

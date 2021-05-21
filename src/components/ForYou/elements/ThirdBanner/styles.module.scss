@@ -31,15 +31,16 @@
   font-size: $helveticaBold64;
   font-family: $helveticaNowTextBold;
   color: $charade;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  margin-bottom: 0.9rem;
+  line-height: 1.1;
+  width: 70%;
 }
 ._subtitle{
   font-size: $helveticaRegular24;
   font-family: $helveticaNowText;
   color: $charade;
   width: 70%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 ._rightContainer{
@@ -49,7 +50,7 @@
   z-index: 1;
   position: absolute;
   left: 30px;
-  top: -145px;
+  top: 0px;
 }
 
 ._buttonContainer{
