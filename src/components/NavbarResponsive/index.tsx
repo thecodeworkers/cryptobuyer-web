@@ -30,7 +30,9 @@ const NavbarResponsive = () => {
         </div>
 
         <div className={styles._rightItems}>
-          <img src='images/icons/user.svg'></img>
+          <a href='https://cryptobuyer.io/accounts/login/' target="_blank" rel="noopener">
+           <img src='images/icons/user.svg'></img>
+          </a>
 
           <div onClick={() => showOrHideMenu(1)} className={styles._toggleParent}>
            <Toggle/>
