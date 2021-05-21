@@ -1,12 +1,11 @@
 import { useState, useEffect  } from 'react'
-import styles from './styles.module.scss'
 import { GeneralButton, Toast } from '@components'
-import { scrolling, createMarkup, scrollTo } from '@utils'
+import { createMarkup } from '@utils'
 import { useDispatch } from 'react-redux'
 import { subscribeUser } from '../../../../store/actions';
+import styles from './styles.module.scss'
 
-const FirstBanner = ({ data, content, scrollMethod }) => {
-
+const FirstBanner = ({ data, content, scrollMethod, reference }) => {
   let timeout;
   const dispatch = useDispatch()
   const [input, setInput] = useState('')
@@ -40,7 +39,7 @@ const FirstBanner = ({ data, content, scrollMethod }) => {
 
   return (
     <>
-      <div className={styles.main}>
+      <div className={styles.main} ref={reference}>
         <div className='_bannerContainer'>
           <div className={styles._content}>
             <div className={styles._textParent}>

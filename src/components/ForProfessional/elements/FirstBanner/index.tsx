@@ -5,9 +5,9 @@ import { scrolling } from '@utils'
 import { createMarkup } from '@utils'
 import { XptPro } from '@images/logos'
 
-const FirstBanner = ({ reference, data }) => (
+const FirstBanner = ({ reference, data, mainRef }) => (
   <>
-    <div className='_main'>
+    <div className='_main' ref={mainRef}>
       <section className={styles._content}>
         <div className={styles._textContainer}>
           <div className={styles._proLogoParent}>

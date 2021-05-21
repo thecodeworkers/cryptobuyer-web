@@ -10,6 +10,10 @@ const ForBusiness = ({ content }) => {
   const { scrollReference: { forBusinessReference } } = useSelector((state: any) => state)
   const [reference, setReference ] = useState(null)
 
+  const heroRef = useCallback((node) => {
+    scrollingReference(node, 'hero')
+  }, [forBusinessReference?.hero])
+
   const payRef = useCallback((node) => {
     scrollingReference(node, 'pay')
     setReference(node)
@@ -26,6 +30,7 @@ const ForBusiness = ({ content }) => {
   }
 
   const scrollDown = () => scrollTo(reference)
+
   return (
     <div>
       <Head>
@@ -33,7 +38,7 @@ const ForBusiness = ({ content }) => {
       </Head>
       <Navbar color='#262833' />
       {content ? (<>
-        <FirstBanner data={content?.mainBanner} content={content?.customers} scrollMethod={scrollDown} />
+        <FirstBanner data={content?.mainBanner} content={content?.customers} scrollMethod={scrollDown} reference={heroRef} />
          <div ref={payRef || reference}>
           <SecondBanner data={content?.thirdBanner} />
         </div>

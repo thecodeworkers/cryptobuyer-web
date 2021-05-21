@@ -1,13 +1,12 @@
-
-import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
-import { scrolling, createMarkup } from '@utils'
+import { createMarkup } from '@utils'
+import styles from './styles.module.scss'
 
 const ForYouFirstBanner = ({ data, reference, scrollMethod }) => {
 
   return (
     <>
-      <div className='_main'>
+      <div className='_main' ref={reference}>
         <section className={styles._content}>
           <div className={styles._textContainer}>
             <h1 className={styles._title}>{data?.title}</h1>
