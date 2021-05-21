@@ -308,10 +308,12 @@
       line-height: 1;
       font-size: 1.5rem;
       width: 90%;
-      margin-top: 1.5rem;
+      margin-top: 1.3rem;
+      margin-bottom: 0.5rem;
      }
      p{
        line-height: 1.2;
+       margin-top: 0.5%;
      }
    }
    ._subtitle{
@@ -319,7 +321,7 @@
    }
    ._basicForm{
      align-items: center;
-     margin-top: 0.8rem;
+     margin-top: 0.5rem;
    }
    ._input{
      width: 300px;
@@ -348,6 +350,11 @@
     ._customerSubtitles{
       font-size: 0.8rem;
     }
+   }
+
+   ._commercesContainer{
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr,) !important;
    }
 
 
