@@ -7,7 +7,7 @@
 
 ._post{
   width: 70%;
-  height: 50%;
+  height: 70%;
 }
 
 ._image {
@@ -21,9 +21,9 @@
 ._postContainer{
   height: 70vh;
   display: flex;
-
   justify-content: center;
   align-items: center;
+  padding-top: 4rem;
 }
 
 ._leftContainer{
@@ -42,6 +42,8 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+  padding-right: 7.5%;
+  box-sizing: border-box;
 }
 
  ._infoContainer {
@@ -49,7 +51,7 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
 
   ._previousInfo {
     display: flex;
@@ -85,7 +87,7 @@
 
 ._textContainer{
   width: 100%;
-  height: 50%;
+  height: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -108,8 +110,25 @@
   font-family: $helveticaNowText;
   font-size: $helveticaRegular20;
   color: $charade;
-  margin-bottom: 1rem;
-  overflow-y: scroll
+  // margin-bottom: 1rem;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  & ::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $charade;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: none;
+  }
 }
 
 ._arrowBack {
@@ -125,9 +144,8 @@
 @include responsive(md) {
 
   ._post {
-    height: 60vh;
+    height: 55vh;
     width: 85%;
-    margin-bottom: 3%;
   }
 
   ._container{
@@ -160,5 +178,13 @@
 
   ._arrowBack {
     display: block;
+  }
+
+  ._postContainer{
+    padding-top: 2%;
+  }
+
+  ._image {
+    height: 50%;
   }
 }

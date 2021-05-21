@@ -33,7 +33,7 @@ const FirstBanner = ({ data, reference }) => {
         ._bannerContainer {
           background-image: url(${background ? background : ''});
           background-repeat: no-repeat;
-          background-size: 100% 100%;
+          background-size: cover;
           width:100%;
           height: 70vh;
         }

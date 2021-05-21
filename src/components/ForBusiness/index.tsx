@@ -1,12 +1,35 @@
-import React, { useRef } from 'react'
+import React, { useCallback, useState, } from 'react'
+import { FirstBanner, SecondBanner, ThirdBanner } from './elements'
+import { scrollTo } from '@utils/common'
+import { useSelector } from 'react-redux'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { FirstBanner, SecondBanner, ThirdBanner } from './elements'
 import Head from 'next/head'
 
 const ForBusiness = ({ content }) => {
+  const { scrollReference: { forBusinessReference } } = useSelector((state: any) => state)
+  const [reference, setReference ] = useState(null)
 
-  const banner = useRef()
+  const heroRef = useCallback((node) => {
+    scrollingReference(node, 'hero')
+  }, [forBusinessReference?.hero])
+
+  const payRef = useCallback((node) => {
+    scrollingReference(node, 'pay')
+    setReference(node)
+  }, [forBusinessReference?.pay])
+
+  const atmRef = useCallback((node) => {
+    scrollingReference(node, 'atm')
+  }, [forBusinessReference?.atm])
+
+  const scrollingReference = (node, state) => {
+    if(forBusinessReference?.current == state) {
+      if(node) scrollTo(node)
+    }
+  }
+
+  const scrollDown = () => scrollTo(reference)
 
   return (
     <div>
@@ -15,11 +38,11 @@ const ForBusiness = ({ content }) => {
       </Head>
       <Navbar color='#262833' />
       {content ? (<>
-        <FirstBanner data={content?.mainBanner} content={content?.customers} reference={banner} />
-         <div ref={banner}>
+        <FirstBanner data={content?.mainBanner} content={content?.customers} scrollMethod={scrollDown} reference={heroRef} />
+         <div ref={payRef || reference}>
           <SecondBanner data={content?.thirdBanner} />
         </div>
-        <ThirdBanner data={content?.fourthBanner} />
+        <ThirdBanner data={content?.fourthBanner} reference={atmRef} />
       </>) : null}
       <Footer />
     </div>

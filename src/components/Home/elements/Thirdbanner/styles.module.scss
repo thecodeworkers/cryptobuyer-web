@@ -16,16 +16,16 @@
 ._title {
   font-family: $helveticaNowTextBold;
   font-size: $helveticaBold64;
-  line-height: 1.2;
-  width: 500px;
+  line-height: 1.1;
+
 }
 
 ._subtitle {
   font-family: $helveticaNowText;
   width: 80%;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: $helveticaRegular24;
-  width:570px
+
 }
 
 ._buttonParent {
@@ -33,7 +33,7 @@
   margin-top: 1.5rem;
 }
 ._logo{
-  width: 250px;
+  width: 220px;
 }
 
 @include responsive(xl) {

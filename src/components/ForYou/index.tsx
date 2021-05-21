@@ -1,12 +1,39 @@
-import React, { useRef } from 'react'
+import React, { useCallback, useState } from 'react'
+import { FirstBanner, SecondBanner, ThirdBanner, FourthBanner, MiddleBanner } from './elements'
+import { scrollTo } from '@utils/common'
+import { useSelector } from 'react-redux'
+import Head from 'next/head'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { FirstBanner, SecondBanner, ThirdBanner, FourthBanner, MiddleBanner } from './elements'
-import Head from 'next/head'
 
 const ForYou = ({ content }) => {
+  const { scrollReference: { forYouReference } } = useSelector((state: any) => state)
+  const [ reference, setReference ] = useState()
 
-  const banner = useRef()
+  const heroRef = useCallback((node) => {
+    scrollingReference(node, 'hero')
+  }, [forYouReference?.hero])
+
+  const payRef = useCallback((node) => {
+    scrollingReference(node, 'pay')
+    setReference(node)
+  }, [forYouReference?.pay])
+
+  const visaRef = useCallback((node) => {
+    scrollingReference(node, 'visa')
+  }, [forYouReference?.visa])
+
+  const atmRef = useCallback((node) => {
+    scrollingReference(node, 'atm')
+  }, [forYouReference?.atm])
+
+  const scrollingReference = (node, state) => {
+    if(forYouReference?.current == state) {
+      if(node) scrollTo(node)
+    }
+  }
+
+  const scrollDown = () => scrollTo(reference)
 
   return (
     <div>
@@ -15,11 +42,11 @@ const ForYou = ({ content }) => {
       </Head>
       <Navbar color='#FFFFFF' />
       {(content) ? (<>
-        <FirstBanner data={content?.mainBanner} reference={banner} />
-        <SecondBanner data={content?.secondBanner} reference={banner} />
-        <MiddleBanner data={content?.customers} />
-        <ThirdBanner data={content?.thirdBanner} />
-        <FourthBanner data={content?.fourthBanner} />
+        <FirstBanner data={content?.mainBanner} reference={heroRef} scrollMethod={scrollDown}/>
+        <SecondBanner data={content?.secondBanner} reference={payRef || reference} />
+        <MiddleBanner data={content?.customers}  />
+        <ThirdBanner data={content?.thirdBanner} reference={visaRef} />
+        <FourthBanner data={content?.fourthBanner} reference={atmRef}/>
         <Footer />
       </>) : null}
     </div>

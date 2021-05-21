@@ -1,20 +1,20 @@
-
-import styles from './styles.module.scss'
 import { GeneralButton } from '@components'
-import { scrolling, createMarkup } from '@utils'
+import { createMarkup } from '@utils'
+import styles from './styles.module.scss'
 
-const ForYouFirstBanner = ({ data, reference }) => {
+const ForYouFirstBanner = ({ data, reference, scrollMethod }) => {
 
   return (
     <>
-      <div className='_main'>
+      <div className='_main' ref={reference}>
         <section className={styles._content}>
           <div className={styles._textContainer}>
             <h1 className={styles._title}>{data?.title}</h1>
             <p className={styles._text}>{data?.subtitle}</p>
             <div className={styles._btnParent}>
-              <GeneralButton height={3} backgroundColor='#ecf0f1' textColor='#262833' text={data?.button?.title} />
-              {/* #FFFFFF */}
+            <a href={data?.button?.link} rel={"noopener"} target='_blank'>
+              <GeneralButton height={3} backgroundColor='#FFFFFF' textColor='#262833' text={data?.button?.title} />
+            </a>
             </div>
           </div>
 
@@ -22,7 +22,7 @@ const ForYouFirstBanner = ({ data, reference }) => {
             <div className={styles._subtitle} dangerouslySetInnerHTML={createMarkup(data?.lowTitle)}></div>
             <div>
               <p className={styles._serviceText}>Conoce todos nuestros servicios <b>para ti</b></p>
-              <div className={styles._arrowParent} onClick={() => scrolling(reference)} >
+              <div className={styles._arrowParent} onClick={scrollMethod} >
                 <img src='images/icons/complete-arrow-down.svg' />
               </div>
             </div>
@@ -34,7 +34,8 @@ const ForYouFirstBanner = ({ data, reference }) => {
       ._main {
           background-image: url(${data?.background?.mediaItemUrl});
           background-repeat: no-repeat;
-          background-size: 100% 100%;
+          background-size: cover;
+          background-position: center;
           width:100%;
           height: 100vh;
         }

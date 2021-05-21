@@ -2,20 +2,22 @@
 
 ._sliderContainer {
   width: 65%;
-  margin: 0px auto;
+  margin: 1% auto;
   background: $white;
-  padding: 1.5rem 0;
+  height: auto;
 }
 
 ._slider{
   display: flex !important;
   justify-content: space-between;
   align-items: center;
+
 }
 
 ._commerce{
   width: 7vw;
 }
+
 @include responsive(sm) {
 
   ._commerce{

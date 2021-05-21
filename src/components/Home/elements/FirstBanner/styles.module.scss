@@ -14,11 +14,12 @@
 }
 
 ._title {
-  font-family: $helveticaNowTextBold;
+  font-family: $helveticaNowTextBlack;
   font-size: $helveticaBold60;
   margin-bottom: 0.5rem;
   color: $charade;
   line-height: 1;
+  margin-bottom: 2rem;
 
   strong {
     color: $easternBlue;
@@ -33,7 +34,7 @@
 }
 
 ._buttonContainer{
-  margin-top: 2.6rem;
+  margin-top: 2rem;
   width: 13.75rem;
 }
 
@@ -72,7 +73,7 @@
   }
   ._buttonContainer{
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
 }
